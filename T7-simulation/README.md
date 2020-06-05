@@ -18,13 +18,15 @@ source env/bin/activate
 cd T7-WT
 python3 phage_model.py
 ```
-This will take more than ten minutes to run. Output is in the file `phage_counts.tsv`.
+This will take more than ten minutes to run! Output is in the file `phage_counts.tsv`.
 You can examine progress and the results while the simulation is still running,
 for example using:
 
 ```sh
 tail phage_counts.tsv
 ```
+
+If you are impatient, you can examine the example TSV output file that is in the repository and use it to visualize the results in the next step: [`T7-WT/example_output_phage_counts.tsv`](T7-WT/example_output_phage_counts.tsv).
 
 # Visualizing output
 
@@ -36,7 +38,7 @@ You can filter rows corresponding to different genes/species and graph them. For
 require(ggplot2)
 require(tidyverse)
 
-cts = read_tsv("phage_counts.tsv")
+cts = read_tsv("example_output_phage_counts.tsv")
 
 species.of.interest = c("gene 0.3", "rnapol-1", "rnapol-3.5", "gene 6", "gene 9")
 cts.to.graph = cts %>% filter(species %in% species.of.interest)
