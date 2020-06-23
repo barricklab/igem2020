@@ -18,13 +18,15 @@ source env/bin/activate
 cd T7-WT
 python3 phage_model.py
 ```
-This will take more than ten minutes to run. Output is in the file `phage_counts.tsv`.
+This will take more than ten minutes to run! Output is in the file `phage_counts.tsv`.
 You can examine progress and the results while the simulation is still running,
 for example using:
 
 ```sh
 tail phage_counts.tsv
 ```
+
+If you are impatient, you can examine the example TSV output file that is in the repository and use it to visualize the results in the next step: [`T7-WT/example_output_phage_counts.tsv`](T7-WT/example_output_phage_counts.tsv).
 
 # Visualizing output
 
