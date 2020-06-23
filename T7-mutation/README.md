@@ -1,5 +1,7 @@
 #  Setup
 
+**You must be using a newer version of _breseq_ (v0.35.2 or later) for these instructions to work!**
+
 Install _breseq_ using one of the methods described in the [_breseq_ instructions](https://barricklab.org/twiki/pub/Lab/ToolsBacterialGenomeResequencing/documentation/installation.html)
 
 **Note:** Because we are only using the `gdtools` utility command from _breseq_. You do not need to install the requirements for _breseq_ (bowtie2 and R)!
