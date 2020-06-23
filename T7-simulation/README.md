@@ -36,7 +36,7 @@ You can filter rows corresponding to different genes/species and graph them. For
 require(ggplot2)
 require(tidyverse)
 
-cts = read_tsv("phage_counts.tsv")
+cts = read_tsv("example_output_phage_counts.tsv")
 
 species.of.interest = c("gene 0.3", "rnapol-1", "rnapol-3.5", "gene 6", "gene 9")
 cts.to.graph = cts %>% filter(species %in% species.of.interest)
