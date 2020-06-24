@@ -17,7 +17,7 @@ This one `delete_1.4-1.6.gd` deletes genes 0.4, 1.5, 1.6:
 DEL	.	.	T7	7608	559
 ```
 
-This one `replace_0.5_with_sfGFP.gd` deletes gene 0.5 and inserts sfGFP in its place:
+This one `replace_0.4_with_sfGFP.gd` deletes gene 0.4 and inserts sfGFP in its place:
 ```txt
 #=GENOME_DIFF	1.0
 INT	.	.	T7	1278	156	sfGFP:1-717
