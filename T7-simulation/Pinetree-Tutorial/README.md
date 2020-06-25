@@ -24,9 +24,9 @@ python3 three_genes.py
 ## Visualizing Pinetree Data in R
 Now that you've generated a dataset, lets try a simple example of how to display it.  
 For this step, you will require some additional programs:
-- R, a programming language designed for data analysis. You can download R through one of the links [here.](https://cran.r-project.org/mirrors.html)
-- RStudio, an IDE that makes coding with R much more user-friendly. [Download Here](https://rstudio.com/products/rstudio/download/#download)
+  - R, a programming language designed for data analysis. You can download R through one of the links [here.](https://cran.r-project.org/mirrors.html)
+  - RStudio, an IDE that makes coding with R much more user-friendly. [Download Here](https://rstudio.com/products/rstudio/download/#download)
 1. First, find the script **"time_course.R"** in this repository. It should be under **igem2020/T7-simulation/scripts.**
    -This script creates a graph of the concentrations of various proteins during the course of a T7 bacteriophage infection. We will be adapting it for use in this toy model.
 2. Open **"time_course.R"** using RStudio
-3. On line 4, which reads 'cts = read_tsv("example_output_phage_counts.tsv")'
+3. On line 4, which reads `cts = read_tsv("example_output_phage_counts.tsv")`
