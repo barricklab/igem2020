@@ -27,6 +27,18 @@ For this step, you will require some additional programs:
   - R, a programming language designed for data analysis. You can download R through one of the links [here.](https://cran.r-project.org/mirrors.html)
   - RStudio, an IDE that makes coding with R much more user-friendly. [Download Here](https://rstudio.com/products/rstudio/download/#download)
 1. First, find the script **"time_course.R"** in this repository. It should be under **igem2020/T7-simulation/scripts.**
-   -This script creates a graph of the concentrations of various proteins during the course of a T7 bacteriophage infection. We will be adapting it for use in this toy model.
+   - This script creates a graph of the concentrations of various proteins during the course of a T7 bacteriophage infection. We will be adapting it for use in this toy model.
 2. Open **"time_course.R"** using RStudio
-3. On line 4, which reads `cts = read_tsv("example_output_phage_counts.tsv")`
+3. On line 4, which reads `cts = read_tsv("example_output_phage_counts.tsv")`, replace **"example_output_phage_counts.tsv"** with **"three_genes_counts.tsv"**.
+   - This line reads a tab sepereated value(.tsv) file of the given name into the script. Here we are changing the filename to that of the output file we created with `three_genes.py.`
+4. Next, you will have to change line 6: `species.of.interest = c("gene 0.3", "rnapol-1", "rnapol-3.5", "gene 6", "gene 9")` to `species.of.interest = c("proteinX", "rnapol", "proteinY")`.
+   - This line creates a vector that specifies which variables the script will search for, in our case: **proteinX**, **proteinY**, and **rnapol** are the only proteins created.
+5. These changes will allow the script to graph protein concentration over time for `three_genes_counts.tsv`, but first we must set the working directory of RStudio to the folder containing the file of interest.
+   -  For Windows users utilizing Ubuntu, use the path to the WSL network directory as such:
+   ```r
+   setwd("//wsl$/Ubuntu-20.04/home/username/pinetree/examples")
+   ```
+   - Remember to replace "username" with the username you created for Ubuntu.
+6. After the directory is set, highlight all the lines of code and click "Run" at the top right of the editor box. This should take a few seconds and create a graph resembling this:
+
+   
