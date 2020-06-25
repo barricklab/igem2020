@@ -26,7 +26,7 @@ Now that you've generated a dataset, lets try a simple example of how to display
 For this step, you will require some additional programs:
   - R, a programming language designed for data analysis. You can download R through one of the links [here.](https://cran.r-project.org/mirrors.html)
   - RStudio, an IDE that makes coding with R much more user-friendly. [Download Here](https://rstudio.com/products/rstudio/download/#download)
-1. First, find the script **"time_course.R"** in this repository. It should be under **igem2020/T7-simulation/scripts.**
+1. First, find the script **"time_course.R"** in this repository. It should be under **igem2020/T7-simulation/scripts** in your WSL network drive if you cloned from the ubuntu terminal.
    - This script creates a graph of the concentrations of various proteins during the course of a T7 bacteriophage infection. We will be adapting it for use in this toy model.
 2. Open **"time_course.R"** using RStudio
 3. On line 4, which reads `cts = read_tsv("example_output_phage_counts.tsv")`, replace **"example_output_phage_counts.tsv"** with **"three_genes_counts.tsv"**.
@@ -40,5 +40,6 @@ For this step, you will require some additional programs:
    ```
    - Remember to replace "username" with the username you created for Ubuntu.
 6. After the directory is set, highlight all the lines of code and click "Run" at the top right of the editor box. This should take a few seconds and create a graph resembling this:
-
-   
+![Example Plot](three_genes_plot_ex.png)
+7. And you're done! This script can be utilized to visualize expression levels for other factors as well, including RNA transcript concentrations and ribosomal density. The line `to.graph="protein"` allows you to specify which factor you want to graph. Try changing the file back to **"example_output_phage_counts.tsv"** and playing around with the species of interest and factor to graph to see if you can find any interesting patterns!
+   - Note, you will have to change the working directory to the folder containing **"example_output_phage_counts.tsv"** for this to work.
