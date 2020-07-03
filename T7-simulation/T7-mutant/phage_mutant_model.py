@@ -148,7 +148,7 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def phage_model():
+def phage_model(input, output="./"):
     verbose = True
     sim = visualizer.adjModel(cell_volume=CELL_VOLUME)
 
