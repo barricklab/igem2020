@@ -26,10 +26,10 @@ FEATURES             Location/Qualifiers
                      /note="activator plasmid"
      gene            1..717
                      /locus_tag="sfGFP"
-                     /note="sfGFP"
+                     /note=""sfGFP"
      CDS             1..717
                      /locus_tag="sfGFP"
-                     /note="sfGFP"
+                     /note=""sfGFP"
                      /codon_start=1
                      /transl_table=11
                      /product="sfGFP"
