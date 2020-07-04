@@ -1,5 +1,7 @@
 from Bio import SeqIO
 import pinetree as pt
+import sys
+import os
 
 CELL_VOLUME = 1.1e-15
 PHI10_BIND = 1.82e7  # Binding constant for phi10
@@ -146,13 +148,16 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def main():
+def phage_model(input, output="./"):
     verbose = True
-    sim = pt.Model(cell_volume=CELL_VOLUME)
+    sim = visualizer.adjModel(cell_volume=CELL_VOLUME)
 
-    record = SeqIO.read("T7_delete_1.4-1.6.gb", "genbank")
+    record = SeqIO.read(input, "genbank")
     genome_length = len(record.seq)
     phage = pt.Genome(name="phage", length=genome_length)
+
+    if not output:
+        output = "./"
 
     for feature in record.features:
         weights = [0.0] * len(record.seq)
@@ -256,8 +261,28 @@ def main():
 
     sim.seed(34)
 
-    sim.simulate(time_limit=1500, time_step=5, output="phage_counts.tsv")
+    sim.simulate(time_limit=1500, time_step=5, output=f"{output}phage_counts.tsv")
 
 
 if __name__ == "__main__":
-    main()
+    arguments = sys.argv
+    # For hard coding variables if you feel like it:
+    input_genome = None  # ex. (resources/T7_genome.gb)
+    output_path = None   # ex. [output | output/]
+
+    # Otherwise it will take from command line
+    if (len(arguments) <= 1 or len(arguments) > 3) and not input_genome:
+        print("Usage: phage_model.py (genbank file filepath) [output folder]")
+        exit(1)
+    elif not input_genome:
+        input_genome = arguments[1]
+        if not os.path.exists(input_genome):
+            print(f"Could not find file {input_genome}")
+            exit(1)
+    if not output_path and len(arguments) == 2:
+        output_path = arguments[2]
+    elif not output_path:
+        output_path = "./"
+        if output_path[-1] != "/" and output_path[-1] != "\\":
+            output_path += "/"
+    phage_model(input_genome, output_path)

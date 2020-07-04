@@ -16,14 +16,14 @@ source env/bin/activate
 
 ```sh
 cd T7-WT
-python3 phage_model.py
+python3 phage_model.py (genbank input filepath) [output folder]
 ```
 This will take more than ten minutes to run! Output is in the file `phage_counts.tsv`.
 You can examine progress and the results while the simulation is still running,
 for example using:
 
 ```sh
-tail phage_counts.tsv
+tail phage_counts.tsv (genbank input filepath) [output folder]
 ```
 
 If you are impatient, you can examine the example TSV output file that is in the repository and use it to visualize the results in the next step: [`T7-WT/example_output_phage_counts.tsv`](T7-WT/example_output_phage_counts.tsv).
