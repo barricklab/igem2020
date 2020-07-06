@@ -2,6 +2,8 @@ from Bio import SeqIO
 import pinetree as pt
 import sys
 import os
+import datetime
+import argparse
 
 CELL_VOLUME = 1.1e-15
 PHI10_BIND = 1.82e7  # Binding constant for phi10
@@ -25,6 +27,43 @@ RELABEL_GENES = {"gene 2": "gp-2",
                  "gene 1": "rnapol-1",
                  "gene 3.5": "lysozyme-3.5",
                  "gene 0.7": "protein_kinase-0.7"}
+
+
+class Logger:
+    '''Sends pretty colors to the console and also logs console to file'''
+    def __init__(self, log_output = ""):
+        self.colors = {'normal': "\u001b[0m",
+                  'warn': '\u001b[31m'}
+        self.verbose = True
+        self.log_output = log_output
+
+        if self.log_output:  # Gotta make sure this exists
+            self.log_output = self.log_output.replace("\\", "/")
+            out_dir = "/".join(self.log_output.split("/")[:-1])
+            if not os.path.exists(out_dir):
+                os.makedirs(out_dir)
+            if self.log_output[-1] == "/" or self.log_output[-1] == ".":
+                self.log_output = f"{self.log_output}pinetree.log"
+            with open(self.log_output, "w") as _:  # clears the file
+                pass
+
+    def _send_to_log(self, text):
+        if not self.log_output:
+            return
+        with open(self.log_output, 'a') as file:
+            file.write(text + '\n')
+
+
+    def normal(self,text):
+        if self.verbose:
+            print(f"{self.colors['normal']}{text}{self.colors['normal']}")
+        self._send_to_log(f"[NORMAL] {text}")
+    def warn(self, text):
+        print(f"{self.colors['warn']}Warning: {text}{self.colors['normal']}")
+        self._send_to_log(f"[WARNING] {text}")
+    def log(self, text):
+        self._send_to_log(f"[LOG] {text}")
+
 
 # Optimal E. coli codons
 OPT_CODONS_E_COLI = {'A': ['GCT'],
@@ -148,15 +187,44 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def phage_model(input, output="./"):
-    sim = visualizer.adjModel(cell_volume=CELL_VOLUME)
+def phage_model(input, output=None):
+    sim = pt.Model(cell_volume=CELL_VOLUME)
 
     record = SeqIO.read(input, "genbank")
     genome_length = len(record.seq)
     phage = pt.Genome(name="phage", length=genome_length)
-    
+
     if not output:
-        output = "./"
+        output = ".".join(input.split(".")[:-1])
+    # Make the directory for output if it doesnt exist
+    output_dir = output.replace("\\", "/")
+    output_dir = "/".join(output.split("/")[:-1])
+    if not os.path.exists(output_dir):
+      os.makedirs(output_dir)
+
+
+    # Log relevant information
+    if output[-1] == "/" or output[-1] == ".":
+        log_output = f"{output}pinetree.log"
+    else:
+        log_output = f"{output}.log"
+    logger = Logger(log_output=f"{log_output}")
+    start_time = datetime.datetime.utcnow()
+    logger.normal("[Pinetree] Pinetree T7 Genome Simulation")
+    logger.normal("barricklab/igem2020 Fork")
+    # Try and find a git repo and log its last commit
+    if os.path.exists(".git/refs/heads/master"):
+        git_master_path =  ".git/refs/heads/master"
+    elif os.path.exists("../.git/refs/heads/master"):
+        git_master_path = "../.git/refs/heads/master"
+    else:
+        git_master_path = ""
+    if git_master_path:
+        with open(git_master_path, 'r') as file:
+            commit_hash = file.readline().strip()
+            logger.normal(f"Last commit: {commit_hash}")
+    logger.normal(f"Script and simulation started at {start_time} UTC")
+
 
     for feature in record.features:
         weights = [0.0] * len(record.seq)
@@ -193,12 +261,16 @@ def phage_model(input, output="./"):
         if feature.type == "CDS":
             weights = compute_cds_weights(record, feature, 1.0, weights)
 
+    logger.normal("Registered genome features")
+
     mask_interactions = ["rnapol-1", "rnapol-3.5",
                          "ecolipol", "ecolipol-p", "ecolipol-2", "ecolipol-2-p"]
     phage.add_mask(500, mask_interactions)
 
     norm_weights = normalize_weights(weights)
     phage.add_weights(norm_weights)
+
+    logger.normal("Implemented masks and weighting")
 
     sim.register_genome(phage)
 
@@ -255,9 +327,18 @@ def phage_model(input, output="./"):
 
     sim.add_reaction(3.5, ["rnapol-3.5"], ["lysozyme-3.5", "rnapol-1"])
 
-    sim.seed(34)
+    logger.normal("Registered reactions")
 
-    sim.simulate(time_limit=1500, time_step=5, output=f"{output}phage_counts.tsv")
+    logger.normal("Running simulation")
+    sim.seed(34)
+    if output[-1] == "/" or output[-1] == ".":
+        sim_output = f"{output}phage_counts.tsv"
+    else:
+        sim_output = f"{output}.tsv"
+    sim.simulate(time_limit=1500, time_step=5, output=sim_output)
+    finish_time = datetime.datetime.utcnow()
+    run_time = (finish_time-start_time).total_seconds()
+    logger.normal(f"Simulation completed in {run_time/60} minutes.")
 
 
 if __name__ == "__main__":
@@ -267,18 +348,34 @@ if __name__ == "__main__":
     output_path = None   # ex. [output | output/]
 
     # Otherwise it will take from command line
-    if (len(arguments) <= 1 or len(arguments) > 3) and not input_genome:
-        print("Usage: phage_model.py (genbank file filepath) [output folder]")
+
+    parser = argparse.ArgumentParser(description='Perform simulation of T7 Protein Expression')
+    parser.add_argument('-i',
+                       action='store',
+                       dest='i',
+                       required=True,
+                       type=str,
+                       help="input file in fasta format")
+
+    parser.add_argument('-o',
+                        action='store',
+                        dest='o',
+                        required=False,
+                        type=str,
+                        help="prefix/title of .csv and .log outfile")
+    options = parser.parse_args()
+    if options.o:
+        output_path = options.o
+    if options.i:
+        input_genome = options.i
+
+
+    if not output_path:
+        output_path = ".".join(input_genome.split(".")[:-1])
+
+    if not os.path.exists(input_genome):
+        print(f"Could not find file {input_genome}")
         exit(1)
-    elif not input_genome:
-        input_genome = arguments[1]
-        if not os.path.exists(input_genome):
-            print(f"Could not find file {input_genome}")
-            exit(1)
-    if not output_path and len(arguments) == 2:
-        output_path = arguments[2]
-    elif not output_path:
-        output_path = "./"
-        if output_path[-1] != "/" and output_path[-1] != "\\":
-            output_path += "/"
+
+
     phage_model(input_genome, output_path)
