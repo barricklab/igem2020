@@ -1,4 +1,4 @@
-LOCUS       T7                     40498 bp    DNA     linear   BSQ 02-JUL-2020
+LOCUS       T7                     40498 bp    DNA     linear   BSQ 07-JUL-2020
 DEFINITION  Enterobacteria phage T7, complete genome.
 ACCESSION   NC_001604
 VERSION     NC_001604.1
@@ -183,24 +183,61 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /host="Escherichia coli"
                      /db_xref="taxon:10760"
-     regulatory      224..224
+     regulatory      224
                      /regulatory_class="promoter"
                      /note="E. coli promoter A0 (leftward)"
-     regulatory      405..405
+     regulatory      405
                      /regulatory_class="promoter"
                      /note="T7 promoter phiOL"
-     regulatory      498..498
+     regulatory      498
                      /regulatory_class="promoter"
                      /note="E. coli promoter A1"
-     regulatory      626..626
+     regulatory      626
                      /regulatory_class="promoter"
                      /note="E. coli promoter A2"
-     regulatory      750..750
+     regulatory      750
                      /regulatory_class="promoter"
                      /note="E. coli promoter A3"
-     misc_structure  890..890
+     misc_structure  890
                      /note="RNase III site R0.3"
-     misc_structure  2029..2029
+     gene            891..2029
+                     /locus_tag="T7p01"
+                     /note="gene 0.3"
+                     /db_xref="GeneID:1261063"
+                     /pseudo
+     mRNA            891..2029
+                     /locus_tag="T7p01"
+                     /product="0.3 mRNA"
+                     /db_xref="GeneID:1261063"
+                     /pseudo
+     CDS             925..1278
+                     /locus_tag="T7p01"
+                     /note="gene 0.3, inhibits EcoB and EcoK host restriction"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041954.1"
+                     /db_xref="GeneID:1261063"
+                     /db_xref="GeneID:1261063"
+                     /translation="MAMSNMTYNNVFDHAYEMLKENIRYDDIRDTDDLHDAIHMAADN
+                     AVPHYYADIFSVMASEGIDLEFEDSGLMPDTKDVIRILQARIYEQLTIDLWEDAEDLL
+                     NEYLEEVEEYEEDEE"
+     gene            1278..1994
+                     /locus_tag="sfGFP"
+                     /note="sfGFP"
+     CDS             1278..1994
+                     /locus_tag="sfGFP"
+                     /note="sfGFP"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="sfGFP"
+                     /protein_id="ASL68970.1"
+                     /translation="MSKGEELFTGVVPILVELDGDVNGHKFSVRGEGEGDATNGKLTL
+                     KFICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKRHDFFKSAMPEGYVQERTISFKD
+                     DGTYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNFNSHNVYITADKQKNG
+                     IKANFKIRHNVEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSVLSKDPNEKRDHM
+                     VLLEFVTAAGITHGMDELYK"
+     misc_structure  2029
                      /locus_tag="T7p01"
                      /note="RNase III site R0.5"
      gene            2030..3699
@@ -226,7 +263,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261051"
                      /translation="MYMLTIGLLTALGLAVGASFGKALGVAVGSYFTACIIIGIIKGA
                      LRK"
-     regulatory      2075..2075
+     regulatory      2075
                      /regulatory_class="promoter"
                      /locus_tag="T7p04"
                      /note="E. coli B promoter"
@@ -280,11 +317,11 @@ FEATURES             Location/Qualifiers
                      QKKDGGAFSIDPEELIKEVEEVARQKEIDRAKARKERHEGRLEARRFKRRNRKARKAH
                      KAKRERMLAAWRWAERQERRNHEVAVDVLGRTNNAMLWVNMFSGDFKALEERIALHWR
                      NADRMAIANGLTLNIDKQLDAMLMG"
-     regulatory      3674..3674
+     regulatory      3674
                      /regulatory_class="promoter"
                      /locus_tag="T7p03"
                      /note="E. coli C promoter"
-     misc_structure  3699..3699
+     misc_structure  3699
                      /locus_tag="T7p03"
                      /note="RNase III site R1"
      gene            3700..6448
@@ -321,11 +358,11 @@ FEATURES             Location/Qualifiers
                      KPIQTRLNLMFLGQFRLQPTINTNKDSEIDAHKQESGIAPNFVHSQDGSHLRKTVVWA
                      HEKYGIESFALIHDSFGTIPADAANLFKAVRETMVDTYESCDVLADFYDQFADQLHES
                      QLDKMPALPAKGNLNLRDILESDFAFA"
-     regulatory      6409..6409
+     regulatory      6409
                      /regulatory_class="promoter"
                      /locus_tag="T7p07"
                      /note="T7 promoter phi1.1A"
-     misc_structure  6448..6448
+     misc_structure  6448
                      /locus_tag="T7p07"
                      /note="RNase III site R1.1"
      gene            6449..7009
@@ -336,7 +373,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p08"
                      /product="1.1 mRNA"
                      /db_xref="GeneID:1261049"
-     regulatory      6484..6484
+     regulatory      6484
                      /regulatory_class="promoter"
                      /locus_tag="T7p08"
                      /note="T7 promoter phi1.1B"
@@ -358,7 +395,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p08"
                      /note="inhibits activity of the host dGTPase [dgt]. Essent
                      ial only in strains that overexpress dGTPase [optA1 mutati
-                     on]. In T7, gp1.2 also causes F plasmid exclusion. In T3,
+                     on]. In T7, gp1.2 also causes F plasmid exclusion. In T3, 
                      however, gp1.2 overcomes the exclusion system. Other names
                      : dGTP triphosphohydrolase inhibitor; gp1.2."
                      /codon_start=1
@@ -370,11 +407,11 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261049"
                      /translation="MGRLYSGNLAAFKAATNKLFQLDLAVIYDDWYDAYTRKDCIRLR
                      IEDRSGNLIDTSTFYHHDEDVLFNMCTDWLNHMYDQLKDWK"
-     regulatory      6970..6970
+     regulatory      6970
                      /regulatory_class="promoter"
                      /locus_tag="T7p08"
                      /note="T7 promoter phi1.3"
-     misc_structure  7009..7009
+     misc_structure  7009
                      /locus_tag="T7p08"
                      /note="RNase III site R1.3"
      gene            7010..8149
@@ -405,7 +442,7 @@ FEATURES             Location/Qualifiers
                      LIVKDPMCIYKRGKKSGWWKMKPENEADGIIQGLVWGTKGLANEGKVIGFEVLLESGR
                      LVNATNISRALMDEFTETVKEATLSQWGFFSPYGIGDNDACTINPYDGWACQISYMEE
                      TPDGSLRHPSFVMFRGTEDNPQEKM"
-     regulatory      8149..8149
+     regulatory      8149
                      /regulatory_class="terminator"
                      /locus_tag="T7p10"
                      /note="E. coli transcription terminator TE"
@@ -424,7 +461,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261075"
                      /translation="MFKKVGKFLAALAAILTLAYILAVYPQVALVVVGACYLAAVCAC
                      VWSIVNW"
-     regulatory      8339..8339
+     regulatory      8339
                      /regulatory_class="promoter"
                      /note="T7 promoter phi1.5"
      gene            8352..8441
@@ -441,7 +478,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261074"
                      /db_xref="GeneID:1261074"
                      /translation="MMYLMPLLIVIVGCLALHCSDDDMPDGHA"
-     regulatory      8456..8456
+     regulatory      8456
                      /regulatory_class="promoter"
                      /note="T7 promoter phi1.6"
      gene            8467..8727
@@ -499,7 +536,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p16"
                      /note="T7 RNA polymerase inhibitor binds to host RNA pol a
                      nd suppresses its activity on a subset of promoters. gp2 d
-                     eficient T7 display reduced DNA replication and premature
+                     eficient T7 display reduced DNA replication and premature 
                      breakdown of replicating DNA, specifically at the left end
                       of the genome, along with the presence of empty proheads.
                       Rifampin can compensate for the missing gp2 function. Oth
@@ -512,7 +549,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261073"
                      /translation="MSNVNTGSLSVDNKKFWATVESSEHSFEVPIYAETLDEALELAE
                      WQYVPAGFEVTRVRPCVAPK"
-     regulatory      9668..9668
+     regulatory      9668
                      /regulatory_class="promoter"
                      /note="T7 promoter phi2.5"
      gene            9719..10417
@@ -559,10 +596,10 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261079"
      CDS             10818..11267
                      /locus_tag="T7p19"
-                     /note="T7 endonuclease I is a Holliday junction resolvase
+                     /note="T7 endonuclease I is a Holliday junction resolvase 
                      encoded by T7 gene 3. Mutants in gene 3 are defective in r
                      ecombination and accumulate branched DNA. Endonuclease I m
-                     ay also play a role in the degradation of the host genome
+                     ay also play a role in the degradation of the host genome 
                      following infection with T7."
                      /codon_start=1
                      /transl_table=11
@@ -586,8 +623,8 @@ FEATURES             Location/Qualifiers
                      is inhibition is greater for class II promoters than class
                       III promoters and therefore may aid in temporal regulatio
                      n of transcription and the switch to particle assembly. In
-                      T7, lysozyme, unlike the T7 holin, is expressed with and
-                     lies in the same region as the replication genes. Lack of
+                      T7, lysozyme, unlike the T7 holin, is expressed with and 
+                     lies in the same region as the replication genes. Lack of 
                      gp3.5 reduces replication and burst size and delays, but d
                      oes not completely prevent lysis. Mutations in the muralyt
                      ic domain of gene 16, an inner capsid protein, can partial
@@ -603,10 +640,10 @@ FEATURES             Location/Qualifiers
                      /translation="MARVQFKQRESTDAIFVHCSATKPSQNVGVREIRQWHKEQGWLD
                      VGYHFIIKRDGTVEAGRDEMAVGSHAKGYNHNSIGVCLVGGIDDKGKFDANFTPAQMQ
                      SLRSLLVTLLAKYEGAVLRAHHEVAPKACPSFDLKRWWEKNELVTSDRG"
-     regulatory      11741..11741
+     regulatory      11741
                      /regulatory_class="promoter"
                      /note="T7 promoter phi3.8"
-     misc_structure  11764..11764
+     misc_structure  11764
                      /note="possible RNase III site R3.8"
      gene            11786..12151
                      /locus_tag="T7p21"
@@ -687,7 +724,7 @@ FEATURES             Location/Qualifiers
                      AEAETDRLLAKLAYMRSGLGCDVIILDHISIVVSASGESDERKMIDNLMTKLKGFAKS
                      TGVVLVVICHLKNPDKGKAHEEGRPVSITDLRGSGALRQLSDTIIALERNQQGDMPNL
                      VLVRILKCRFTGDTGIAGYMEYNKETGWLEPSSYSGEEESHSESTDWSNDTDF"
-     regulatory      13232..13232
+     regulatory      13232
                      /regulatory_class="promoter"
                      /locus_tag="T7p24"
                      /note="T7 promoter phi4c"
@@ -707,7 +744,7 @@ FEATURES             Location/Qualifiers
                      /translation="MRKVAPFLLLTYVVLAHYANYLILLLPLSVISKAICLTLSSFVF
                      SSAALLVILVSLATWNTTRKPDGLNHQVTQGKKSHTQSQQTGPTTLTSDRILDDFPDD
                      YEKFRWRVPF"
-     regulatory      13902..13902
+     regulatory      13902
                      /regulatory_class="promoter"
                      /note="T7 promoter phi4.3"
      gene            13913..14125
@@ -740,9 +777,9 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261059"
                      /translation="MSNVAETIRLSDTADQWNRRVHINVRNGKATMVYRWKDSKSSKN
                      HTQRMTLTDEQALRLVNALTKAAVTAIHEAGRVNEAMAILDKIDN"
-     misc_structure  14453..14453
+     misc_structure  14453
                      /note="RNase III site R4.7"
-     regulatory      14476..14476
+     regulatory      14476
                      /regulatory_class="promoter"
                      /note="T7 promoter phi4.7"
      gene            14488..14895
@@ -916,10 +953,10 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261058"
                      /db_xref="GeneID:1261058"
                      /translation="METVAYIGLGLCVLGVCLISWGLWDLARIIKSLHDTK"
-     regulatory      19106..19106
+     regulatory      19106
                      /regulatory_class="promoter"
                      /note="T7 promoter phi6.5"
-     misc_structure  19124..19124
+     misc_structure  19124
                      /note="RNase III site R6.5"
      gene            19166..19420
                      /locus_tag="T7p37"
@@ -975,7 +1012,7 @@ FEATURES             Location/Qualifiers
      CDS             20096..20395
                      /locus_tag="T7p40"
                      /note="required for virion infectivity but not morphogenes
-                     is. In T7, gp 7.3 appears to be required for the assembly
+                     is. In T7, gp 7.3 appears to be required for the assembly 
                      of tail fibers on capsids. Other names: gp7.3"
                      /codon_start=1
                      /transl_table=11
@@ -1026,7 +1063,7 @@ FEATURES             Location/Qualifiers
                      SQELQLPLVRVLLKQLQATQQIPELPKEAVEPTISTGLEAIGRGQDLDKLERCVTAWA
                      ALAPMRDDPDINLAMIKLRIANAIGIDTSGILLTEEQKQQKMAQQSMQMGMDNGAAAL
                      AQGMAAQATASPEAMAAAADSVGLQPGI"
-     regulatory      22426..22426
+     regulatory      22426
                      /regulatory_class="promoter"
                      /note="T7 promoter phi9"
      gene            22511..23434
@@ -1051,7 +1088,7 @@ FEATURES             Location/Qualifiers
                      SYAKLAEIGYTKAFIDSYIRGQEALVEQYVNSVIEYAGGRERFDALYNHLETHNPEAA
                      QSLDNALTNRDLATVKAIINLAGESRAKAFGRKPTRSVTNRAIPAKPQATKREGFADR
                      SEMIKAMSDPRYRTDANYRRQVEQKVIDSNF"
-     regulatory      23465..23465
+     regulatory      23465
                      /regulatory_class="promoter"
                      /note="T7 promoter phi10"
      gene            23528..24723
@@ -1103,7 +1140,7 @@ FEATURES             Location/Qualifiers
                      AALMPNAANYAALIDPEKGSIRNVMGFEVVEVPHLTAGGAGTAREGTTGQKHVFPANK
                      GEGNVKVAKDNVIGLFMHRSAVGTVKLRDLALERARRANFQADQIIAKYAMGHGGLRP
                      EAAGAVVFKVE"
-     regulatory      24771..24771
+     regulatory      24771
                      /regulatory_class="terminator"
                      /note="T7 transcription terminator Tphi"
      gene            24789..25379
@@ -1151,10 +1188,10 @@ FEATURES             Location/Qualifiers
                      NFGRGKITVLEPDGKITVFEQPTAGWNSDPWLRLSGNLEGRMVYIGFNINFVYEFSKF
                      LIKQTADDGSTSTEDIGRLQLRRAWVNYENSGTFDIYVENQSSNWKYTMAGARLGSNT
                      LRAGRLNLGTGQYRFPVVGNAKFNTVYILSDETTPLNIIGCGWEGNYLRRSSGI"
-     regulatory      27835..27835
+     regulatory      27835
                      /regulatory_class="promoter"
                      /note="T7 promoter phi13"
-     misc_structure  27842..27842
+     misc_structure  27842
                      /note="possible RNase III site R13"
      gene            27868..28284
                      /locus_tag="T7p48"
@@ -1205,7 +1242,7 @@ FEATURES             Location/Qualifiers
                      /note="Approximately 12 copies of the internal virion prot
                      ein C encoded by phage T7 gene 15 (gp15) are part of the i
                      nternal core of the T7 virion. Along with gp14 and gp16, t
-                     he other internal core proteins, gp15 is ejected from the
+                     he other internal core proteins, gp15 is ejected from the 
                      phage head and forms part of a putative channel that spans
                       the entire host cell envelope and allows entry of DNA."
                      /codon_start=1
@@ -1238,7 +1275,7 @@ FEATURES             Location/Qualifiers
                      in D encoded by phage T7 gene 16 (gp16) are part of the in
                      ternal core of the T7 virion. Along with gp14 and gp15, th
                      e other internal core proteins, gp16 is ejected from the p
-                     hage head and forms part of a putative channel that spans
+                     hage head and forms part of a putative channel that spans 
                      the entire host cell envelope and allows entry of DNA. The
                       N-terminus has similarity to a lytic transglycosylase and
                       may help form a channel for phage DNA translocation throu
@@ -1274,7 +1311,7 @@ FEATURES             Location/Qualifiers
                      AGGFYAMAAHVKAYALPKEKRKEYLERALDPTMIAHAALSRSSQLGAPLAMVDLVGGV
                      LGFESSKMARSTILPKDTVKERDPNKPYTSREVMGAMGSNLLEQMPSAGFVANVGATL
                      MNAAGVVNSPNKATEQDFMTGLMNSTKELVPNDPLTQQLVLKIYEANGVNLRERRK"
-     regulatory      35127..35127
+     regulatory      35127
                      /regulatory_class="promoter"
                      /note="T7 promoter phi17"
      gene            35185..36846
@@ -1309,7 +1346,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p53"
                      /note="Type II holins have two putative transmembrane doma
                      ins and are thought to allow endolysins access to the cell
-                      wall at the optimal lysis time. However, in phage T7 the
+                      wall at the optimal lysis time. However, in phage T7 the 
                      holin protein gp17.5 does not appear to be essential and g
                      p17.5 mutants only show a minor delay in lysis. Other name
                      s: gp17.5; lysis protein"
@@ -1341,10 +1378,10 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261042"
                      /translation="MEKDKSLITFLEMLDTAMAQRMLADLSDHERRSPQLYNAINKLL
                      DRHKFQIGKLQPDVHILGGLAGALEEYKEKVGDNGLTDDDIYTLQ"
-     regulatory      37397..37397
+     regulatory      37397
                      /regulatory_class="promoter"
                      /note="E. coli promoter E[6]"
-     misc_structure  37417..37417
+     misc_structure  37417
                      /note="RNase III site R18.5"
      gene            37478..37909
                      /locus_tag="T7p55"
@@ -1373,7 +1410,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261057"
      CDS             37593..37844
                      /locus_tag="T7p56"
-                     /note="in Enterobacteria phage T7, this protein interacts
+                     /note="in Enterobacteria phage T7, this protein interacts 
                      with gp18.5 and is expressed from the -1 frame of a gene c
                      ompletely overlapping gene 18.5. This suggests that it may
                       be an analog of lambda lysis protein Rz1. Other names: gp
@@ -1441,7 +1478,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261066"
                      /translation="MATPIRPLSYSLRRQSNGESRRLSTRVTSVTVCSVRYSVLSFLN
                      TTTVRWKRFVPVV"
-     regulatory      39790..39790
+     regulatory      39790
                      /regulatory_class="promoter"
                      /note="T7 promoter phiOR"
      gene            39950..40099
