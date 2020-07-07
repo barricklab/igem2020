@@ -40,7 +40,7 @@ class Logger:
         if self.log_output:  # Gotta make sure this exists
             self.log_output = self.log_output.replace("\\", "/")
             out_dir = "/".join(self.log_output.split("/")[:-1])
-            if not os.path.exists(out_dir):
+            if (out_dir != '') and (not os.path.exists(out_dir)):
                 os.makedirs(out_dir)
             if self.log_output[-1] == "/" or self.log_output[-1] == ".":
                 self.log_output = f"{self.log_output}pinetree.log"
@@ -199,7 +199,7 @@ def phage_model(input, output=None, time=1500):
     # Make the directory for output if it doesnt exist
     output_dir = output.replace("\\", "/")
     output_dir = "/".join(output.split("/")[:-1])
-    if not os.path.exists(output_dir):
+    if output_dir != '' and not os.path.exists(output_dir):
       os.makedirs(output_dir)
 
 
@@ -256,6 +256,7 @@ def phage_model(input, output=None, time=1500):
             if name in RELABEL_GENES:
                 name = RELABEL_GENES[name]
             # Construct CDS parameters for this gene
+            print(name, " " , start, " ", stop)
             phage.add_gene(name=name, start=start, stop=stop,
                            rbs_start=start - 30, rbs_stop=start, rbs_strength=1e7)
         if feature.type == "CDS":
@@ -379,13 +380,11 @@ if __name__ == "__main__":
     else:
         time = 1500
 
-
     if not output_path:
         output_path = ".".join(input_genome.split(".")[:-1])
 
     if not os.path.exists(input_genome):
         print(f"Could not find file {input_genome}")
         exit(1)
-
 
     phage_model(input_genome, output_path, time)

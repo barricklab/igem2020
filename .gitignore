@@ -4,6 +4,9 @@
 *.pdf
 *.png
 
+#Don't accidentally check in output files
+T7-mutation/*.gb
+
 #R
 .Rhistory
 
@@ -137,5 +140,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#.ds_store files 
+#.ds_store files
 .DS_Store
