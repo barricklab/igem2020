@@ -187,7 +187,7 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def phage_model(input, output=None):
+def phage_model(input, output=None, time=1500):
     sim = pt.Model(cell_volume=CELL_VOLUME)
 
     record = SeqIO.read(input, "genbank")
@@ -335,7 +335,7 @@ def phage_model(input, output=None):
         sim_output = f"{output}phage_counts.tsv"
     else:
         sim_output = f"{output}.tsv"
-    sim.simulate(time_limit=1500, time_step=5, output=sim_output)
+    sim.simulate(time_limit=time, time_step=5, output=sim_output)
     finish_time = datetime.datetime.utcnow()
     run_time = (finish_time-start_time).total_seconds()
     logger.normal(f"Simulation completed in {run_time/60} minutes.")
@@ -363,11 +363,21 @@ if __name__ == "__main__":
                         required=False,
                         type=str,
                         help="prefix/title of .csv and .log outfile")
+    parser.add_argument('-t',
+                        action='store',
+                        dest='o',
+                        required=False,
+                        type=int,
+                        help="Duration of simulation")
     options = parser.parse_args()
     if options.o:
         output_path = options.o
     if options.i:
         input_genome = options.i
+    if options.t:
+        time = options.t
+    else:
+        time = 1500
 
 
     if not output_path:
@@ -378,4 +388,4 @@ if __name__ == "__main__":
         exit(1)
 
 
-    phage_model(input_genome, output_path)
+    phage_model(input_genome, output_path, time)
