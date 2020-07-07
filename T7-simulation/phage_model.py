@@ -4,6 +4,7 @@ import sys
 import os
 import datetime
 import argparse
+import multiprocessing
 
 CELL_VOLUME = 1.1e-15
 PHI10_BIND = 1.82e7  # Binding constant for phi10
@@ -31,10 +32,10 @@ RELABEL_GENES = {"gene 2": "gp-2",
 
 class Logger:
     '''Sends pretty colors to the console and also logs console to file'''
-    def __init__(self, log_output = ""):
+    def __init__(self, log_output = "", verbose = False):
         self.colors = {'normal': "\u001b[0m",
                   'warn': '\u001b[31m'}
-        self.verbose = True
+        self.verbose = verbose
         self.log_output = log_output
 
         if self.log_output:  # Gotta make sure this exists
@@ -55,13 +56,14 @@ class Logger:
 
 
     def normal(self,text):
-        if self.verbose:
-            print(f"{self.colors['normal']}{text}{self.colors['normal']}")
+        print(f"{self.colors['normal']}{text}{self.colors['normal']}")
         self._send_to_log(f"[NORMAL] {text}")
     def warn(self, text):
         print(f"{self.colors['warn']}Warning: {text}{self.colors['normal']}")
         self._send_to_log(f"[WARNING] {text}")
     def log(self, text):
+        if self.verbose:
+            print(f"{self.colors['normal']}{text}{self.colors['normal']}")
         self._send_to_log(f"[LOG] {text}")
 
 
@@ -90,6 +92,8 @@ def get_promoter_interactions(name):
     Calculate promoter binding strengths. The relative strengths defined here
     come from 2012 Covert, et al paper.
     '''
+    if name in IGNORE_REGULATORY:
+        return
     ecoli_strong = ["E. coli promoter A1",
                     "E. coli promoter A2",
                     "E. coli promoter A3"]
@@ -187,7 +191,7 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def phage_model(input, output=None, time=1500):
+def phage_model(input, output=None, time=1500, verbose=True):
     sim = pt.Model(cell_volume=CELL_VOLUME)
 
     record = SeqIO.read(input, "genbank")
@@ -208,7 +212,7 @@ def phage_model(input, output=None, time=1500):
         log_output = f"{output}pinetree.log"
     else:
         log_output = f"{output}.log"
-    logger = Logger(log_output=f"{log_output}")
+    logger = Logger(log_output=f"{log_output}", verbose=verbose)
     start_time = datetime.datetime.utcnow()
     logger.normal("[Pinetree] Pinetree T7 Genome Simulation")
     logger.normal("barricklab/igem2020 Fork")
@@ -225,42 +229,85 @@ def phage_model(input, output=None, time=1500):
             logger.normal(f"Last commit: {commit_hash}")
     logger.normal(f"Script and simulation started at {start_time} UTC")
 
+    # --- Feature Acquisition and validation  VVV
 
-    for feature in record.features:
-        weights = [0.0] * len(record.seq)
-        # Convert to inclusive genomic coordinates
+    feature_dict = {}
+    for i, feature in enumerate(record.features):  # Accuasition
         start = feature.location.start.position + 1
         stop = feature.location.end.position
         name = ''
-        if "note" in feature.qualifiers:
+        feature_type = ''
+        interactions = None
+        source_feature = feature
+        if 'name' in feature.qualifiers:
+            name = feature.qualifiers["name"][0]
+        elif "note" in feature.qualifiers:
             name = feature.qualifiers["note"][0]
-        # Grab promoters and terminators
         if feature.type == "regulatory":
-            if name in IGNORE_REGULATORY:
-                continue
-            # Construct promoter
             if "promoter" in feature.qualifiers["regulatory_class"]:
                 length = stop - start
                 if length < 35:
                     start = start - 35
                 interactions = get_promoter_interactions(name)
-                phage.add_promoter(name, start, stop, interactions)
-            # Construct terminator params
+                feature_type = "promoter"
             if "terminator" in feature.qualifiers["regulatory_class"]:
                 interactions = get_terminator_interactions(name)
-                phage.add_terminator(name, start, stop, interactions)
+                feature_type = "terminator"
         # Grab genes/CDSes
-        if feature.type == "gene":
-            if name in IGNORE_GENES:
-                continue
+        elif feature.type == "gene":
             if name in RELABEL_GENES:
                 name = RELABEL_GENES[name]
-            # Construct CDS parameters for this gene
-            print(name, " " , start, " ", stop)
-            phage.add_gene(name=name, start=start, stop=stop,
-                           rbs_start=start - 30, rbs_stop=start, rbs_strength=1e7)
-        if feature.type == "CDS":
-            weights = compute_cds_weights(record, feature, 1.0, weights)
+            feature_type = 'gene'
+        elif feature.type == "CDS":
+            feature_type = "cds"
+        else:
+            feature_type = None
+
+        if feature_type:
+            feature_dict[i] = {"start": start,
+                               "stop": stop,
+                               "name": name,
+                               "type": feature_type,
+                               "interactions": interactions,
+                               "skip": False,
+                               "source_feature": source_feature
+                               }
+
+    # TODO: Add more feature validation
+    for feature in feature_dict.items():  # Validation
+        feature = feature[1]
+        if feature['name'] in IGNORE_REGULATORY or feature['name'] in IGNORE_GENES:
+            feature['skip'] = True
+            logger.log(f"Ignored feature {feature['name']} ({feature['start']} - {feature['stop']})")
+            continue
+        if feature['stop'] - feature['start'] < 50 and feature['type'] in ['gene', 'cds']:
+            logger.warn(f"Found {feature['type'], feature['name']} that is tiny! ({feature['start'] - feature['stop']})")
+
+    # -- Feature Acquisition Validation  ^^^
+    # -- Add Features to Sim  VVV
+    for feature in feature_dict.items():
+        feature = feature[1]
+        weights = [0.0] * len(record.seq)  # TODO: Maybe this is a bug and should be outside loop?
+        if feature['skip']:
+            continue
+        elif feature['type'] == "promoter":
+            phage.add_promoter(feature['name'], feature['start'], feature['stop'], feature['interactions'])
+            logger.log(f"Added promoter feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
+        elif feature['type'] == "terminator":
+            phage.add_terminator(feature['name'], feature['start'], feature['stop'], feature['interactions'])
+            logger.log(f"Added terminator feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
+        elif feature['type'] == "cds":
+            weights = compute_cds_weights(record, feature['source_feature'], 1.0, weights)
+            logger.log(f"Considered CDS weight: Start: {feature['start']}, Stop: {feature['stop']}")
+        elif feature['type'] == "gene":
+            phage.add_gene(name=feature['name'], start=feature['start'], stop=feature['stop'],
+                           rbs_start=feature['start'] - 30, rbs_stop=feature['start'], rbs_strength=1e7)
+            logger.log(f"Added gene feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
+        else:
+            continue
+    # -- Add Featues to Sim  ^^^
+
+
 
     logger.normal("Registered genome features")
 
@@ -336,11 +383,35 @@ def phage_model(input, output=None, time=1500):
         sim_output = f"{output}phage_counts.tsv"
     else:
         sim_output = f"{output}.tsv"
-    sim.simulate(time_limit=time, time_step=5, output=sim_output)
+
+    # -- Running the actual sim. VVVV
+    # Note: Multiprocessing necessary for working keyboard interrupts.
+    sim_process = multiprocessing.Process(target=sim.simulate, kwargs={'time_limit': time,
+                                                        'time_step': 5,
+                                                        'output': sim_output
+                                                        })
+    sim_process.start()
+    try:
+        sim_process.join()
+    except KeyboardInterrupt:
+        sim_process.terminate()
+        with open(sim_output, 'r') as outfile:
+            for line in outfile:
+                pass
+            last_file_line = line
+        interrupt_time = str(last_file_line).split("\t")[0]
+        logger.warn(f'Received keyboard interruption. Simulation reached time {interrupt_time}')
+        finish_time = datetime.datetime.utcnow()
+        run_time = (finish_time - start_time).total_seconds()
+        logger.normal(f"Simulation interrupted after {run_time / 60} minutes.")
+        exit(0)
+
+
     finish_time = datetime.datetime.utcnow()
     run_time = (finish_time-start_time).total_seconds()
-    logger.normal(f"Simulation completed in {run_time/60} minutes.")
 
+    logger.normal(f"Simulation completed in {run_time/60} minutes.")
+    # -- Running the actual sim. ^^^^
 
 if __name__ == "__main__":
     arguments = sys.argv
@@ -371,13 +442,15 @@ if __name__ == "__main__":
                         type=int,
                         help="Duration of simulation")
     options = parser.parse_args()
-    if options.o:
+    try:
         output_path = options.o
+    except AttributeError:
+        pass
     if options.i:
         input_genome = options.i
-    if options.t:
+    try:
         time = options.t
-    else:
+    except AttributeError:
         time = 1500
 
     if not output_path:
@@ -387,4 +460,4 @@ if __name__ == "__main__":
         print(f"Could not find file {input_genome}")
         exit(1)
 
-    phage_model(input_genome, output_path, time)
+    phage_model(input_genome, output_path, time, verbose=False)
