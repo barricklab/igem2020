@@ -395,7 +395,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p08"
                      /note="inhibits activity of the host dGTPase [dgt]. Essent
                      ial only in strains that overexpress dGTPase [optA1 mutati
-                     on]. In T7, gp1.2 also causes F plasmid exclusion. In T3, 
+                     on]. In T7, gp1.2 also causes F plasmid exclusion. In T3,
                      however, gp1.2 overcomes the exclusion system. Other names
                      : dGTP triphosphohydrolase inhibitor; gp1.2."
                      /codon_start=1
@@ -536,7 +536,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p16"
                      /note="T7 RNA polymerase inhibitor binds to host RNA pol a
                      nd suppresses its activity on a subset of promoters. gp2 d
-                     eficient T7 display reduced DNA replication and premature 
+                     eficient T7 display reduced DNA replication and premature
                      breakdown of replicating DNA, specifically at the left end
                       of the genome, along with the presence of empty proheads.
                       Rifampin can compensate for the missing gp2 function. Oth
@@ -596,10 +596,10 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261079"
      CDS             10818..11267
                      /locus_tag="T7p19"
-                     /note="T7 endonuclease I is a Holliday junction resolvase 
+                     /note="T7 endonuclease I is a Holliday junction resolvase
                      encoded by T7 gene 3. Mutants in gene 3 are defective in r
                      ecombination and accumulate branched DNA. Endonuclease I m
-                     ay also play a role in the degradation of the host genome 
+                     ay also play a role in the degradation of the host genome
                      following infection with T7."
                      /codon_start=1
                      /transl_table=11
@@ -623,8 +623,8 @@ FEATURES             Location/Qualifiers
                      is inhibition is greater for class II promoters than class
                       III promoters and therefore may aid in temporal regulatio
                      n of transcription and the switch to particle assembly. In
-                      T7, lysozyme, unlike the T7 holin, is expressed with and 
-                     lies in the same region as the replication genes. Lack of 
+                      T7, lysozyme, unlike the T7 holin, is expressed with and
+                     lies in the same region as the replication genes. Lack of
                      gp3.5 reduces replication and burst size and delays, but d
                      oes not completely prevent lysis. Mutations in the muralyt
                      ic domain of gene 16, an inner capsid protein, can partial
@@ -1012,7 +1012,7 @@ FEATURES             Location/Qualifiers
      CDS             20096..20395
                      /locus_tag="T7p40"
                      /note="required for virion infectivity but not morphogenes
-                     is. In T7, gp 7.3 appears to be required for the assembly 
+                     is. In T7, gp 7.3 appears to be required for the assembly
                      of tail fibers on capsids. Other names: gp7.3"
                      /codon_start=1
                      /transl_table=11
@@ -1242,7 +1242,7 @@ FEATURES             Location/Qualifiers
                      /note="Approximately 12 copies of the internal virion prot
                      ein C encoded by phage T7 gene 15 (gp15) are part of the i
                      nternal core of the T7 virion. Along with gp14 and gp16, t
-                     he other internal core proteins, gp15 is ejected from the 
+                     he other internal core proteins, gp15 is ejected from the
                      phage head and forms part of a putative channel that spans
                       the entire host cell envelope and allows entry of DNA."
                      /codon_start=1
@@ -1275,7 +1275,7 @@ FEATURES             Location/Qualifiers
                      in D encoded by phage T7 gene 16 (gp16) are part of the in
                      ternal core of the T7 virion. Along with gp14 and gp15, th
                      e other internal core proteins, gp16 is ejected from the p
-                     hage head and forms part of a putative channel that spans 
+                     hage head and forms part of a putative channel that spans
                      the entire host cell envelope and allows entry of DNA. The
                       N-terminus has similarity to a lytic transglycosylase and
                       may help form a channel for phage DNA translocation throu
@@ -1346,7 +1346,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="T7p53"
                      /note="Type II holins have two putative transmembrane doma
                      ins and are thought to allow endolysins access to the cell
-                      wall at the optimal lysis time. However, in phage T7 the 
+                      wall at the optimal lysis time. However, in phage T7 the
                      holin protein gp17.5 does not appear to be essential and g
                      p17.5 mutants only show a minor delay in lysis. Other name
                      s: gp17.5; lysis protein"
@@ -1410,7 +1410,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261057"
      CDS             37593..37844
                      /locus_tag="T7p56"
-                     /note="in Enterobacteria phage T7, this protein interacts 
+                     /note="in Enterobacteria phage T7, this protein interacts
                      with gp18.5 and is expressed from the -1 frame of a gene c
                      ompletely overlapping gene 18.5. This suggests that it may
                       be an analog of lambda lysis protein Rz1. Other names: gp

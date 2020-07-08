@@ -13,21 +13,37 @@ IGNORE_REGULATORY = ["E. coli promoter E[6]",
                      "T7 promoter phiOL",
                      "E. coli promoter A0 (leftward)"]
 
-IGNORE_GENES = ["gene 10B",
-                "possible gene 5.5-5.7",
-                "gene 4.1",
-                "gene 4B",
-                "gene 0.6A",
-                "gene 0.6B",
-                "possible gene 0.6B",
-                "gene 0.5",
-                "gene 0.4"]
+# Old 'gene' feature version
+#IGNORE_GENES = ["gp10B",
+#                "possible gene 5.5-5.7",
+#                "gene 4.1",
+#                "gene 4B",
+#                "gene 0.6A",
+#                "gene 0.6B",
+#                "possible gene 0.6B",
+#                "gene 0.5",
+#                "gene 0.4"]
 
-RELABEL_GENES = {"gene 2": "gp-2",
-                 "gene 1": "rnapol-1",
-                 "gene 3.5": "lysozyme-3.5",
-                 "gene 0.7": "protein_kinase-0.7"}
+#New 'CDS' feature version
+IGNORE_CDS = ["gp10B",
+              "gp5.5-5.7",
+              "gp4.1",
+              "gp4B",
+              "gp0.6A",
+              "gp0.6B",
+              "gp0.5",
+              "gp0.4"]
 
+# Old 'gene' feature version
+#RELABEL_GENES = {"gene 2": "gp2",
+#                 "gene 1": "rnapol-1",
+#                 "gene 3.5": "lysozyme-3.5",
+#                 "gene 0.7": "protein_kinase-0.7"}
+
+#New 'CDS' feature version
+RELABEL_CDS = {"gp1": "rnapol-1",
+               "gp3.5": "lysozyme-3.5",
+               "gp0.7": "protein_kinase-0.7"}
 
 class Logger:
     '''Sends pretty colors to the console and also logs console to file'''
@@ -232,7 +248,9 @@ def phage_model(input, output=None):
         start = feature.location.start.position + 1
         stop = feature.location.end.position
         name = ''
-        if "note" in feature.qualifiers:
+        if "name" in feature.qualifiers:
+            name = feature.qualifiers["name"][0]
+        elif "note" in feature.qualifiers:
             name = feature.qualifiers["note"][0]
         # Grab promoters and terminators
         if feature.type == "regulatory":
@@ -250,17 +268,20 @@ def phage_model(input, output=None):
                 interactions = get_terminator_interactions(name)
                 phage.add_terminator(name, start, stop, interactions)
         # Grab genes/CDSes
-        if feature.type == "gene":
-            if name in IGNORE_GENES:
+        if feature.type == "CDS":
+            if name in IGNORE_CDS:
+                print("IGNORED: ", name, "(positions " , start, "-", stop, ")")
                 continue
-            if name in RELABEL_GENES:
-                name = RELABEL_GENES[name]
+            if name in RELABEL_CDS:
+                name = RELABEL_CDS[name]
             # Construct CDS parameters for this gene
-            print(name, " " , start, " ", stop)
+            print(name, " (positions " , start, "-", stop, ")")
             phage.add_gene(name=name, start=start, stop=stop,
                            rbs_start=start - 30, rbs_stop=start, rbs_strength=1e7)
         if feature.type == "CDS":
             weights = compute_cds_weights(record, feature, 1.0, weights)
+
+
 
     logger.normal("Registered genome features")
 
@@ -316,13 +337,13 @@ def phage_model(input, output=None):
     sim.add_reaction(3.8e7, ["protein_kinase-0.7", "ecolipol-2"],
                      ["ecolipol-2-p", "protein_kinase-0.7"])
 
-    sim.add_reaction(3.8e7, ["gp-2", "ecolipol"], ["ecolipol-2"])
+    sim.add_reaction(3.8e7, ["gp2", "ecolipol"], ["ecolipol-2"])
 
-    sim.add_reaction(3.8e7, ["gp-2", "ecolipol-p"], ["ecolipol-2-p"])
+    sim.add_reaction(3.8e7, ["gp2", "ecolipol-p"], ["ecolipol-2-p"])
 
-    sim.add_reaction(1.1, ["ecolipol-2-p"], ["gp-2", "ecolipol-p"])
+    sim.add_reaction(1.1, ["ecolipol-2-p"], ["gp2", "ecolipol-p"])
 
-    sim.add_reaction(1.1, ["ecolipol-2"], ["gp-2", "ecolipol"])
+    sim.add_reaction(1.1, ["ecolipol-2"], ["gp2", "ecolipol"])
 
     sim.add_reaction(3.8e9, ["lysozyme-3.5", "rnapol-1"], ["rnapol-3.5"])
 
