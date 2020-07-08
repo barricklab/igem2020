@@ -6,8 +6,8 @@
 
 #Don't accidentally check in output files
 T7-mutation/*.gb
-T7-simulation/output
-T7-simulation/input
+T7-simulation/user-output
+T7-simulation/user-input
 
 #R
 .Rhistory

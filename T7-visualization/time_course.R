@@ -1,7 +1,7 @@
 require(ggplot2)
 require(tidyverse)
 
-cts = read_tsv("example_output_phage_counts.tsv")
+cts = read_tsv("T7.example.counts.tsv")
 
 species.of.interest = c("gene 0.3", "rnapol-1", "rnapol-3.5", "gene 6", "gene 9")
 cts.to.graph = cts %>% filter(species %in% species.of.interest)

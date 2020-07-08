@@ -192,6 +192,7 @@ def normalize_weights(weights):
 
 
 def phage_model(input, output=None, time=1500, verbose=True):
+
     sim = pt.Model(cell_volume=CELL_VOLUME)
 
     record = SeqIO.read(input, "genbank")
@@ -380,9 +381,9 @@ def phage_model(input, output=None, time=1500, verbose=True):
     logger.normal("Running simulation")
     sim.seed(34)
     if output[-1] == "/" or output[-1] == ".":
-        sim_output = f"{output}phage_counts.tsv"
+        sim_output = f"{output}phage.counts.tsv"
     else:
-        sim_output = f"{output}.tsv"
+        sim_output = f"{output}.counts.tsv"
 
     # -- Running the actual sim. VVVV
     # Note: Multiprocessing necessary for working keyboard interrupts.
@@ -421,26 +422,29 @@ if __name__ == "__main__":
 
     # Otherwise it will take from command line
 
-    parser = argparse.ArgumentParser(description='Perform simulation of T7 Protein Expression')
+    parser = argparse.ArgumentParser(description='Perform simulation of T7 phage gene expression')
     parser.add_argument('-i',
                        action='store',
+                       metavar="input.gb",
                        dest='i',
                        required=True,
                        type=str,
-                       help="input file in fasta format")
+                       help="input file in fasta format (REQUIRED)")
 
     parser.add_argument('-o',
                         action='store',
+                        metavar="output-prefix",
                         dest='o',
                         required=False,
                         type=str,
-                        help="prefix/title of .csv and .log outfile")
+                        help="prefix of *.counts.tsv and *.log output files (REQUIRED)")
     parser.add_argument('-t',
                         action='store',
-                        dest='o',
+                        metavar="seconds",
+                        dest='t',
                         required=False,
                         type=int,
-                        help="Duration of simulation")
+                        help="Duration of simulation in seconds")
     options = parser.parse_args()
     try:
         output_path = options.o
