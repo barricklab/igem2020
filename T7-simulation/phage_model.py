@@ -14,8 +14,7 @@ IGNORE_REGULATORY = ["E. coli promoter E[6]",
                      "T7 promoter phiOL",
                      "E. coli promoter A0 (leftward)"]
 
-# Old 'gene' feature version
-IGNORE_GENES = ["gp10B",
+IGNORE_GENES = ["gene 10B",
                 "possible gene 5.5-5.7",
                 "gene 4.1",
                 "gene 4B",
@@ -25,26 +24,11 @@ IGNORE_GENES = ["gp10B",
                 "gene 0.5",
                 "gene 0.4"]
 
-#New 'CDS' feature version
-#IGNORE_CDS = ["gp10B",
-#              "gp5.5-5.7",
-#              "gp4.1",
-#              "gp4B",
-#              "gp0.6A",
-#              "gp0.6B",
-#              "gp0.5",
-#              "gp0.4"]
-
-# Old 'gene' feature version
-RELABEL_GENES = {"gene 2": "gp2",
+RELABEL_GENES = {"gene 2": "gp-2",
                  "gene 1": "rnapol-1",
                  "gene 3.5": "lysozyme-3.5",
                  "gene 0.7": "protein_kinase-0.7"}
 
-#New 'CDS' feature version
-RELABEL_CDS = {"gp1": "rnapol-1",
-               "gp3.5": "lysozyme-3.5",
-               "gp0.7": "protein_kinase-0.7"}
 
 class Logger:
     '''Sends pretty colors to the console and also logs console to file'''
@@ -259,7 +243,6 @@ def phage_model(input, output=None, time=1500, verbose=True):
             name = feature.qualifiers["name"][0]
         elif "note" in feature.qualifiers:
             name = feature.qualifiers["note"][0]
-
         if feature.type == "regulatory":
             if "promoter" in feature.qualifiers["regulatory_class"]:
                 length = stop - start
@@ -326,8 +309,6 @@ def phage_model(input, output=None, time=1500, verbose=True):
 
 
 
-
-
     logger.normal("Registered genome features")
 
     mask_interactions = ["rnapol-1", "rnapol-3.5",
@@ -382,13 +363,13 @@ def phage_model(input, output=None, time=1500, verbose=True):
     sim.add_reaction(3.8e7, ["protein_kinase-0.7", "ecolipol-2"],
                      ["ecolipol-2-p", "protein_kinase-0.7"])
 
-    sim.add_reaction(3.8e7, ["gp2", "ecolipol"], ["ecolipol-2"])
+    sim.add_reaction(3.8e7, ["gp-2", "ecolipol"], ["ecolipol-2"])
 
-    sim.add_reaction(3.8e7, ["gp2", "ecolipol-p"], ["ecolipol-2-p"])
+    sim.add_reaction(3.8e7, ["gp-2", "ecolipol-p"], ["ecolipol-2-p"])
 
-    sim.add_reaction(1.1, ["ecolipol-2-p"], ["gp2", "ecolipol-p"])
+    sim.add_reaction(1.1, ["ecolipol-2-p"], ["gp-2", "ecolipol-p"])
 
-    sim.add_reaction(1.1, ["ecolipol-2"], ["gp2", "ecolipol"])
+    sim.add_reaction(1.1, ["ecolipol-2"], ["gp-2", "ecolipol"])
 
     sim.add_reaction(3.8e9, ["lysozyme-3.5", "rnapol-1"], ["rnapol-3.5"])
 
