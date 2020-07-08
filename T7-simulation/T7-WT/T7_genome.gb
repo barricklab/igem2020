@@ -1,7 +1,7 @@
-LOCUS       T7              39937 bp    DNA     linear   PHG 10-FEB-2015
+LOCUS       T7                     39937 bp    DNA     linear   PHG 10-FEB-2015
 DEFINITION  Enterobacteria phage T7, complete genome.
-ACCESSION   NC_001604
-VERSION     NC_001604.1
+ACCESSION   NC_001604-edited
+VERSION     NC_001604.1-edited
 DBLINK      BioProject: PRJNA14460
 KEYWORDS    RefSeq; capsid; dGTPase; DNA ligase; DNA polymerase; E. coli; E.
             coli RNA polymerase; EcoB; EcoK; endonuclease; exonuclease; F
