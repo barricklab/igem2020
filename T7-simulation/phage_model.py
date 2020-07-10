@@ -5,6 +5,7 @@ import os
 import datetime
 import argparse
 import multiprocessing
+import random
 
 CELL_VOLUME = 1.1e-15
 PHI10_BIND = 1.82e7  # Binding constant for phi10
@@ -191,7 +192,7 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def phage_model(input, output=None, time=1500, verbose=True):
+def phage_model(input, output=None, time=1500, verbose=True, seed=None):
 
     sim = pt.Model(cell_volume=CELL_VOLUME)
 
@@ -379,7 +380,12 @@ def phage_model(input, output=None, time=1500, verbose=True):
     logger.normal("Registered reactions")
 
     logger.normal("Running simulation")
-    sim.seed(34)
+
+    if not seed:
+        seed = random.randint(0, 10000)
+    sim.seed(seed)
+    logger.normal(f"Randomness seed was set to {seed}")
+
     if output[-1] == "/" or output[-1] == ".":
         sim_output = f"{output}phage.counts.tsv"
     else:
@@ -447,6 +453,13 @@ if __name__ == "__main__":
                         required=False,
                         type=int,
                         help="Duration of simulation in seconds")
+    parser.add_argument('-s',
+                        action='store',
+                        metavar="seed",
+                        dest='s',
+                        required=False,
+                        type=int,
+                        help="Randomness seed")
     options = parser.parse_args()
     try:
         output_path = options.o
@@ -461,6 +474,13 @@ if __name__ == "__main__":
     if not time:
         time = 1500
 
+    try:
+        seed = options.s
+    except AttributeError:
+        seed = None
+    if not time:
+        seed = None
+
     if not output_path:
         output_path = ".".join(input_genome.split(".")[:-1])
 
@@ -468,4 +488,4 @@ if __name__ == "__main__":
         print(f"Could not find file {input_genome}")
         exit(1)
 
-    phage_model(input_genome, output_path, time, verbose=False)
+    phage_model(input_genome, output_path, time, verbose=False, seed=seed)
