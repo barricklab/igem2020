@@ -387,12 +387,12 @@ def phage_model(input, output=None, time=1500, verbose=True):
 
     # -- Running the actual sim. VVVV
     # Note: Multiprocessing necessary for working keyboard interrupts.
-    sim_process = multiprocessing.Process(target=sim.simulate, kwargs={'time_limit': time,
-                                                        'time_step': 5,
-                                                        'output': sim_output
-                                                        })
-    sim_process.start()
     try:
+        sim_process = multiprocessing.Process(target=sim.simulate, kwargs={'time_limit': time,
+                                                                           'time_step': 5,
+                                                                           'output': sim_output
+                                                                           })
+        sim_process.start()
         sim_process.join()
     except KeyboardInterrupt:
         sim_process.terminate()
@@ -406,7 +406,9 @@ def phage_model(input, output=None, time=1500, verbose=True):
         run_time = (finish_time - start_time).total_seconds()
         logger.normal(f"Simulation interrupted after {run_time / 60} minutes.")
         exit(0)
-
+    except TypeError:
+        logger.warn("There was a problem with multiprocessing. Keyboard Interrupts won't work, but the simulation should still run.")
+        sim.simulate(time_limit= time, time_step=5, output=sim_output)
 
     finish_time = datetime.datetime.utcnow()
     run_time = (finish_time-start_time).total_seconds()
@@ -455,6 +457,8 @@ if __name__ == "__main__":
     try:
         time = options.t
     except AttributeError:
+        time = 1500
+    if not time:
         time = 1500
 
     if not output_path:
