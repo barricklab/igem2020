@@ -10,25 +10,27 @@ import random
 CELL_VOLUME = 1.1e-15
 PHI10_BIND = 1.82e7  # Binding constant for phi10
 
+
 IGNORE_REGULATORY = ["E. coli promoter E[6]",
                      "T7 promoter phiOR",
                      "T7 promoter phiOL",
                      "E. coli promoter A0 (leftward)"]
 
-IGNORE_GENES = ["gene 10B",
-                "possible gene 5.5-5.7",
-                "gene 4.1",
-                "gene 4B",
-                "gene 0.6A",
-                "gene 0.6B",
-                "possible gene 0.6B",
-                "gene 0.5",
-                "gene 0.4"]
+### Some important proteins
+#
+# gp1 is T7 RNA Polymerase
+# gp3.5 is T7 lysozyme
+# gp0.7 is a protein kinase that phosphorylates E. coli RNA polymerase
 
-RELABEL_GENES = {"gene 2": "gp-2",
-                 "gene 1": "rnapol-1",
-                 "gene 3.5": "lysozyme-3.5",
-                 "gene 0.7": "protein_kinase-0.7"}
+#New 'CDS' feature version
+IGNORE_CDS = ["gp10B",
+              "gp5.5-5.7",
+              "gp4.1",
+              "gp4B",
+              "gp0.6A",
+              "gp0.6B",
+              "gp0.5",
+              "gp0.4"]
 
 
 class Logger:
@@ -123,23 +125,23 @@ def get_promoter_interactions(name):
         return {'ecolipol': 1e4,
                 'ecolipol-p': 0.3e4}
     elif name in phi1_3:
-        return {'rnapol-1': PHI10_BIND * 0.01,
-                'rnapol-3.5': PHI10_BIND * 0.01 * 0.5}
+        return {'gp1': PHI10_BIND * 0.01,
+                'gp3.5': PHI10_BIND * 0.01 * 0.5}
     elif name in phi3_8:
-        return {'rnapol-1': PHI10_BIND * 0.01,
-                'rnapol-3.5': PHI10_BIND * 0.01 * 0.5}
+        return {'gp1': PHI10_BIND * 0.01,
+                'gp3.5': PHI10_BIND * 0.01 * 0.5}
     elif name in phi6_5:
-        return {'rnapol-1': PHI10_BIND * 0.05,
-                'rnapol-3.5': PHI10_BIND * 0.05}
+        return {'gp1': PHI10_BIND * 0.05,
+                'gp3.5': PHI10_BIND * 0.05}
     elif name in phi9:
-        return {'rnapol-1': PHI10_BIND * 0.2,
-                'rnapol-3.5': PHI10_BIND * 0.2}
+        return {'gp1': PHI10_BIND * 0.2,
+                'gp3.5': PHI10_BIND * 0.2}
     elif name in phi10:
-        return {'rnapol-1': PHI10_BIND,
-                'rnapol-3.5': PHI10_BIND}
+        return {'gp1': PHI10_BIND,
+                'gp3.5': PHI10_BIND}
     elif name in phi13:
-        return {'rnapol-1': PHI10_BIND * 0.1,
-                'rnapol-3.5': PHI10_BIND * 0.1}
+        return {'gp1': PHI10_BIND * 0.1,
+                'gp3.5': PHI10_BIND * 0.1}
     else:
         raise ValueError(
             "Promoter strength for {0} not assigned.".format(name))
@@ -152,11 +154,11 @@ def get_terminator_interactions(name):
     if name == "E. coli transcription terminator TE":
         return {'ecolipol': 1.0,
                 'ecolipol-p': 1.0,
-                'rnapol-1': 0.0,
-                'rnapol-3.5': 0.0}
+                'gp1': 0.0,
+                'gp1+gp3.5': 0.0}
     elif name == "T7 transcription terminator Tphi":
-        return {'rnapol-1': 0.85,
-                'rnapol-3.5': 0.85}
+        return {'gp1': 0.85,
+                'gp1+gp3.5': 0.85}
     else:
         return {'name': 0.0}
 
@@ -255,11 +257,6 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
             if "terminator" in feature.qualifiers["regulatory_class"]:
                 interactions = get_terminator_interactions(name)
                 feature_type = "terminator"
-        # Grab genes/CDSes
-        elif feature.type == "gene":
-            if name in RELABEL_GENES:
-                name = RELABEL_GENES[name]
-            feature_type = 'gene'
         elif feature.type == "CDS":
             feature_type = "cds"
         else:
@@ -278,7 +275,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
     # TODO: Add more feature validation
     for feature in feature_dict.items():  # Validation
         feature = feature[1]
-        if feature['name'] in IGNORE_REGULATORY or feature['name'] in IGNORE_GENES:
+        if feature['name'] in IGNORE_REGULATORY or feature['name'] in IGNORE_CDS:
             feature['skip'] = True
             logger.log(f"Ignored feature {feature['name']} ({feature['start']} - {feature['stop']})")
             continue
@@ -299,12 +296,10 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
             phage.add_terminator(feature['name'], feature['start'], feature['stop'], feature['interactions'])
             logger.log(f"Added terminator feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
         elif feature['type'] == "cds":
-            weights = compute_cds_weights(record, feature['source_feature'], 1.0, weights)
-            logger.log(f"Considered CDS weight: Start: {feature['start']}, Stop: {feature['stop']}")
-        elif feature['type'] == "gene":
             phage.add_gene(name=feature['name'], start=feature['start'], stop=feature['stop'],
                            rbs_start=feature['start'] - 30, rbs_stop=feature['start'], rbs_strength=1e7)
-            logger.log(f"Added gene feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
+            weights = compute_cds_weights(record, feature['source_feature'], 1.0, weights)
+            logger.log(f"Added CDS feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
         else:
             continue
     # -- Add Featues to Sim  ^^^
@@ -313,7 +308,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
 
     logger.normal("Registered genome features")
 
-    mask_interactions = ["rnapol-1", "rnapol-3.5",
+    mask_interactions = ["gp1", "gp1+gp3.5",
                          "ecolipol", "ecolipol-p", "ecolipol-2", "ecolipol-2-p"]
     phage.add_mask(500, mask_interactions)
 
@@ -324,8 +319,8 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
 
     sim.register_genome(phage)
 
-    sim.add_polymerase("rnapol-1", 35, 230, 0)
-    sim.add_polymerase("rnapol-3.5", 35, 230, 0)
+    sim.add_polymerase("gp1", 35, 230, 0)
+    sim.add_polymerase("gp1+gp3.5", 35, 230, 0)
     sim.add_polymerase("ecolipol", 35, 45, 0)
     sim.add_polymerase("ecolipol-p", 35, 45, 0)
     sim.add_polymerase("ecolipol-2", 35, 45, 0)
@@ -359,23 +354,23 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
     sim.add_reaction(0.04, ["bound_ecolipol_p"], [
                      "ecolipol-p", "ecoli_genome", "ecoli_transcript"])
 
-    sim.add_reaction(3.8e7, ["protein_kinase-0.7", "ecolipol"],
-                     ["ecolipol-p", "protein_kinase-0.7"])
+    sim.add_reaction(3.8e7, ["gp0.7", "ecolipol"],
+                     ["ecolipol-p", "gp0.7"])
 
-    sim.add_reaction(3.8e7, ["protein_kinase-0.7", "ecolipol-2"],
-                     ["ecolipol-2-p", "protein_kinase-0.7"])
+    sim.add_reaction(3.8e7, ["gp0.7", "ecolipol+gp2"],
+                     ["ecolipol+gp2-p", "gp0.7"])
 
-    sim.add_reaction(3.8e7, ["gp-2", "ecolipol"], ["ecolipol-2"])
+    sim.add_reaction(3.8e7, ["gp2", "ecolipol"], ["ecolipol+gp2"])
 
-    sim.add_reaction(3.8e7, ["gp-2", "ecolipol-p"], ["ecolipol-2-p"])
+    sim.add_reaction(3.8e7, ["gp2", "ecolipol-p"], ["ecolipol+gp2-p"])
 
-    sim.add_reaction(1.1, ["ecolipol-2-p"], ["gp-2", "ecolipol-p"])
+    sim.add_reaction(1.1, ["ecolipol+gp2-p"], ["gp2", "ecolipol-p"])
 
-    sim.add_reaction(1.1, ["ecolipol-2"], ["gp-2", "ecolipol"])
+    sim.add_reaction(1.1, ["ecolipol+gp2"], ["gp2", "ecolipol"])
 
-    sim.add_reaction(3.8e9, ["lysozyme-3.5", "rnapol-1"], ["rnapol-3.5"])
+    sim.add_reaction(3.8e9, ["gp3.5", "gp1"], ["gp1+gp3.5"])
 
-    sim.add_reaction(3.5, ["rnapol-3.5"], ["lysozyme-3.5", "rnapol-1"])
+    sim.add_reaction(3.5, ["gp1+gp3.5"], ["gp3.5", "gp1"])
 
     logger.normal("Registered reactions")
 
@@ -384,7 +379,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
     if not seed:
         seed = random.randint(0, 10000)
     sim.seed(seed)
-    logger.normal(f"Randomness seed was set to {seed}")
+    logger.normal(f"Random seed was set to {seed}")
 
     if output[-1] == "/" or output[-1] == ".":
         sim_output = f"{output}phage.counts.tsv"
