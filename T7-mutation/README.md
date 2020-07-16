@@ -2,7 +2,7 @@
 
 **You must be using a newer version of _breseq_ (v0.35.2 or later) for these instructions to work!**
 
-Use this link to find this version: https://github.com/barricklab/breseq/releases/tag/v0.35.2rc1
+Use this link to find this version: https://github.com/barricklab/breseq/releases/tag/v0.35.2rc2
 
 Install _breseq_ using one of the methods described in the [_breseq_ instructions](https://barricklab.org/twiki/pub/Lab/ToolsBacterialGenomeResequencing/documentation/installation.html)
 
