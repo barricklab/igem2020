@@ -1,4 +1,4 @@
-LOCUS       T7                     39378 bp    DNA     linear   BSQ 15-JUL-2020
+LOCUS       T7                     39378 bp    DNA     linear   BSQ 20-JUL-2020
 DEFINITION  Enterobacteria phage T7, complete genome.
 ACCESSION   NC_001604-edited
 VERSION     NC_001604.1-edited
@@ -210,7 +210,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261063"
      CDS             925..1278
                      /locus_tag="T7p01"
-                     /name="T7p01"
+                     /name="gp0.3"
                      /note="gene 0.3, inhibits EcoB and EcoK host restriction"
                      /codon_start=1
                      /transl_table=11
@@ -227,7 +227,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261053"
      CDS             1278..1433
                      /locus_tag="T7p02"
-                     /name="T7p02"
+                     /name="gp0.4"
                      /note="gene 0.4"
                      /codon_start=1
                      /transl_table=11
@@ -254,7 +254,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261051"
      CDS             1496..1639
                      /locus_tag="T7p04"
-                     /name="T7p04"
+                     /name="gp0.5"
                      /note="gene 0.5"
                      /codon_start=1
                      /transl_table=11
@@ -274,7 +274,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261061"
      CDS             join(1636..1794,1796..1972)
                      /locus_tag="T7p05"
-                     /name="T7p05"
+                     /name="gp0.6B"
                      /note="possible gene 0.6B"
                      /codon_start=1
                      /transl_table=11
@@ -291,7 +291,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261071"
      CDS             1636..1797
                      /locus_tag="T7p06"
-                     /name="T7p06"
+                     /name="gp0.6A"
                      /note="gene 0.6A"
                      /codon_start=1
                      /transl_table=11
@@ -303,7 +303,7 @@ FEATURES             Location/Qualifiers
                      IGSGYDRTH"
      CDS             2021..3100
                      /locus_tag="T7p03"
-                     /name="T7p03"
+                     /name="gp0.7"
                      /note="The T7 seryl-threonyl protein kinase gp0.7 is invol
                      ved in host transcription shutoff and Col Ib exclusion. Ph
                      osphorylates E. coli RNA polymerase. Other names: gp0.7."
@@ -338,7 +338,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261050"
      CDS             3171..5822
                      /locus_tag="T7p07"
-                     /name="T7p07"
+                     /name="gp1"
                      /note="A family of single subunit RNA polymerases."
                      /codon_start=1
                      /transl_table=11
@@ -388,7 +388,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261072"
      CDS             6007..6135
                      /locus_tag="T7p09"
-                     /name="T7p09"
+                     /name="gp1.1"
                      /note="other names: gp1.1"
                      /codon_start=1
                      /transl_table=11
@@ -399,7 +399,7 @@ FEATURES             Location/Qualifiers
                      /translation="MRNFEKMTKRSNRNARDFEATKGRKLNKTKRDRSHKRSWEGQ"
      CDS             6137..6394
                      /locus_tag="T7p08"
-                     /name="T7p08"
+                     /name="gp1.2"
                      /note="inhibits activity of the host dGTPase [dgt]. Essent
                      ial only in strains that overexpress dGTPase [optA1 mutati
                      on]. In T7, gp1.2 also causes F plasmid exclusion. In T3, 
@@ -431,7 +431,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261055"
      CDS             6475..7554
                      /locus_tag="T7p10"
-                     /name="T7p10"
+                     /name="gp1.3"
                      /note="Catalyzes the ATP-dependent formation of a phosphod
                      iester bond at the site of single-stranded breaks in doubl
                      e-stranded DNA. T7 ligase is essential in ligase-deficient
@@ -460,7 +460,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261060"
      CDS             7607..8197
                      /locus_tag="T7p14"
-                     /name="T7p14"
+                     /name="gp1.7"
                      /note="gene 1.7"
                      /codon_start=1
                      /transl_table=11
@@ -478,7 +478,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261054"
      CDS             8190..8336
                      /locus_tag="T7p15"
-                     /name="T7p15"
+                     /name="gp1.8"
                      /note="not essential in T7. Other names: gp1.8"
                      /codon_start=1
                      /transl_table=11
@@ -494,7 +494,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261073"
      CDS             8339..8533
                      /locus_tag="T7p16"
-                     /name="T7p16"
+                     /name="gp2"
                      /note="T7 RNA polymerase inhibitor binds to host RNA pol a
                      nd suppresses its activity on a subset of promoters. gp2 d
                      eficient T7 display reduced DNA replication and premature 
@@ -519,7 +519,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261080"
      CDS             8599..9297
                      /locus_tag="T7p17"
-                     /name="T7p17"
+                     /name="gp2.5"
                      /note="binds single-stranded DNA. In phage T7 gp2.5 is ess
                      ential for DNA replication and recombination. Other names:
                       gp2.5; SSB."
@@ -541,7 +541,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261078"
      CDS             9298..9717
                      /locus_tag="T7p18"
-                     /name="T7p18"
+                     /name="gp2.8"
                      /note="gene 2.8"
                      /codon_start=1
                      /transl_table=11
@@ -559,7 +559,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261079"
      CDS             9698..10147
                      /locus_tag="T7p19"
-                     /name="T7p19"
+                     /name="gp3"
                      /note="T7 endonuclease I is a Holliday junction resolvase 
                      encoded by T7 gene 3. Mutants in gene 3 are defective in r
                      ecombination and accumulate branched DNA. Endonuclease I m
@@ -581,7 +581,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261077"
      CDS             10147..10602
                      /locus_tag="T7p20"
-                     /name="T7p20"
+                     /name="gp3.5"
                      /note="T7 lysozyme hydrolyzes an amide bond in the host ce
                      ll wall following its release from the cytoplasm. In addit
                      ion, T7 lysozyme inhibits T7 RNA polymerase initiation. Th
@@ -616,7 +616,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261065"
      CDS             10666..11031
                      /locus_tag="T7p21"
-                     /name="T7p21"
+                     /name="gp3.8"
                      /note="gene 3.8"
                      /codon_start=1
                      /transl_table=11
@@ -634,7 +634,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261046"
      CDS             11006..12706
                      /locus_tag="T7p22"
-                     /name="T7p22"
+                     /name="gp4A"
                      /note="gene 4A, primase/helicase [14,15]"
                      /codon_start=1
                      /transl_table=11
@@ -660,7 +660,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261047"
      CDS             11076..11198
                      /locus_tag="T7p23"
-                     /name="T7p23"
+                     /name="gp4.1"
                      /note="gene 4.1"
                      /codon_start=1
                      /transl_table=11
@@ -675,7 +675,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261048"
      CDS             11195..12706
                      /locus_tag="T7p24"
-                     /name="T7p24"
+                     /name="gp4B"
                      /note="gene 4B/helicase [14,15]"
                      /codon_start=1
                      /transl_table=11
@@ -703,7 +703,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261021"
      CDS             12429..12767
                      /locus_tag="T7p25"
-                     /name="T7p25"
+                     /name="gp4.2"
                      /note="gene 4.2"
                      /codon_start=1
                      /transl_table=11
@@ -723,7 +723,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261069"
      CDS             12793..13005
                      /locus_tag="T7p26"
-                     /name="T7p26"
+                     /name="gp4.3"
                      /note="not essential in T7; Other names: gp4.3."
                      /codon_start=1
                      /transl_table=11
@@ -739,7 +739,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261059"
      CDS             13025..13294
                      /locus_tag="T7p27"
-                     /name="T7p27"
+                     /name="gp4.5"
                      /note="not essential in T7. Other names: gp4.5."
                      /codon_start=1
                      /transl_table=11
@@ -760,7 +760,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261043"
      CDS             13368..13775
                      /locus_tag="T7p28"
-                     /name="T7p28"
+                     /name="gp4.7"
                      /note="gene 4.7"
                      /codon_start=1
                      /transl_table=11
@@ -777,7 +777,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261044"
      CDS             13794..15908
                      /locus_tag="T7p29"
-                     /name="T7p29"
+                     /name="gp5"
                      /note="gene 5"
                      /codon_start=1
                      /transl_table=11
@@ -805,7 +805,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261045"
      CDS             15924..16280
                      /locus_tag="T7p30"
-                     /name="T7p30"
+                     /name="gp5.3"
                      /note="gene 5.3"
                      /codon_start=1
                      /transl_table=11
@@ -822,7 +822,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261041"
      CDS             join(16292..16588,16588..16800)
                      /locus_tag="T7p31"
-                     /name="T7p31"
+                     /name="gp5.5-5.7"
                      /note="possible gene 5.5-5.7"
                      /codon_start=1
                      /transl_table=11
@@ -841,7 +841,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261038"
      CDS             16292..16591
                      /locus_tag="T7p32"
-                     /name="T7p32"
+                     /name="gp5.5"
                      /note="in Enterobacteria phage T7, gp5.5 abolishes E. coli
                       nucleoid protein H-NS-mediated inhibition of transcriptio
                      n by T7 RNA polymerases in vitro. Not essential, but mutan
@@ -863,7 +863,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261040"
      CDS             16591..16800
                      /locus_tag="T7p33"
-                     /name="T7p33"
+                     /name="gp5.7"
                      /note="gene 5.7"
                      /codon_start=1
                      /transl_table=11
@@ -880,7 +880,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261037"
      CDS             16800..16958
                      /locus_tag="T7p34"
-                     /name="T7p34"
+                     /name="gp5.9"
                      /note="not essential. Other names: gp5.9; exonuclease V in
                      hibitor"
                      /codon_start=1
@@ -897,7 +897,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261052"
      CDS             16945..17847
                      /locus_tag="T7p35"
-                     /name="T7p35"
+                     /name="gp6"
                      /note="The T7 exonuclease encoded by gene 6 is required fo
                      r (a) recombination and (b) for the degradation of host ch
                      romosomal DNA. The latter process provides nucleotides for
@@ -925,7 +925,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261058"
      CDS             17835..17948
                      /locus_tag="T7p36"
-                     /name="T7p36"
+                     /name="gp6.3"
                      /note="gene 6.3"
                      /codon_start=1
                      /transl_table=11
@@ -945,7 +945,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261036"
      CDS             18046..18300
                      /locus_tag="T7p37"
-                     /name="T7p37"
+                     /name="gp6.5"
                      /note="gene 6.5"
                      /codon_start=1
                      /transl_table=11
@@ -961,7 +961,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261039"
      CDS             18305..18571
                      /locus_tag="T7p38"
-                     /name="T7p38"
+                     /name="gp6.7"
                      /note="may be involved in virion morphogenesis and is inje
                      cted from virion into host cell. Other names: gp6.7"
                      /codon_start=1
@@ -978,7 +978,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261056"
      CDS             18571..18972
                      /locus_tag="T7p39"
-                     /name="T7p39"
+                     /name="gp7"
                      /note="gene 7, host range"
                      /codon_start=1
                      /transl_table=11
@@ -995,7 +995,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261035"
      CDS             18976..19275
                      /locus_tag="T7p40"
-                     /name="T7p40"
+                     /name="gp7.3"
                      /note="required for virion infectivity but not morphogenes
                      is. In T7, gp 7.3 appears to be required for the assembly 
                      of tail fibers on capsids. Other names: gp7.3"
@@ -1013,7 +1013,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261028"
      CDS             19289..19681
                      /locus_tag="T7p41"
-                     /name="T7p41"
+                     /name="gp7.7"
                      /note="gene 7.7"
                      /codon_start=1
                      /transl_table=11
@@ -1031,7 +1031,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261033"
      CDS             19681..21291
                      /locus_tag="T7p42"
-                     /name="T7p42"
+                     /name="gp8"
                      /note="gene 8"
                      /codon_start=1
                      /transl_table=11
@@ -1059,7 +1059,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261027"
      CDS             21391..22314
                      /locus_tag="T7p43"
-                     /name="T7p43"
+                     /name="gp9"
                      /note="Phage T7-like scaffolding protein. The protein is e
                      ncoded by gene 9 in T7 (gp9) and is required for the forma
                      tion of pro-capsids."
@@ -1085,7 +1085,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261029"
      CDS             join(22408..23430,23430..23603)
                      /locus_tag="T7p44"
-                     /name="T7p44"
+                     /name="gp10B"
                      /note="major capsid protein. Involved in F-exclusion of wt
                       T7 phage. A minor capsid protein (gp10B) is produced from
                       gene 10 by a -1 frameshift towards the end of 10A, result
@@ -1111,7 +1111,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261026"
      CDS             22408..23445
                      /locus_tag="T7p45"
-                     /name="T7p45"
+                     /name="gp10A"
                      /note="major capsid protein. Involved in F-exclusion of wt
                       T7 phage. A minor capsid protein (gp10B) is produced from
                       gene 10 by a -1 frameshift towards the end of 10A, result
@@ -1139,7 +1139,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261030"
      CDS             23669..24259
                      /locus_tag="T7p46"
-                     /name="T7p46"
+                     /name="gp11"
                      /note="Tail tubular proteins A and B are required for asse
                      mbly of tails of T7-like phages."
                      /codon_start=1
@@ -1158,7 +1158,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261024"
      CDS             24283..26667
                      /locus_tag="T7p47"
-                     /name="T7p47"
+                     /name="gp12"
                      /note="gene 12"
                      /codon_start=1
                      /transl_table=11
@@ -1191,7 +1191,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261025"
      CDS             26748..27164
                      /locus_tag="T7p48"
-                     /name="T7p48"
+                     /name="gp13"
                      /note="gene 13"
                      /codon_start=1
                      /transl_table=11
@@ -1208,7 +1208,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261032"
      CDS             27169..27759
                      /locus_tag="T7p49"
-                     /name="T7p49"
+                     /name="gp14"
                      /note="Approximately 12 copies of the internal virion prot
                      ein B encoded in phage T7 by gene 14 are part of the inter
                      nal core of the T7 virion. Along with gp16 and gp15, the o
@@ -1233,7 +1233,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261034"
      CDS             27766..30009
                      /locus_tag="T7p50"
-                     /name="T7p50"
+                     /name="gp15"
                      /note="Approximately 12 copies of the internal virion prot
                      ein C encoded by phage T7 gene 15 (gp15) are part of the i
                      nternal core of the T7 virion. Along with gp14 and gp16, t
@@ -1266,7 +1266,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261031"
      CDS             30036..33992
                      /locus_tag="T7p51"
-                     /name="T7p51"
+                     /name="gp16"
                      /note="Approximately 3 copies of the internal virion prote
                      in D encoded by phage T7 gene 16 (gp16) are part of the in
                      ternal core of the T7 virion. Along with gp14 and gp15, th
@@ -1316,7 +1316,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261023"
      CDS             34065..35726
                      /locus_tag="T7p52"
-                     /name="T7p52"
+                     /name="gp17"
                      /note="in phages T7 and T3 trimers of gp17 form each of th
                      e 6 kinked tail fibers. Other names: gp17."
                      /codon_start=1
@@ -1341,7 +1341,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261022"
      CDS             35785..35988
                      /locus_tag="T7p53"
-                     /name="T7p53"
+                     /name="gp17.5"
                      /note="Type II holins have two putative transmembrane doma
                      ins and are thought to allow endolysins access to the cell
                       wall at the optimal lysis time. However, in phage T7 the 
@@ -1363,7 +1363,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261042"
      CDS             35994..36263
                      /locus_tag="T7p54"
-                     /name="T7p54"
+                     /name="gp18"
                      /note="involved in the packaging of genome monomers into a
                       procapsid using head-to-tail concatemers of genomes. othe
                      r names: DNA packaging protein A; DNA maturation protein A
@@ -1388,7 +1388,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261067"
      CDS             36358..36789
                      /locus_tag="T7p55"
-                     /name="T7p55"
+                     /name="gp18.5"
                      /note="analog of phage lambda protein Rz, a cell lysis pro
                      tein. Rz and gp18.5 share distant sequence similarity, sim
                      ilar function, and a similar genome neighborhood. In T7, g
@@ -1410,7 +1410,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261057"
      CDS             36473..36724
                      /locus_tag="T7p56"
-                     /name="T7p56"
+                     /name="gp18.7"
                      /note="in Enterobacteria phage T7, this protein interacts 
                      with gp18.5 and is expressed from the -1 frame of a gene c
                      ompletely overlapping gene 18.5. This suggests that it may
@@ -1430,7 +1430,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261062"
      CDS             36811..38571
                      /locus_tag="T7p57"
-                     /name="T7p57"
+                     /name="gp19"
                      /note="gene 19"
                      /codon_start=1
                      /transl_table=11
@@ -1456,7 +1456,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261064"
      CDS             37457..37714
                      /locus_tag="T7p58"
-                     /name="T7p58"
+                     /name="gp19.2"
                      /note="gene 19.2"
                      /codon_start=1
                      /transl_table=11
@@ -1472,7 +1472,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261066"
      CDS             37994..38167
                      /locus_tag="T7p59"
-                     /name="T7p59"
+                     /name="gp19.3"
                      /note="gene 19.3"
                      /codon_start=1
                      /transl_table=11
@@ -1491,7 +1491,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="GeneID:1261068"
      CDS             38830..38979
                      /locus_tag="T7p60"
-                     /name="T7p60"
+                     /name="gp19.5"
                      /note="gene 19.5"
                      /codon_start=1
                      /transl_table=11
