@@ -279,8 +279,12 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
             feature['skip'] = True
             logger.log(f"Ignored feature {feature['name']} ({feature['start']} - {feature['stop']})")
             continue
+        if 'pseudo' in feature['source_feature'].qualifiers.keys():
+            logger.warn(f"Found {feature['name']} with flag 'pseudo'. Ignoring.")
+            feature['skip'] = True
+            continue
         if feature['stop'] - feature['start'] < 50 and feature['type'] in ['gene', 'cds']:
-            logger.warn(f"Found {feature['type'], feature['name']} that is tiny! ({feature['start'] - feature['stop']})")
+            logger.warn(f"Found {feature['type'], feature['name']} that is tiny! ({feature['start']} - {feature['stop']})")
 
     # -- Feature Acquisition Validation  ^^^
     # -- Add Features to Sim  VVV
