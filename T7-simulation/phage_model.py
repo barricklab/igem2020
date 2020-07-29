@@ -288,9 +288,9 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
 
     # -- Feature Acquisition Validation  ^^^
     # -- Add Features to Sim  VVV
+    weights = [0.0] * len(record.seq)
     for feature in feature_dict.items():
         feature = feature[1]
-        weights = [0.0] * len(record.seq)  # TODO: Maybe this is a bug and should be outside loop?
         if feature['skip']:
             continue
         elif feature['type'] == "promoter":
