@@ -11,7 +11,7 @@ wt.to.graph = wt %>% filter(species %in% disp$species, time == max(wt$time)) %>%
 
 mt.to.graph = mt %>% filter(species %in% disp$species, time == max(mt$time)) %>% left_join(disp, by = "species")
 
-disp = disp %>% arrange(-sort.order)
+disp = disp %>% arrange(sort.order)
 
 wt.to.graph$species = factor(wt.to.graph$species, levels = disp$species) 
 wt.to.graph = wt.to.graph %>% complete(species)
