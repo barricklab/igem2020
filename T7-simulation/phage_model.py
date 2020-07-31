@@ -6,6 +6,8 @@ import datetime
 import argparse
 import multiprocessing
 import random
+import copy
+import csv
 
 CELL_VOLUME = 1.1e-15
 PHI10_BIND = 1.82e7  # Binding constant for phi10
@@ -206,7 +208,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
         output = ".".join(input.split(".")[:-1])
     # Make the directory for output if it doesnt exist
     output_dir = output.replace("\\", "/")
-    output_dir = "/".join(output.split("/")[:-1])
+    output_dir = "/".join(output_dir.split("/")[:-1])
     if output_dir != '' and not os.path.exists(output_dir):
       os.makedirs(output_dir)
 
@@ -289,25 +291,47 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
     # -- Feature Acquisition Validation  ^^^
     # -- Add Features to Sim  VVV
     weights = [0.0] * len(record.seq)
+    output_feature_dict = dict()
     for feature in feature_dict.items():
-        feature = feature[1]
-        if feature['skip']:
+        feature_contents = feature[1]
+        if feature_contents['skip']:
             continue
-        elif feature['type'] == "promoter":
-            phage.add_promoter(feature['name'], feature['start'], feature['stop'], feature['interactions'])
-            logger.log(f"Added promoter feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
-        elif feature['type'] == "terminator":
-            phage.add_terminator(feature['name'], feature['start'], feature['stop'], feature['interactions'])
-            logger.log(f"Added terminator feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
-        elif feature['type'] == "cds":
-            phage.add_gene(name=feature['name'], start=feature['start'], stop=feature['stop'],
-                           rbs_start=feature['start'] - 30, rbs_stop=feature['start'], rbs_strength=1e7)
-            weights = compute_cds_weights(record, feature['source_feature'], 1.0, weights)
-            logger.log(f"Added CDS feature: {feature['name']}, Start: {feature['start']}, Stop: {feature['stop']}")
+        elif feature_contents['type'] == "promoter":
+            phage.add_promoter(feature_contents['name'], feature_contents['start'], feature_contents['stop'], feature_contents['interactions'])
+            logger.log(f"Added promoter feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+            output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+        elif feature_contents['type'] == "terminator":
+            phage.add_terminator(feature_contents['name'], feature_contents['start'], feature_contents['stop'], feature_contents['interactions'])
+            logger.log(f"Added terminator feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+            output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+        elif feature_contents['type'] == "cds":
+            phage.add_gene(name=feature_contents['name'], start=feature_contents['start'], stop=feature_contents['stop'],
+                           rbs_start=feature_contents['start'] - 30, rbs_stop=feature_contents['start'], rbs_strength=1e7)
+            weights = compute_cds_weights(record, feature_contents['source_feature'], 1.0, weights)
+            logger.log(f"Added CDS feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+            output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
         else:
             continue
     # -- Add Featues to Sim  ^^^
-
+    # -- Output Features to CSV VVVVV
+    out_columns = ['name', 'type', 'start', 'end']
+    out_data = []
+    for feature in feature_dict.items():
+        feature_contents = feature[1]
+        out_data.append({'name': feature_contents['name'],
+                         'type': feature_contents['type'],
+                         'start': feature_contents['start'],
+                         'end': feature_contents['stop']})
+    if output[-1] == "/" or output[-1] == ".":
+        out_features_filename = f"{output}features.csv"
+    else:
+        out_features_filename = f"{output}.features.csv"
+    with open(out_features_filename, 'w') as csv_file_object:
+        writer = csv.DictWriter(csv_file_object, fieldnames=out_columns)
+        writer.writeheader()
+        for contents in out_data:
+            writer.writerow(contents)
+    # -- Output Features to CSV ^^^^^
 
 
     logger.normal("Registered genome features")
