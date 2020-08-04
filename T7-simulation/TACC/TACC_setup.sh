@@ -34,6 +34,7 @@ python3 setup.py install --user
 # Clone iGEM 2019 repo
 cd $WORK/src
 git clone https://github.com/barricklab/igem2020.git
+pip3 install --user -r $WORK/src/igem2020/T7-simulation/requirements.txt
 
 
 ##########################################################################
@@ -50,5 +51,29 @@ cp $WORK/src/igem2020/T7-simulation/T7-WT/T7_genome.gb $SCRATCH/T7-example-run
 # Copy the job script that is checked into the repository
 cp $WORK/src/igem2020/T7-simulation/TACC/launcher.slurm $SCRATCH/T7-example-run
 
-#Change into the job directory
+# Copy the commmands.sh file that is checked into the repository
+cp $WORK/src/igem2020/T7-simulation/TACC/commands.sh $SCRATCH/T7-example-run
+
+# Edit the launcher to change the email address, number of nodes requested, etc.
+nano launcher.slurm
+
+# Change into the job directory
 cd $SCRATCH/T7-example-run
+
+# Submit the job
+sbatch launcher.slurm
+
+# Check on progress
+showq -u username
+
+# Oops. Need to stop job...
+scancel <job_id>
+
+##########################################################################
+# Extra: Run commands on a reserved cluster node (for testing or development)
+
+# Getting an idev node for testing commands... (-m is the number of minutes to reserve. Must be ≤120)
+idev -m 60
+
+#Leave the idev mode early
+logout
