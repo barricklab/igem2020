@@ -10,7 +10,7 @@ nano ~/.bashrc
 # Add these lines under "PLACE MODULE COMMANDS HERE and ONLY HERE."
 module load git
 module load Rstats
-module load python 3
+module load python3
 
 # Add these lines under "PLACE Environment Variables including PATH here"
 export PATH="$PATH:$WORK/src/igem2020/T7-simulation"
