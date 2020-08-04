@@ -29,7 +29,7 @@
 #SBATCH -A breseq
 #SBATCH -N 1                # Must be commands/48 rounded UP to an integer
 #SBATCH -n 48               # Option should be 48 x N
-#SBATCH -p development      # Use normal if N>48 or -t > 1 hr
+#SBATCH -p normal           # Use normal if N>48 or -t > 1 hr
 #SBATCH -o Parametric.%j.out
 #SBATCH -e Parametric.%j.err
 #SBATCH -t 01:00:00         # Format HH::MM:SS
@@ -40,7 +40,7 @@
 #------------------------------------------------------
 
 module load launcher
-export LAUNCHER_WORKDIR=.
+export LAUNCHER_WORKDIR=$PWD
 export LAUNCHER_JOB_FILE=commands.sh
 
 $LAUNCHER_DIR/paramrun
