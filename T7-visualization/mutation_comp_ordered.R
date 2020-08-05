@@ -57,8 +57,7 @@ compare_genomes_barplot
 #generates plotly for the graph and saves it locally in the working directory 
 library(plotly)
 pPlotly <- ggplotly(compare_genomes_barplot)
-<<<<<<< HEAD
+
 htmlwidgets::saveWidget(pPlotly, "delete_10_compare_genomes.html")
-=======
+
 htmlwidgets::saveWidget(pPlotly, "compare_genomes.html")
->>>>>>> 36dadf7640eb89bf0a00760f73153bd9d1feec90
