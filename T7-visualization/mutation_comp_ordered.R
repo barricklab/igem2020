@@ -58,6 +58,4 @@ compare_genomes_barplot
 library(plotly)
 pPlotly <- ggplotly(compare_genomes_barplot)
 
-htmlwidgets::saveWidget(pPlotly, "delete_10_compare_genomes.html")
-
 htmlwidgets::saveWidget(pPlotly, "compare_genomes.html")
