@@ -27,7 +27,7 @@ if (exists("output.prefix")) {
 
 
 #read in both the wild type and mutant phage count files, files names may vary 
-wt = read_tsv("T7-WT_24.counts.tsv")
+wt = read_tsv("T7-WT_24-1500s.counts.tsv")
 
 disp = read.csv("gene_display.csv", stringsAsFactors = FALSE)
 
