@@ -199,6 +199,7 @@ FEATURES             Location/Qualifiers
                      /regulatory_class="promoter"
                      /note="E. coli promoter A3"
      misc_structure  890
+                     /name="RNase III site R0.3"
                      /note="RNase III site R0.3"
      gene            891..1468
                      /locus_tag="T7p01"
@@ -239,6 +240,7 @@ FEATURES             Location/Qualifiers
                      IALESAE"
      misc_structure  1468
                      /locus_tag="T7p01"
+                     /name="RNase III site R0.5"
                      /note="RNase III site R0.5"
      gene            1469..3138
                      /locus_tag="T7p03"
@@ -328,6 +330,7 @@ FEATURES             Location/Qualifiers
                      /note="E. coli C promoter"
      misc_structure  3138
                      /locus_tag="T7p03"
+                     /name="RNase III site R1"
                      /note="RNase III site R1"
      gene            3139..5887
                      /locus_tag="T7p07"
@@ -370,6 +373,7 @@ FEATURES             Location/Qualifiers
                      /note="T7 promoter phi1.1A"
      misc_structure  5887
                      /locus_tag="T7p07"
+                     /name="RNase III site R1.1"
                      /note="RNase III site R1.1"
      gene            5888..6448
                      /locus_tag="T7p08"
@@ -421,6 +425,7 @@ FEATURES             Location/Qualifiers
                      /note="T7 promoter phi1.3"
      misc_structure  6448
                      /locus_tag="T7p08"
+                     /name="RNase III site R1.3"
                      /note="RNase III site R1.3"
      gene            6449..7588
                      /locus_tag="T7p10"
@@ -664,6 +669,7 @@ FEATURES             Location/Qualifiers
                      /regulatory_class="promoter"
                      /note="T7 promoter phi3.8"
      misc_structure  11203
+                     /name="possible RNase III site R3.8"
                      /note="possible RNase III site R3.8"
      gene            11225..11590
                      /locus_tag="T7p21"
@@ -805,6 +811,7 @@ FEATURES             Location/Qualifiers
                      /translation="MSNVAETIRLSDTADQWNRRVHINVRNGKATMVYRWKDSKSSKN
                      HTQRMTLTDEQALRLVNALTKAAVTAIHEAGRVNEAMAILDKIDN"
      misc_structure  13892
+                     /name="RNase III site R4.7"
                      /note="RNase III site R4.7"
      regulatory      13915
                      /regulatory_class="promoter"
@@ -993,6 +1000,7 @@ FEATURES             Location/Qualifiers
                      /regulatory_class="promoter"
                      /note="T7 promoter phi6.5"
      misc_structure  18563
+                     /name="RNase III site R6.5"
                      /note="RNase III site R6.5"
      gene            18605..18859
                      /locus_tag="T7p37"
@@ -1242,6 +1250,7 @@ FEATURES             Location/Qualifiers
                      /regulatory_class="promoter"
                      /note="T7 promoter phi13"
      misc_structure  27281
+                     /name="possible RNase III site R13"
                      /note="possible RNase III site R13"
      gene            27307..27723
                      /locus_tag="T7p48"
@@ -1440,6 +1449,7 @@ FEATURES             Location/Qualifiers
                      /regulatory_class="promoter"
                      /note="E. coli promoter E[6]"
      misc_structure  36856
+                     /name="RNase III site R18.5"
                      /note="RNase III site R18.5"
      gene            36917..37348
                      /locus_tag="T7p55"

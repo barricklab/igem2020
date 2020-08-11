@@ -34,6 +34,34 @@ IGNORE_CDS = ["gp10B",
               "gp0.5",
               "gp0.4"]
 
+# Optimal E. coli codons
+OPT_CODONS_E_COLI = {'A': ['GCT'],
+                     'R': ['CGT', 'CGC'],
+                     'N': ['AAC'],
+                     'D': ['GAC'],
+                     'C': ['TGC'],
+                     'Q': ['CAG'],
+                     'E': ['GAA'],
+                     'G': ['GGT', 'GGC'],
+                     'H': ['CAC'],
+                     'I': ['ATC'],
+                     'L': ['CTG'],
+                     'F': ['TTC'],
+                     'P': ['CCG'],
+                     'S': ['TCT', 'TCC'],
+                     'T': ['ACT', 'ACC'],
+                     'Y': ['TAC'],
+                     'V': ['GTT', 'GTA']}
+
+# RNAse information
+RNase_E = {"speed": 20,
+           "rate": 1e-5,
+           "footprint": 10}
+
+RNase_III = {"rate": 1e-2}
+
+RNAse_Table = {"R0.0": 1e-2}  # Example site that doesnt exist. To ignore, set to 0
+
 
 class Logger:
     '''Sends pretty colors to the console and also logs console to file'''
@@ -70,26 +98,6 @@ class Logger:
         if self.verbose:
             print(f"{self.colors['normal']}{text}{self.colors['normal']}")
         self._send_to_log(f"[LOG] {text}")
-
-
-# Optimal E. coli codons
-OPT_CODONS_E_COLI = {'A': ['GCT'],
-                     'R': ['CGT', 'CGC'],
-                     'N': ['AAC'],
-                     'D': ['GAC'],
-                     'C': ['TGC'],
-                     'Q': ['CAG'],
-                     'E': ['GAA'],
-                     'G': ['GGT', 'GGC'],
-                     'H': ['CAC'],
-                     'I': ['ATC'],
-                     'L': ['CTG'],
-                     'F': ['TTC'],
-                     'P': ['CCG'],
-                     'S': ['TCT', 'TCC'],
-                     'T': ['ACT', 'ACC'],
-                     'Y': ['TAC'],
-                     'V': ['GTT', 'GTA']}
 
 
 def get_promoter_interactions(name):
@@ -196,13 +204,12 @@ def normalize_weights(weights):
     return norm_weights
 
 
-def phage_model(input, output=None, time=1500, verbose=True, seed=None):
+def phage_model(input, output=None, time=1500, verbose=True, seed=None, multiplicity=1, use_rnases=False):
 
     sim = pt.Model(cell_volume=CELL_VOLUME)
 
     record = SeqIO.read(input, "genbank")
     genome_length = len(record.seq)
-    phage = pt.Genome(name="phage", length=genome_length)
 
     if not output:
         output = ".".join(input.split(".")[:-1])
@@ -244,7 +251,9 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
         name = ''
         feature_type = ''
         interactions = None
+        skip = False
         source_feature = feature
+        rate = 0
         if 'name' in feature.qualifiers:
             name = feature.qualifiers["name"][0]
         elif "note" in feature.qualifiers:
@@ -261,6 +270,17 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
                 feature_type = "terminator"
         elif feature.type == "CDS":
             feature_type = "cds"
+        elif feature.type == "misc_structure":
+            feature_type = "misc"
+            if "rnase" in name.lower():
+                feature_type = "rnase_site"
+                for site_name in RNAse_Table.keys():
+                    if site_name in name:
+                        rate = RNAse_Table[site_name]
+                        if rate == 0:
+                            skip = True
+
+
         else:
             feature_type = None
 
@@ -270,13 +290,21 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
                                "name": name,
                                "type": feature_type,
                                "interactions": interactions,
-                               "skip": False,
-                               "source_feature": source_feature
+                               "skip": skip,
+                               "source_feature": source_feature,
+                               "rate": rate
                                }
 
     # TODO: Add more feature validation
+    if use_rnases == False:
+        logger.normal("Not considering RNase activity (use flag -r to consider)")
+    else:
+        logger.normal(f"Considering RNase activity.")
+
     for feature in feature_dict.items():  # Validation
         feature = feature[1]
+        if feature['skip']:
+            continue
         if feature['name'] in IGNORE_REGULATORY or feature['name'] in IGNORE_CDS:
             feature['skip'] = True
             logger.log(f"Ignored feature {feature['name']} ({feature['start']} - {feature['stop']})")
@@ -287,31 +315,64 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
             continue
         if feature['stop'] - feature['start'] < 50 and feature['type'] in ['gene', 'cds']:
             logger.warn(f"Found {feature['type'], feature['name']} that is tiny! ({feature['start']} - {feature['stop']})")
+        if feature['type'] == "rnase_site" and use_rnases == False:
+            feature['skip'] = True
+            continue
+        if feature['type'] == "rnase_site" and feature['rate'] == 0:
+            logger.log(f"{feature['name']} has no explicit binding rate. Defaulting.")
+            feature['rate'] = RNase_III["rate"]
 
     # -- Feature Acquisition Validation  ^^^
+
+    # -- Set up masks
+    mask_interactions = ["gp1", "gp1+gp3.5", "ecolipol", "ecolipol-p", "ecolipol-2", "ecolipol-2-p"]
+
+    logger.normal("Implemented masks and weighting")
+
+        # -- Set up masks
+
+
     # -- Add Features to Sim  VVV
-    weights = [0.0] * len(record.seq)
-    output_feature_dict = dict()
-    for feature in feature_dict.items():
-        feature_contents = feature[1]
-        if feature_contents['skip']:
-            continue
-        elif feature_contents['type'] == "promoter":
-            phage.add_promoter(feature_contents['name'], feature_contents['start'], feature_contents['stop'], feature_contents['interactions'])
-            logger.log(f"Added promoter feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
-            output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
-        elif feature_contents['type'] == "terminator":
-            phage.add_terminator(feature_contents['name'], feature_contents['start'], feature_contents['stop'], feature_contents['interactions'])
-            logger.log(f"Added terminator feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
-            output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
-        elif feature_contents['type'] == "cds":
-            phage.add_gene(name=feature_contents['name'], start=feature_contents['start'], stop=feature_contents['stop'],
-                           rbs_start=feature_contents['start'] - 30, rbs_stop=feature_contents['start'], rbs_strength=1e7)
-            weights = compute_cds_weights(record, feature_contents['source_feature'], 1.0, weights)
-            logger.log(f"Added CDS feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
-            output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+    phage_genomes = {}
+    for infection in range(0, multiplicity):
+        weights = [0.0] * len(record.seq)
+        if RNase_E:
+            phage_genomes[infection] = pt.Genome(name=f"phage_{infection}", length=genome_length,
+                              transcript_degradation_rate_ext=RNase_E['rate'],
+                              rnase_speed=RNase_E['speed'],
+                              rnase_footprint=RNase_E['footprint'])
         else:
-            continue
+            phage_genomes[infection] = pt.Genome(name=f"phage_{infection}", length=genome_length)
+        output_feature_dict = dict()
+        for feature in feature_dict.items():
+            feature_contents = feature[1]
+            if feature_contents['skip']:
+                continue
+            elif feature_contents['type'] == "promoter":
+                phage_genomes[infection].add_promoter(feature_contents['name'], feature_contents['start'], feature_contents['stop'], feature_contents['interactions'])
+                logger.log(f"Added promoter feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+                output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+            elif feature_contents['type'] == "terminator":
+                phage_genomes[infection].add_terminator(feature_contents['name'], feature_contents['start'], feature_contents['stop'], feature_contents['interactions'])
+                logger.log(f"Added terminator feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+                output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+            elif feature_contents['type'] == "cds":
+                phage_genomes[infection].add_gene(name=feature_contents['name'], start=feature_contents['start'], stop=feature_contents['stop'],
+                               rbs_start=feature_contents['start'] - 30, rbs_stop=feature_contents['start'], rbs_strength=1e7)
+                weights = compute_cds_weights(record, feature_contents['source_feature'], 1.0, weights)
+                logger.log(f"Added CDS feature: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+                output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+            elif feature_contents['type'] == "rnase_site":
+                phage_genomes[infection].add_rnase_site(name=feature_contents['name'], start=feature_contents['start'], stop=feature_contents['stop']+10, rate=feature_contents['rate'])
+                logger.log(f"Added RNase site: {feature_contents['name']}, Start: {feature_contents['start']}, Stop: {feature_contents['stop']}")
+                output_feature_dict[copy.copy(feature[0])] = copy.deepcopy(feature[1])
+            else:
+                continue
+        phage_genomes[infection].add_mask(500, mask_interactions)
+        norm_weights = normalize_weights(weights)
+        phage_genomes[infection].add_weights(norm_weights)
+        sim.register_genome(phage_genomes[infection])
+        logger.log(f"Registered phage genome #{infection+1}")
     # -- Add Featues to Sim  ^^^
     # -- Output Features to CSV VVVVV
     out_columns = ['name', 'type', 'start', 'end']
@@ -338,14 +399,6 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
 
     mask_interactions = ["gp1", "gp1+gp3.5",
                          "ecolipol", "ecolipol-p", "ecolipol-2", "ecolipol-2-p"]
-    phage.add_mask(500, mask_interactions)
-
-    norm_weights = normalize_weights(weights)
-    phage.add_weights(norm_weights)
-
-    logger.normal("Implemented masks and weighting")
-
-    sim.register_genome(phage)
 
     sim.add_polymerase("gp1", 35, 230, 0)
     sim.add_polymerase("gp1+gp3.5", 35, 230, 0)
@@ -405,7 +458,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None):
     logger.normal("Running simulation")
 
     if not seed:
-        seed = random.randint(0, 10000)
+        seed = random.randint(0, 2147483647)
     sim.seed(seed)
     logger.normal(f"Random seed was set to {seed}")
 
@@ -483,6 +536,18 @@ if __name__ == "__main__":
                         required=False,
                         type=int,
                         help="Randomness seed")
+    parser.add_argument('-m',
+                        action='store',
+                        metavar="MOI",
+                        dest='m',
+                        required=False,
+                        type=int,
+                        help="Multiplicity of Infection")
+    parser.add_argument('-r',
+                        action='store_true',
+                        dest='r',
+                        required=False,
+                        help="Option to use RNases")
     options = parser.parse_args()
     try:
         output_path = options.o
@@ -497,12 +562,27 @@ if __name__ == "__main__":
     if not time:
         time = 1500
 
+
+    try:
+        multiplicity = options.m
+    except AttributeError:
+        multiplicity = 1
+    if not multiplicity:
+        multiplicity = 1
+
     try:
         seed = options.s
     except AttributeError:
         seed = None
-    if not time:
+    if not seed:
         seed = None
+
+    try:
+        use_rnases = options.r
+    except AttributeError:
+        use_rnases = False
+    if not use_rnases:
+        use_rnases = False
 
     if not output_path:
         output_path = ".".join(input_genome.split(".")[:-1])
@@ -511,4 +591,4 @@ if __name__ == "__main__":
         print(f"Could not find file {input_genome}")
         exit(1)
 
-    phage_model(input_genome, output_path, time, verbose=False, seed=seed)
+    phage_model(input_genome, output_path, time, verbose=False, seed=seed, multiplicity=multiplicity, use_rnases=use_rnases)
