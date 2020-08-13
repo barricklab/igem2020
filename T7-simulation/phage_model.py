@@ -87,13 +87,14 @@ class Logger:
         with open(self.log_output, 'a') as file:
             file.write(text + '\n')
 
-
     def normal(self,text):
         print(f"{self.colors['normal']}{text}{self.colors['normal']}")
         self._send_to_log(f"[NORMAL] {text}")
+
     def warn(self, text):
         print(f"{self.colors['warn']}Warning: {text}{self.colors['normal']}")
         self._send_to_log(f"[WARNING] {text}")
+
     def log(self, text):
         if self.verbose:
             print(f"{self.colors['normal']}{text}{self.colors['normal']}")
@@ -205,6 +206,9 @@ def normalize_weights(weights):
 
 
 def phage_model(input, output=None, time=1500, verbose=True, seed=None, multiplicity=1, use_rnases=False):
+
+    if 0 > seed > 2147483647:
+        raise ValueError(f"Seed must be between 0 and 2147483647. You used '{seed}'.")
 
     sim = pt.Model(cell_volume=CELL_VOLUME)
 
