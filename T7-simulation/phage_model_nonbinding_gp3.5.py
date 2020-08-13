@@ -58,9 +58,9 @@ RNase_E = {"speed": 20,
            "rate": 1e-5,
            "footprint": 10}
 
-RNase_III = {"rate": 1e-2}
+RNase_III = {"rate": 1e-2}  # This is the default for the RNAse_table values if sites arent explicitly listed
 
-RNAse_Table = {"R0.0": 1e-2}  # Example site that doesnt exist. To ignore, set to 0
+RNAse_Table = {"R0.0": 1e-2}  # RNAse site R0.0 doesn't exist, its just an example. To ignore a site, set to 0
 
 
 class Logger:
@@ -275,7 +275,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
             if "rnase" in name.lower():
                 feature_type = "rnase_site"
                 for site_name in RNAse_Table.keys():
-                    if site_name in name:
+                    if site_name == name.split(" ")[-1] or site_name == name:
                         rate = RNAse_Table[site_name]
                         if rate == 0:
                             skip = True
@@ -375,14 +375,28 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
         logger.log(f"Registered phage genome #{infection+1}")
     # -- Add Featues to Sim  ^^^
     # -- Output Features to CSV VVVVV
-    out_columns = ['name', 'type', 'start', 'end']
+    out_columns = ['name', 'type', 'start', 'end', 'strength']
     out_data = []
     for feature in feature_dict.items():
         feature_contents = feature[1]
+        if feature_contents['skip'] == True:
+            continue
+        feature_contents['strength'] = None
+        if feature_contents['type'] == "promoter":
+            promoter_interaction_result = get_promoter_interactions(feature_contents['name'])
+            if 'ecolipol' in promoter_interaction_result.keys():
+                feature_contents['strength'] = promoter_interaction_result['ecolipol']
+            elif 'gp1' in promoter_interaction_result.keys():
+                feature_contents['strength'] = promoter_interaction_result['gp1']
+            else:
+                feature_contents['strength'] = 0
+        elif feature_contents['type'] == "rnase_site":
+            feature_contents['strength'] = feature_contents['rate']
         out_data.append({'name': feature_contents['name'],
                          'type': feature_contents['type'],
                          'start': feature_contents['start'],
-                         'end': feature_contents['stop']})
+                         'end': feature_contents['stop'],
+                         'strength': feature_contents['strength']})
     if output[-1] == "/" or output[-1] == ".":
         out_features_filename = f"{output}features.csv"
     else:
