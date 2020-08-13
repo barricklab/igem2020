@@ -13,7 +13,7 @@ f = open("commands.sh", "w")
 
 for i in range(96):
     run_num += 1
-    seed = random.randint(0,4294967295)
+    seed = random.randint(0, 2147483647)
     command = "python3 " + "$WORK/src/igem2020/T7-simulation/" + model + " -i " + genome_filename + " -o " + output_prefix + "_" + str(run_num) + " -s " + str(seed) + " -r\n"
     f.write(command)
 
