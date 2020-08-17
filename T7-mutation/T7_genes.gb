@@ -1,0 +1,2780 @@
+LOCUS       gp0.3                    354 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp0.3.
+ACCESSION   gp0
+VERSION     gp0.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..354
+                     /locus_tag="T7p01"
+                     /name="gp0.3"
+                     /note="gene 0.3, inhibits EcoB and EcoK host restriction"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041954.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03775"
+                     /db_xref="GeneID:1261063"
+                     /translation="MAMSNMTYNNVFDHAYEMLKENIRYDDIRDTDDLHDAIHMAADNA
+                     VPHYYADIFSVMASEGIDLEFEDSGLMPDTKDVIRILQARIYEQLTIDLWEDAEDLLNE
+                     YLEEVEEYEEDEE"
+ORIGIN
+        1 atggctatgt ctaacatgac ttacaacaac gttttcgacc acgcttacga aatgctgaaa
+       61 gaaaacatcc gttatgatga catccgtgac actgatgacc tgcacgatgc tattcacatg
+      121 gctgccgata atgcagttcc gcactactac gctgacatct ttagcgtaat ggcaagtgag
+      181 ggcattgacc ttgagttcga agactctggt ctgatgcctg acaccaagga cgtaatccgc
+      241 atcctgcaag cgcgtatcta tgagcaatta acgattgacc tctgggaaga cgcagaagac
+      301 ttgctcaatg aatacttgga ggaagtcgag gagtacgagg aggatgaaga gtaa
+//
+LOCUS       gp0.4                    156 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp0.4.
+ACCESSION   gp0
+VERSION     gp0.4
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..156
+                     /locus_tag="T7p02"
+                     /note="gene 0.4"
+                     /db_xref="GeneID:1261053"
+     CDS             1..156
+                     /locus_tag="T7p02"
+                     /name="gp0.4"
+                     /note="gene 0.4"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041955.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03776"
+                     /db_xref="GeneID:1261053"
+                     /translation="MSTTNVQYGLTAQTVLFYSDMVRCGFNWSLAMAQLKELYENNKAI
+                     ALESAE"
+ORIGIN
+        1 atgtctacta ccaacgtgca atacggtctg accgctcaaa ctgtactttt ctatagcgac
+       61 atggtgcgct gtggctttaa ctggtcactc gcaatggcac agctcaaaga actgtacgaa
+      121 aacaacaagg caatagcttt agaatctgct gagtga
+//
+LOCUS       gp0.5                    144 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp0.5.
+ACCESSION   gp0
+VERSION     gp0.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..144
+                     /locus_tag="T7p04"
+                     /note="gene 0.5"
+                     /db_xref="GeneID:1261051"
+     CDS             1..144
+                     /locus_tag="T7p04"
+                     /name="gp0.5"
+                     /note="gene 0.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041956.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03777"
+                     /db_xref="GeneID:1261051"
+                     /translation="MYMLTIGLLTALGLAVGASFGKALGVAVGSYFTACIIIGIIKGAL
+                     RK"
+     regulatory      19
+                     /regulatory_class="promoter"
+                     /locus_tag="T7p04"
+                     /note="E. coli B promoter"
+ORIGIN
+        1 atgtatatgc ttactatcgg tctactcacc gctctaggtc tagctgtagg tgcatccttt
+       61 gggaaggctt taggtgtagc tgtaggttcc tactttaccg cttgcatcat cataggaatc
+      121 atcaaagggg cactacgcaa atga
+//
+LOCUS       gp0.6B                   337 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp0.6B.
+ACCESSION   gp0.6B
+VERSION     gp0.6B
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..337
+                     /locus_tag="T7p05"
+                     /note="possible gene 0.6B"
+                     /db_xref="GeneID:1261061"
+     CDS             join(1..159,161..337)
+                     /locus_tag="T7p05"
+                     /name="gp0.6B"
+                     /note="possible gene 0.6B"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041957.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03778"
+                     /db_xref="GeneID:1261061"
+                     /translation="MMKHYVMPIHTSNGATVCTPDGFAMKQRIERLKRELRINRKINKI
+                     GSGYDRTHDGLKKGYMPNGTLYAANRRIVRTWRENNLERRKDKRGRRGIDERKRLKPRN
+                     SPHLNRH"
+     gene            1..162
+                     /locus_tag="T7p06"
+                     /note="gene 0.6A"
+                     /db_xref="GeneID:1261071"
+     CDS             1..162
+                     /locus_tag="T7p06"
+                     /name="gp0.6A"
+                     /note="gene 0.6A"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041958.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03778"
+                     /db_xref="GeneID:1261071"
+                     /translation="MMKHYVMPIHTSNGATVCTPDGFAMKQRIERLKRELRINRKINKI
+                     GSGYDRTH"
+ORIGIN
+        1 atgatgaagc actacgttat gccaatccac acgtccaacg gggcaaccgt atgtacacct
+       61 gatgggttcg caatgaaaca acgaatcgaa cgccttaagc gtgaactccg cattaaccgc
+      121 aagattaaca agataggttc cggctatgac agaacgcact gatggcttaa agaaaggtta
+      181 tatgcccaat ggcacactat acgctgcaaa tcggcgaata gtgagaactt ggcgagagaa
+      241 caacctcgaa cgccgcaagg acaagagagg gcggcgtggc atagacgaaa ggaaaaggtt
+      301 aaagccaaga aactcgccgc acttgaacag gcactag
+//
+LOCUS       gp0.6A                   162 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp0.6A.
+ACCESSION   gp0.6A
+VERSION     gp0.6A
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..162
+                     /locus_tag="T7p06"
+                     /note="gene 0.6A"
+                     /db_xref="GeneID:1261071"
+     CDS             1..162
+                     /locus_tag="T7p06"
+                     /name="gp0.6A"
+                     /note="gene 0.6A"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041958.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03778"
+                     /db_xref="GeneID:1261071"
+                     /translation="MMKHYVMPIHTSNGATVCTPDGFAMKQRIERLKRELRINRKINKI
+                     GSGYDRTH"
+ORIGIN
+        1 atgatgaagc actacgttat gccaatccac acgtccaacg gggcaaccgt atgtacacct
+       61 gatgggttcg caatgaaaca acgaatcgaa cgccttaagc gtgaactccg cattaaccgc
+      121 aagattaaca agataggttc cggctatgac agaacgcact ga
+//
+LOCUS       gp0.7                   1080 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp0.7.
+ACCESSION   gp0
+VERSION     gp0.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..1080
+                     /locus_tag="T7p03"
+                     /name="gp0.7"
+                     /note="The T7 seryl-threonyl protein kinase gp0.7 is
+                     involved in host transcription shutoff and Col Ib
+                     exclusion. Phosphorylates E. coli RNA polymerase. Other
+                     names: gp0.7."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="protein kinase"
+                     /protein_id="NP_041959.1"
+                     /db_xref="GOA:P00513"
+                     /db_xref="UniProtKB/Swiss-Prot:P00513"
+                     /db_xref="GeneID:1261070"
+                     /translation="MNITDIMNAIDAIKALPICELDKRQGMLIDLLVEMVNSETCDGEL
+                     TELNQALEHQDWWTTLKCLTADAGFKMLGNGHFSAAYSHPLLPNRVIKVGFKKEDSGAA
+                     YTAFCRMYQGRPGIPNVYDVQRHAGCYTVVLDALKDCERFNNDAHYKYAEIASDIIDCN
+                     SDEHDELTGWDGEFVETCKLIRKFFEGIASFDMHSGNIMFSNGDVPYITDPVSFSQKKD
+                     GGAFSIDPEELIKEVEEVARQKEIDRAKARKERHEGRLEARRFKRRNRKARKAHKAKRE
+                     RMLAAWRWAERQERRNHEVAVDVLGRTNNAMLWVNMFSGDFKALEERIALHWRNADRMA
+                     IANGLTLNIDKQLDAMLMG"
+ORIGIN
+        1 atgaacatta ccgacatcat gaacgctatc gacgcaatca aagcactgcc aatctgtgaa
+       61 cttgacaagc gtcaaggtat gcttatcgac ttactggtcg agatggtcaa cagcgagacg
+      121 tgtgatggcg agctaaccga actaaatcag gcacttgagc atcaagattg gtggactacc
+      181 ttgaagtgtc tcacggctga cgcagggttc aagatgctcg gtaatggtca cttctcggct
+      241 gcttatagtc acccgctgct acctaacaga gtgattaagg tgggctttaa gaaagaggat
+      301 tcaggcgcag cctataccgc attctgccgc atgtatcagg gtcgtcctgg tatccctaac
+      361 gtctacgatg tacagcgcca cgctggatgc tatacggtgg tacttgacgc acttaaggat
+      421 tgcgagcgtt tcaacaatga tgcccattat aaatacgctg agattgcaag cgacatcatt
+      481 gattgcaatt cggatgagca tgatgagtta actggatggg atggtgagtt tgttgaaact
+      541 tgtaaactaa tccgcaagtt ctttgagggc atcgcctcat tcgacatgca tagcgggaac
+      601 atcatgttct caaatggaga cgtaccatac atcaccgacc cggtatcatt ctcgcagaag
+      661 aaagacggtg gcgcattcag catcgaccct gaggaactca tcaaggaagt cgaggaagtc
+      721 gcacgacaga aagaaattga ccgcgctaag gcccgtaaag aacgtcacga ggggcgctta
+      781 gaggcacgca gattcaaacg tcgcaaccgc aaggcacgta aagcacacaa agctaagcgc
+      841 gaaagaatgc ttgctgcgtg gcgatgggct gaacgtcaag aacggcgtaa ccatgaggta
+      901 gctgtagatg tactaggaag aaccaataac gctatgctct gggtcaacat gttctctggg
+      961 gactttaagg cgcttgagga acgaatcgcg ctgcactggc gtaatgctga ccggatggct
+     1021 atcgctaatg gtcttacgct caacattgat aagcaacttg acgcaatgtt aatgggctga
+//
+LOCUS       gp1                     2652 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.
+ACCESSION   gp1
+VERSION     gp1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..2652
+                     /locus_tag="T7p07"
+                     /name="gp1"
+                     /note="A family of single subunit RNA polymerases."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="T3/T7-like RNA polymerase"
+                     /protein_id="NP_041960.1"
+                     /db_xref="GOA:P00573"
+                     /db_xref="UniProtKB/Swiss-Prot:P00573"
+                     /db_xref="GeneID:1261050"
+                     /translation="MNTINIAKNDFSDIELAAIPFNTLADHYGERLAREQLALEHESYE
+                     MGEARFRKMFERQLKAGEVADNAAAKPLITTLLPKMIARINDWFEEVKAKRGKRPTAFQ
+                     FLQEIKPEAVAYITIKTTLACLTSADNTTVQAVASAIGRAIEDEARFGRIRDLEAKHFK
+                     KNVEEQLNKRVGHVYKKAFMQVVEADMLSKGLLGGEAWSSWHKEDSIHVGVRCIEMLIE
+                     STGMVSLHRQNAGVVGQDSETIELAPEYAEAIATRAGALAGISPMFQPCVVPPKPWTGI
+                     TGGGYWANGRRPLALVRTHSKKALMRYEDVYMPEVYKAINIAQNTAWKINKKVLAVANV
+                     ITKWKHCPVEDIPAIEREELPMKPEDIDMNPEALTAWKRAAAAVYRKDKARKSRRISLE
+                     FMLEQANKFANHKAIWFPYNMDWRGRVYAVSMFNPQGNDMTKGLLTLAKGKPIGKEGYY
+                     WLKIHGANCAGVDKVPFPERIKFIEENHENIMACAKSPLENTWWAEQDSPFCFLAFCFE
+                     YAGVQHHGLSYNCSLPLAFDGSCSGIQHFSAMLRDEVGGRAVNLLPSETVQDIYGIVAK
+                     KVNEILQADAINGTDNEVVTVTDENTGEISEKVKLGTKALAGQWLAYGVTRSVTKRSVM
+                     TLAYGSKEFGFRQQVLEDTIQPAIDSGKGLMFTQPNQAAGYMAKLIWESVSVTVVAAVE
+                     AMNWLKSAAKLLAAEVKDKKTGEILRKRCAVHWVTPDGFPVWQEYKKPIQTRLNLMFLG
+                     QFRLQPTINTNKDSEIDAHKQESGIAPNFVHSQDGSHLRKTVVWAHEKYGIESFALIHD
+                     SFGTIPADAANLFKAVRETMVDTYESCDVLADFYDQFADQLHESQLDKMPALPAKGNLN
+                     LRDILESDFAFA"
+ORIGIN
+        1 atgaacacga ttaacatcgc taagaacgac ttctctgaca tcgaactggc tgctatcccg
+       61 ttcaacactc tggctgacca ttacggtgag cgtttagctc gcgaacagtt ggcccttgag
+      121 catgagtctt acgagatggg tgaagcacgc ttccgcaaga tgtttgagcg tcaacttaaa
+      181 gctggtgagg ttgcggataa cgctgccgcc aagcctctca tcactaccct actccctaag
+      241 atgattgcac gcatcaacga ctggtttgag gaagtgaaag ctaagcgcgg caagcgcccg
+      301 acagccttcc agttcctgca agaaatcaag ccggaagccg tagcgtacat caccattaag
+      361 accactctgg cttgcctaac cagtgctgac aatacaaccg ttcaggctgt agcaagcgca
+      421 atcggtcggg ccattgagga cgaggctcgc ttcggtcgta tccgtgacct tgaagctaag
+      481 cacttcaaga aaaacgttga ggaacaactc aacaagcgcg tagggcacgt ctacaagaaa
+      541 gcatttatgc aagttgtcga ggctgacatg ctctctaagg gtctactcgg tggcgaggcg
+      601 tggtcttcgt ggcataagga agactctatt catgtaggag tacgctgcat cgagatgctc
+      661 attgagtcaa ccggaatggt tagcttacac cgccaaaatg ctggcgtagt aggtcaagac
+      721 tctgagacta tcgaactcgc acctgaatac gctgaggcta tcgcaacccg tgcaggtgcg
+      781 ctggctggca tctctccgat gttccaacct tgcgtagttc ctcctaagcc gtggactggc
+      841 attactggtg gtggctattg ggctaacggt cgtcgtcctc tggcgctggt gcgtactcac
+      901 agtaagaaag cactgatgcg ctacgaagac gtttacatgc ctgaggtgta caaagcgatt
+      961 aacattgcgc aaaacaccgc atggaaaatc aacaagaaag tcctagcggt cgccaacgta
+     1021 atcaccaagt ggaagcattg tccggtcgag gacatccctg cgattgagcg tgaagaactc
+     1081 ccgatgaaac cggaagacat cgacatgaat cctgaggctc tcaccgcgtg gaaacgtgct
+     1141 gccgctgctg tgtaccgcaa ggacaaggct cgcaagtctc gccgtatcag ccttgagttc
+     1201 atgcttgagc aagccaataa gtttgctaac cataaggcca tctggttccc ttacaacatg
+     1261 gactggcgcg gtcgtgttta cgctgtgtca atgttcaacc cgcaaggtaa cgatatgacc
+     1321 aaaggactgc ttacgctggc gaaaggtaaa ccaatcggta aggaaggtta ctactggctg
+     1381 aaaatccacg gtgcaaactg tgcgggtgtc gataaggttc cgttccctga gcgcatcaag
+     1441 ttcattgagg aaaaccacga gaacatcatg gcttgcgcta agtctccact ggagaacact
+     1501 tggtgggctg agcaagattc tccgttctgc ttccttgcgt tctgctttga gtacgctggg
+     1561 gtacagcacc acggcctgag ctataactgc tcccttccgc tggcgtttga cgggtcttgc
+     1621 tctggcatcc agcacttctc cgcgatgctc cgagatgagg taggtggtcg cgcggttaac
+     1681 ttgcttccta gtgaaaccgt tcaggacatc tacgggattg ttgctaagaa agtcaacgag
+     1741 attctacaag cagacgcaat caatgggacc gataacgaag tagttaccgt gaccgatgag
+     1801 aacactggtg aaatctctga gaaagtcaag ctgggcacta aggcactggc tggtcaatgg
+     1861 ctggcttacg gtgttactcg cagtgtgact aagcgttcag tcatgacgct ggcttacggg
+     1921 tccaaagagt tcggcttccg tcaacaagtg ctggaagata ccattcagcc agctattgat
+     1981 tccggcaagg gtctgatgtt cactcagccg aatcaggctg ctggatacat ggctaagctg
+     2041 atttgggaat ctgtgagcgt gacggtggta gctgcggttg aagcaatgaa ctggcttaag
+     2101 tctgctgcta agctgctggc tgctgaggtc aaagataaga agactggaga gattcttcgc
+     2161 aagcgttgcg ctgtgcattg ggtaactcct gatggtttcc ctgtgtggca ggaatacaag
+     2221 aagcctattc agacgcgctt gaacctgatg ttcctcggtc agttccgctt acagcctacc
+     2281 attaacacca acaaagatag cgagattgat gcacacaaac aggagtctgg tatcgctcct
+     2341 aactttgtac acagccaaga cggtagccac cttcgtaaga ctgtagtgtg ggcacacgag
+     2401 aagtacggaa tcgaatcttt tgcactgatt cacgactcct tcggtaccat tccggctgac
+     2461 gctgcgaacc tgttcaaagc agtgcgcgaa actatggttg acacatatga gtcttgtgat
+     2521 gtactggctg atttctacga ccagttcgct gaccagttgc acgagtctca attggacaaa
+     2581 atgccagcac ttccggctaa aggtaacttg aacctccgtg acatcttaga gtcggacttc
+     2641 gcgttcgcgt aa
+//
+LOCUS       gp1.1                    129 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.1.
+ACCESSION   gp1
+VERSION     gp1.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..129
+                     /locus_tag="T7p09"
+                     /note="gene 1.1"
+                     /db_xref="GeneID:1261072"
+     CDS             1..129
+                     /locus_tag="T7p09"
+                     /name="gp1.1"
+                     /note="other names: gp1.1"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041961.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03779"
+                     /db_xref="GeneID:1261072"
+                     /translation="MRNFEKMTKRSNRNARDFEATKGRKLNKTKRDRSHKRSWEGQ"
+ORIGIN
+        1 atgcgtaact tcgaaaagat gaccaaacgt tctaaccgta atgctcgtga cttcgaggca
+       61 accaaaggtc gcaagttgaa taagactaag cgtgaccgct ctcacaagcg tagctgggag
+      121 ggtcagtaa
+//
+LOCUS       gp1.2                    258 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.2.
+ACCESSION   gp1
+VERSION     gp1.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..258
+                     /locus_tag="T7p08"
+                     /name="gp1.2"
+                     /note="inhibits activity of the host dGTPase [dgt].
+                     Essential only in strains that overexpress dGTPase [optA1
+                     mutation]. In T7, gp1.2 also causes F plasmid exclusion. In
+                     T3, however, gp1.2 overcomes the exclusion system. Other
+                     names: dGTP triphosphohydrolase inhibitor; gp1.2."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="host dGTPase inhibitor"
+                     /protein_id="NP_041962.1"
+                     /db_xref="GOA:P03780"
+                     /db_xref="UniProtKB/Swiss-Prot:P03780"
+                     /db_xref="GeneID:1261049"
+                     /translation="MGRLYSGNLAAFKAATNKLFQLDLAVIYDDWYDAYTRKDCIRLRI
+                     EDRSGNLIDTSTFYHHDEDVLFNMCTDWLNHMYDQLKDWK"
+ORIGIN
+        1 atgggacgtt tatatagtgg taatctggca gcattcaagg cagcaacaaa caagctgttc
+       61 cagttagact tagcggtcat ttatgatgac tggtatgatg cctatacaag aaaagattgc
+      121 atacggttac gtattgagga caggagtgga aacctgattg atactagcac cttctaccac
+      181 cacgacgagg acgttctgtt caatatgtgt actgattggt tgaaccatat gtatgaccag
+      241 ttgaaggact ggaagtaa
+//
+LOCUS       gp1.3                   1080 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.3.
+ACCESSION   gp1
+VERSION     gp1.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..1080
+                     /locus_tag="T7p10"
+                     /name="gp1.3"
+                     /note="Catalyzes the ATP-dependent formation of a
+                     phosphodiester bond at the site of single-stranded breaks
+                     in double-stranded DNA. T7 ligase is essential in
+                     ligase-deficient hosts only."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="ATP-dependent DNA ligase"
+                     /protein_id="NP_041963.1"
+                     /db_xref="GOA:P00969"
+                     /db_xref="UniProtKB/Swiss-Prot:P00969"
+                     /db_xref="GeneID:1261055"
+                     /translation="MMNIKTNPFKAVSFVESAIKKALDNAGYLIAEIKYDGVRGNICVD
+                     NTANSYWLSRVSKTIPALEHLNGFDVRWKRLLNDDRCFYKDGFMLDGELMVKGVDFNTG
+                     SGLLRTKWTDTKNQEFHEELFVEPIRKKDKVPFKLHTGHLHIKLYAILPLHIVESGEDC
+                     DVMTLLMQEHVKNMLPLLQEYFPEIEWQAAESYEVYDMVELQQLYEQKRAEGHEGLIVK
+                     DPMCIYKRGKKSGWWKMKPENEADGIIQGLVWGTKGLANEGKVIGFEVLLESGRLVNAT
+                     NISRALMDEFTETVKEATLSQWGFFSPYGIGDNDACTINPYDGWACQISYMEETPDGSL
+                     RHPSFVMFRGTEDNPQEKM"
+ORIGIN
+        1 atgatgaaca ttaagactaa cccgtttaaa gccgtgtctt tcgtagagtc tgccattaag
+       61 aaggctctgg ataacgctgg gtatcttatc gctgaaatca agtacgatgg tgtacgcggg
+      121 aacatctgcg tagacaatac tgctaacagt tactggctct ctcgtgtatc taaaacgatt
+      181 ccggcactgg agcacttaaa cgggtttgat gttcgctgga agcgtctact gaacgatgac
+      241 cgttgcttct acaaagatgg ctttatgctt gatggggaac tcatggtcaa gggcgtagac
+      301 tttaacacag ggtccggcct actgcgtacc aaatggactg acacgaagaa ccaagagttc
+      361 catgaagagt tattcgttga accaatccgt aagaaagata aagttccctt taagctgcac
+      421 actggacacc ttcacataaa actgtacgct atcctcccgc tgcacatcgt ggagtctgga
+      481 gaagactgtg atgtcatgac gttgctcatg caggaacacg ttaagaacat gctgcctctg
+      541 ctacaggaat acttccctga aatcgaatgg caagcggctg aatcttacga ggtctacgat
+      601 atggtagaac tacagcaact gtacgagcag aagcgagcag aaggccatga gggtctcatt
+      661 gtgaaagacc cgatgtgtat ctataagcgc ggtaagaaat ctggctggtg gaaaatgaaa
+      721 cctgagaacg aagctgacgg tatcattcag ggtctggtat ggggtacaaa aggtctggct
+      781 aatgaaggta aagtgattgg ttttgaggtg cttcttgaga gtggtcgttt agttaacgcc
+      841 acgaatatct ctcgcgcctt aatggatgag ttcactgaga cagtaaaaga ggccacccta
+      901 agtcaatggg gattctttag cccatacggt attggcgaca acgatgcttg tactattaac
+      961 ccttacgatg gctgggcgtg tcaaattagc tacatggagg aaacacctga tggctctttg
+     1021 cggcacccat cgttcgtaat gttccgtggc accgaggaca accctcaaga gaaaatgtaa
+//
+LOCUS       gp1.4                    156 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.4.
+ACCESSION   gp1
+VERSION     gp1.4
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..156
+                     /locus_tag="T7p11"
+                     /note="gene 1.4"
+                     /db_xref="GeneID:1261075"
+     CDS             1..156
+                     /locus_tag="T7p11"
+                     /name="gp1.4"
+                     /note="gene 1.4"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041964.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03791"
+                     /db_xref="GeneID:1261075"
+                     /translation="MFKKVGKFLAALAAILTLAYILAVYPQVALVVVGACYLAAVCACV
+                     WSIVNW"
+ORIGIN
+        1 atgtttaaga aggttggtaa attccttgcg gctttggcag ctatcctgac gcttgcgtat
+       61 attcttgcgg tataccctca agtagcacta gtagtagttg gcgcttgtta cttagcggca
+      121 gtgtgtgctt gcgtgtggag tatagttaac tggtaa
+//
+LOCUS       gp1.5                     90 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.5.
+ACCESSION   gp1
+VERSION     gp1.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..90
+                     /locus_tag="T7p12"
+                     /note="gene 1.5"
+                     /db_xref="GeneID:1261074"
+     CDS             1..90
+                     /locus_tag="T7p12"
+                     /name="gp1.5"
+                     /note="gene 1.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041965.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03792"
+                     /db_xref="GeneID:1261074"
+                     /translation="MMYLMPLLIVIVGCLALHCSDDDMPDGHA"
+ORIGIN
+        1 atgatgtact taatgccatt actcatcgtc attgtaggat gccttgcgct ccactgtagc
+       61 gatgatgata tgccagatgg tcacgcttaa
+//
+LOCUS       gp1.6                    261 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.6.
+ACCESSION   gp1
+VERSION     gp1.6
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..261
+                     /locus_tag="T7p13"
+                     /note="gene 1.6"
+                     /db_xref="GeneID:1261076"
+     CDS             1..261
+                     /locus_tag="T7p13"
+                     /name="gp1.6"
+                     /note="gene 1.6"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041966.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03793"
+                     /db_xref="GeneID:1261076"
+                     /translation="MFRLHYNKSVKNFTVRRADRSIVCASERRAKIPLIGNTVPLAPSV
+                     HIIITRGDFEKAIDKKRPVLSVAVTRFPFVRLLLKRIKEVF"
+ORIGIN
+        1 atgtttcgac ttcattacaa caaaagcgtt aagaatttca cggttcgccg tgctgaccgt
+       61 tcaatcgtat gtgcgagcga gcgccgagct aagatacctc ttattggtaa cacagttcct
+      121 ttggcaccga gcgtccacat cattatcacc cgtggtgact ttgagaaagc aatagacaag
+      181 aaacgtccgg ttcttagtgt ggcagtgacc cgcttcccgt tcgtccgtct gttactcaaa
+      241 cgaatcaagg aggtgttctg a
+//
+LOCUS       gp1.7                    591 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.7.
+ACCESSION   gp1
+VERSION     gp1.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..591
+                     /locus_tag="T7p14"
+                     /note="gene 1.7"
+                     /db_xref="GeneID:1261060"
+     CDS             1..591
+                     /locus_tag="T7p14"
+                     /name="gp1.7"
+                     /note="gene 1.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041967.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03781"
+                     /db_xref="GeneID:1261060"
+                     /translation="MGLLDGEAWEKENPPVQATGCIACLEKDDRYPHTCNKGANDMTER
+                     EQEMIIKLIDNNEGRPDDLNGCGILCSNVPCHLCPANNDQKITLGEIRAMDPRKPHLNK
+                     PEVTPTDDQPSAETIEGVTKPSHYMLFDDIEAIEVIARSMTVEQFKGYCFGNILKYRLR
+                     AGKKSELAYLEKDLAKADFYKELFEKHKDKCYA"
+ORIGIN
+        1 atgggactgt tagatggtga agcctgggaa aaagaaaacc cgccagtaca agcaactggg
+       61 tgtatagctt gcttagagaa agatgaccgt tatccacaca cctgtaacaa aggagctaac
+      121 gatatgaccg aacgtgaaca agagatgatc attaagttga tagacaataa tgaaggtcgc
+      181 ccagatgatt tgaatggctg cggtattctc tgctccaatg tcccttgcca cctctgcccc
+      241 gcaaataacg atcaaaagat aaccttaggt gaaatccgag cgatggaccc acgtaaacca
+      301 catctgaata aacctgaggt aactcctaca gatgaccagc cttccgctga gacaatcgaa
+      361 ggtgtcacta agccttccca ctacatgctg tttgacgaca ttgaggctat cgaagtgatt
+      421 gctcgttcaa tgaccgttga gcagttcaag ggatactgct tcggtaacat cttaaagtac
+      481 agactacgtg ctggtaagaa gtcagagtta gcgtacttag agaaagacct agcgaaagca
+      541 gacttctata aagaactctt tgagaaacat aaggataaat gttatgcata a
+//
+LOCUS       gp1.8                    147 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp1.8.
+ACCESSION   gp1
+VERSION     gp1.8
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..147
+                     /locus_tag="T7p15"
+                     /note="gene 1.8"
+                     /db_xref="GeneID:1261054"
+     CDS             1..147
+                     /locus_tag="T7p15"
+                     /name="gp1.8"
+                     /note="not essential in T7. Other names: gp1.8"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041968.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03794"
+                     /db_xref="GeneID:1261054"
+                     /translation="MHNFKSTPPADSLSDDFTSCSEWCRKMWEETFDDAYIKLYELWKS
+                     RGQ"
+ORIGIN
+        1 atgcataact tcaagtcaac cccacctgcc gacagcctat ctgatgactt cacatcttgc
+       61 tcagagtggt gccgaaagat gtgggaagag acattcgacg atgcgtacat caagctgtat
+      121 gaactttgga aatcgagagg tcaatga
+//
+LOCUS       gp2                      195 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp2.
+ACCESSION   gp2
+VERSION     gp2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..195
+                     /locus_tag="T7p16"
+                     /note="gene 2"
+                     /db_xref="GeneID:1261073"
+     CDS             1..195
+                     /locus_tag="T7p16"
+                     /name="gp2"
+                     /note="T7 RNA polymerase inhibitor binds to host RNA pol
+                     and suppresses its activity on a subset of promoters. gp2
+                     deficient T7 display reduced DNA replication and premature
+                     breakdown of replicating DNA, specifically at the left end
+                     of the genome, along with the presence of empty proheads.
+                     Rifampin can compensate for the missing gp2 function. Other
+                     names: gp2."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="inhibitor of host bacterial RNA polymerase"
+                     /protein_id="NP_041969.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03704"
+                     /db_xref="GeneID:1261073"
+                     /translation="MSNVNTGSLSVDNKKFWATVESSEHSFEVPIYAETLDEALELAEW
+                     QYVPAGFEVTRVRPCVAPK"
+ORIGIN
+        1 atgtcaaacg taaatacagg ttcacttagt gtggacaata agaagttttg ggctaccgta
+       61 gagtcctcgg agcattcctt cgaggttcca atctacgctg agaccctaga cgaagctctg
+      121 gagttagccg aatggcaata cgttccggct ggctttgagg ttactcgtgt gcgtccttgt
+      181 gtagcaccga agtaa
+//
+LOCUS       gp2.5                    699 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp2.5.
+ACCESSION   gp2
+VERSION     gp2.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..699
+                     /locus_tag="T7p17"
+                     /note="gene 2.5"
+                     /db_xref="GeneID:1261080"
+     CDS             1..699
+                     /locus_tag="T7p17"
+                     /name="gp2.5"
+                     /note="binds single-stranded DNA. In phage T7 gp2.5 is
+                     essential for DNA replication and recombination. Other
+                     names: gp2.5; SSB."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="single-stranded DNA-binding protein"
+                     /protein_id="NP_041970.1"
+                     /db_xref="GOA:P03696"
+                     /db_xref="UniProtKB/Swiss-Prot:P03696"
+                     /db_xref="GeneID:1261080"
+                     /translation="MAKKIFTSALGTAEPYAYIAKPDYGNEERGFGNPRGVYKVDLTIP
+                     NKDPRCQRMVDEIVKCHEEAYAAAVEEYEANPPAVARGKKPLKPYEGDMPFFDNGDGTT
+                     TFKFKCYASFQDKKTKETKHINLVVVDSKGKKMEDVPIIGGGSKLKVKYSLVPYKWNTA
+                     VGASVKLQLESVMLVELATFGGGEDDWADEVEENGYVASGSAKASKPRDEESWDEDDEE
+                     SEEADEDGDF"
+ORIGIN
+        1 atggctaaga agattttcac ctctgcgctg ggtaccgctg aaccttacgc ttacatcgcc
+       61 aagccggact acggcaacga agagcgtggc tttgggaacc ctcgtggtgt ctataaagtt
+      121 gacctgacta ttcccaacaa agacccgcgc tgccagcgta tggtcgatga aatcgtgaag
+      181 tgtcacgaag aggcttatgc tgctgccgtt gaggaatacg aagctaatcc acctgctgta
+      241 gctcgtggta agaaaccgct gaaaccgtat gagggtgaca tgccgttctt cgataacggt
+      301 gacggtacga ctacctttaa gttcaaatgc tacgcgtctt tccaagacaa gaagaccaaa
+      361 gagaccaagc acatcaatct ggttgtggtt gactcaaaag gtaagaagat ggaagacgtt
+      421 ccgattatcg gtggtggctc taagctgaaa gttaaatatt ctctggttcc atacaagtgg
+      481 aacactgctg taggtgcgag cgttaagctg caactggaat ccgtgatgct ggtcgaactg
+      541 gctacctttg gtggcggtga agacgattgg gctgacgaag ttgaagagaa cggctatgtt
+      601 gcctctggtt ctgccaaagc gagcaaacca cgcgacgaag aaagctggga cgaagacgac
+      661 gaagagtccg aggaagcaga cgaagacgga gacttctaa
+//
+LOCUS       gp2.8                    420 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp2.8.
+ACCESSION   gp2
+VERSION     gp2.8
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..420
+                     /locus_tag="T7p18"
+                     /note="gene 2.8"
+                     /db_xref="GeneID:1261078"
+     CDS             1..420
+                     /locus_tag="T7p18"
+                     /name="gp2.8"
+                     /note="gene 2.8"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041971.1"
+                     /db_xref="GOA:P03795"
+                     /db_xref="UniProtKB/Swiss-Prot:P03795"
+                     /db_xref="GeneID:1261078"
+                     /translation="MELREKILERIKVTSSGCWEWQGATNNKGYGQVWCSNTGKVVYCH
+                     RVMSNAPKGSTVLHSCDNPLCCNPEHLSIGTPKENSTDMVNKGRSHKGYKLSDEDVMAI
+                     MESSESNVSLARTYGVSQQTICDIRKGRRHGRLRR"
+ORIGIN
+        1 gtggaactgc gggagaaaat ccttgagcga atcaaggtga cttcctctgg gtgttgggag
+       61 tggcagggcg ctacgaacaa taaagggtac gggcaggtgt ggtgcagcaa taccggaaag
+      121 gttgtctact gtcatcgcgt aatgtctaat gctccgaaag gttctaccgt cctgcactcc
+      181 tgtgataatc cattatgttg taaccctgaa cacctatcca taggaactcc aaaagagaac
+      241 tccactgaca tggtaaataa gggtcgctca cacaaggggt ataaactttc agacgaagac
+      301 gtaatggcaa tcatggagtc cagcgagtcc aatgtatcct tagctcgcac ctatggtgtc
+      361 tcccaacaga ctatttgtga tatacgcaaa gggaggcgac atggcaggtt acggcgctaa
+//
+LOCUS       gp3                      450 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp3.
+ACCESSION   gp3
+VERSION     gp3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..450
+                     /locus_tag="T7p19"
+                     /note="gene 3"
+                     /db_xref="GeneID:1261079"
+     CDS             1..450
+                     /locus_tag="T7p19"
+                     /name="gp3"
+                     /note="T7 endonuclease I is a Holliday junction resolvase
+                     encoded by T7 gene 3. Mutants in gene 3 are defective in
+                     recombination and accumulate branched DNA. Endonuclease I
+                     may also play a role in the degradation of the host genome
+                     following infection with T7."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="endonuclease I"
+                     /protein_id="NP_041972.1"
+                     /db_xref="GOA:P00641"
+                     /db_xref="UniProtKB/Swiss-Prot:P00641"
+                     /db_xref="GeneID:1261079"
+                     /translation="MAGYGAKGIRKVGAFRSGLEDKVSKQLESKGIKFEYEEWKVPYVI
+                     PASNHTYTPDFLLPNGIFVETKGLWESDDRKKHLLIREQHPELDIRIVFSSSRTKLYKG
+                     SPTSYGEFCEKHGIKFADKLIPAEWIKEPKKEVPFDRLKRKGGKK"
+ORIGIN
+        1 atggcaggtt acggcgctaa aggaatccga aaggttggag cgtttcgctc tggcctagag
+       61 gacaaggttt caaagcagtt ggaatcaaaa ggtattaaat tcgagtatga agagtggaaa
+      121 gtgccttatg taattccggc gagcaatcac acttacactc cagacttctt acttccaaac
+      181 ggtatattcg ttgagacaaa gggtctgtgg gaaagcgatg atagaaagaa gcacttatta
+      241 attagggagc agcaccccga gctagacatc cgtattgtct tctcaagctc acgtactaag
+      301 ttatacaaag gttctccaac gtcttatgga gagttctgcg aaaagcatgg tattaagttc
+      361 gctgataaac tgatacctgc tgagtggata aaggaaccca agaaggaggt cccctttgat
+      421 agattaaaaa ggaaaggagg aaagaaataa
+//
+LOCUS       gp3.5                    456 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp3.5.
+ACCESSION   gp3
+VERSION     gp3.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..456
+                     /locus_tag="T7p20"
+                     /note="gene 3.5"
+                     /db_xref="GeneID:1261077"
+     CDS             1..456
+                     /locus_tag="T7p20"
+                     /name="gp3.5"
+                     /note="T7 lysozyme hydrolyzes an amide bond in the host
+                     cell wall following its release from the cytoplasm. In
+                     addition, T7 lysozyme inhibits T7 RNA polymerase
+                     initiation. This inhibition is greater for class II
+                     promoters than class III promoters and therefore may aid in
+                     temporal regulation of transcription and the switch to
+                     particle assembly. In T7, lysozyme, unlike the T7 holin, is
+                     expressed with and lies in the same region as the
+                     replication genes. Lack of gp3.5 reduces replication and
+                     burst size and delays, but does not completely prevent
+                     lysis. Mutations in the muralytic domain of gene 16, an
+                     inner capsid protein, can partially compensate for a
+                     deletion of gp3.5. Other names: gp3.5; amidase;
+                     N-acetylmuramoyl-L-alanine amidase"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="lysozyme"
+                     /protein_id="NP_041973.1"
+                     /db_xref="GOA:P00806"
+                     /db_xref="UniProtKB/Swiss-Prot:P00806"
+                     /db_xref="GeneID:1261077"
+                     /translation="MARVQFKQRESTDAIFVHCSATKPSQNVGVREIRQWHKEQGWLDV
+                     GYHFIIKRDGTVEAGRDEMAVGSHAKGYNHNSIGVCLVGGIDDKGKFDANFTPAQMQSL
+                     RSLLVTLLAKYEGAVLRAHHEVAPKACPSFDLKRWWEKNELVTSDRG"
+ORIGIN
+        1 atggctcgtg tacagtttaa acaacgtgaa tctactgacg caatctttgt tcactgctcg
+       61 gctaccaagc caagtcagaa tgttggtgtc cgtgagattc gccagtggca caaagagcag
+      121 ggttggctcg atgtgggata ccactttatc atcaagcgag acggtactgt ggaggcagga
+      181 cgagatgaga tggctgtagg ctctcacgct aagggttaca accacaactc tatcggcgtc
+      241 tgccttgttg gtggtatcga cgataaaggt aagttcgacg ctaactttac gccagcccaa
+      301 atgcaatccc ttcgctcact gcttgtcaca ctgctggcta agtacgaagg cgctgtgctt
+      361 cgcgcccatc atgaggtggc gccgaaggct tgcccttcgt tcgaccttaa gcgttggtgg
+      421 gagaagaacg aactggtcac ttctgaccgt ggataa
+//
+LOCUS       gp3.8                    366 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp3.8.
+ACCESSION   gp3
+VERSION     gp3.8
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..366
+                     /locus_tag="T7p21"
+                     /note="gene 3.8"
+                     /db_xref="GeneID:1261065"
+     CDS             1..366
+                     /locus_tag="T7p21"
+                     /name="gp3.8"
+                     /note="gene 3.8"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative NHN endonuclease"
+                     /protein_id="NP_041974.1"
+                     /db_xref="GOA:P03797"
+                     /db_xref="UniProtKB/Swiss-Prot:P03797"
+                     /db_xref="GeneID:1261065"
+                     /translation="MRKSYKQFYKAPRRHIQVWEAANGPIPKGYYIDHIDGNPLNDALD
+                     NLRLALPKENSWNMKTPKSNTSGLKGLSWSKEREMWRGTVTAEGKQHNFRSRDLLEVVA
+                     WIYRTRRELHGQFARFR"
+ORIGIN
+        1 atgcgcaagt cttataaaca attctataag gctccgagga ggcatatcca agtgtgggag
+       61 gcagccaatg ggcctatacc aaaaggttat tatatagacc acattgacgg caatccactc
+      121 aacgacgcct tagacaatct ccgtctggct ctcccaaaag aaaactcatg gaacatgaag
+      181 actccaaaga gcaatacctc aggactaaag ggactgagtt ggagcaagga aagggagatg
+      241 tggagaggca ctgtaacagc tgagggtaaa cagcataact ttcgtagtag agatctattg
+      301 gaagtcgttg cgtggattta tagaactagg agggaattgc atggacaatt cgcacgattc
+      361 cgatag
+//
+LOCUS       gp4A                    1701 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4A.
+ACCESSION   gp4A
+VERSION     gp4A
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1701
+                     /locus_tag="T7p22"
+                     /note="gene 4A"
+                     /db_xref="GeneID:1261046"
+     CDS             1..1701
+                     /locus_tag="T7p22"
+                     /name="gp4A"
+                     /note="gene 4A, primase/helicase [14,15]"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA primase/helicase"
+                     /protein_id="NP_041975.1"
+                     /db_xref="GOA:P03692"
+                     /db_xref="UniProtKB/Swiss-Prot:P03692"
+                     /db_xref="GeneID:1261046"
+                     /translation="MDNSHDSDSVFLYHIPCDNCGSSDGNSLFSDGHTFCYVCEKWTAG
+                     NEDTKERASKRKPSGGKPMTYNVWNFGESNGRYSALTARGISKETCQKAGYWIAKVDGV
+                     MYQVADYRDQNGNIVSQKVRDKDKNFKTTGSHKSDALFGKHLWNGGKKIVVTEGEIDML
+                     TVMELQDCKYPVVSLGHGASAAKKTCAANYEYFDQFEQIILMFDMDEAGRKAVEEAAQV
+                     LPAGKVRVAVLPCKDANECHLNGHDREIMEQVWNAGPWIPDGVVSALSLRERIREHLSS
+                     EESVGLLFSGCTGINDKTLGARGGEVIMVTSGSGMGKSTFVRQQALQWGTAMGKKVGLA
+                     MLEESVEETAEDLIGLHNRVRLRQSDSLKREIIENGKFDQWFDELFGNDTFHLYDSFAE
+                     AETDRLLAKLAYMRSGLGCDVIILDHISIVVSASGESDERKMIDNLMTKLKGFAKSTGV
+                     VLVVICHLKNPDKGKAHEEGRPVSITDLRGSGALRQLSDTIIALERNQQGDMPNLVLVR
+                     ILKCRFTGDTGIAGYMEYNKETGWLEPSSYSGEEESHSESTDWSNDTDF"
+     gene            71..193
+                     /locus_tag="T7p23"
+                     /note="gene 4.1"
+                     /db_xref="GeneID:1261047"
+     CDS             71..193
+                     /locus_tag="T7p23"
+                     /name="gp4.1"
+                     /note="gene 4.1"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041976.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03782"
+                     /db_xref="GeneID:1261047"
+                     /translation="MGTRCSLTDTRSATYARSGLLVMKTLKRGLQNGNPQEVNQ"
+     gene            190..1701
+                     /locus_tag="T7p24"
+                     /note="gene 4B"
+                     /db_xref="GeneID:1261048"
+     CDS             190..1701
+                     /locus_tag="T7p24"
+                     /name="gp4B"
+                     /note="gene 4B/helicase [14,15]"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="helicase"
+                     /protein_id="NP_041977.1"
+                     /db_xref="GOA:P03692"
+                     /db_xref="UniProtKB/Swiss-Prot:P03692"
+                     /db_xref="GeneID:1261048"
+                     /translation="MTYNVWNFGESNGRYSALTARGISKETCQKAGYWIAKVDGVMYQV
+                     ADYRDQNGNIVSQKVRDKDKNFKTTGSHKSDALFGKHLWNGGKKIVVTEGEIDMLTVME
+                     LQDCKYPVVSLGHGASAAKKTCAANYEYFDQFEQIILMFDMDEAGRKAVEEAAQVLPAG
+                     KVRVAVLPCKDANECHLNGHDREIMEQVWNAGPWIPDGVVSALSLRERIREHLSSEESV
+                     GLLFSGCTGINDKTLGARGGEVIMVTSGSGMGKSTFVRQQALQWGTAMGKKVGLAMLEE
+                     SVEETAEDLIGLHNRVRLRQSDSLKREIIENGKFDQWFDELFGNDTFHLYDSFAEAETD
+                     RLLAKLAYMRSGLGCDVIILDHISIVVSASGESDERKMIDNLMTKLKGFAKSTGVVLVV
+                     ICHLKNPDKGKAHEEGRPVSITDLRGSGALRQLSDTIIALERNQQGDMPNLVLVRILKC
+                     RFTGDTGIAGYMEYNKETGWLEPSSYSGEEESHSESTDWSNDTDF"
+     regulatory      1107
+                     /regulatory_class="promoter"
+                     /locus_tag="T7p24"
+                     /note="T7 promoter phi4c"
+ORIGIN
+        1 atggacaatt cgcacgattc cgatagtgta tttctttacc acattccttg tgacaactgt
+       61 gggagtagtg atgggaactc gctgttctct gacggacaca cgttctgcta cgtatgcgag
+      121 aagtggactg ctggtaatga agacactaaa gagagggctt caaaacggaa accctcagga
+      181 ggtaaaccaa tgacttacaa cgtgtggaac ttcggggaat ccaatggacg ctactccgcg
+      241 ttaactgcga gaggaatctc caaggaaacc tgtcagaagg ctggctactg gattgccaaa
+      301 gtagacggtg tgatgtacca agtggctgac tatcgggacc agaacggcaa cattgtgagt
+      361 cagaaggttc gagataaaga taagaacttt aagaccactg gtagtcacaa gagtgacgct
+      421 ctgttcggga agcacttgtg gaatggtggt aagaagattg tcgttacaga aggtgaaatc
+      481 gacatgctta ccgtgatgga acttcaagac tgtaagtatc ctgtagtgtc gttgggtcac
+      541 ggtgcctctg ccgctaagaa gacatgcgct gccaactacg aatactttga ccagttcgaa
+      601 cagattatct taatgttcga tatggacgaa gcagggcgca aagcagtcga agaggctgca
+      661 caggttctac ctgctggtaa ggtacgagtg gcagttcttc cgtgtaagga tgcaaacgag
+      721 tgtcacctaa atggtcacga ccgtgaaatc atggagcaag tgtggaatgc tggtccttgg
+      781 attcctgatg gtgtggtatc ggctctttcg ttacgtgaac gaatccgtga gcacctatcg
+      841 tccgaggaat cagtaggttt acttttcagt ggctgcactg gtatcaacga taagacctta
+      901 ggtgcccgtg gtggtgaagt cattatggtc acttccggtt ccggtatggg taagtcaacg
+      961 ttcgtccgtc aacaagctct acaatggggc acagcgatgg gcaagaaggt aggcttagcg
+     1021 atgcttgagg agtccgttga ggagaccgct gaggacctta taggtctaca caaccgtgtc
+     1081 cgactgagac aatccgactc actaaagaga gagattattg agaacggtaa gttcgaccaa
+     1141 tggttcgatg aactgttcgg caacgatacg ttccatctat atgactcatt cgccgaggct
+     1201 gagacggata gactgctcgc taagctggcc tacatgcgct caggcttggg ctgtgacgta
+     1261 atcattctag accacatctc aatcgtcgta tccgcttctg gtgaatccga tgagcgtaag
+     1321 atgattgaca acctgatgac caagctcaaa gggttcgcta agtcaactgg ggtggtgctg
+     1381 gtcgtaattt gtcaccttaa gaacccagac aaaggtaaag cacatgagga aggtcgcccc
+     1441 gtttctatta ctgacctacg tggttctggc gcactacgcc aactatctga tactattatt
+     1501 gcccttgagc gtaatcagca aggcgatatg cctaaccttg tcctcgttcg tattctcaag
+     1561 tgccgcttta ctggtgatac tggtatcgct ggctacatgg aatacaacaa ggaaaccgga
+     1621 tggcttgaac catcaagtta ctcaggggaa gaagagtcac actcagagtc aacagactgg
+     1681 tccaacgaca ctgacttctg a
+//
+LOCUS       gp4.1                    123 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4.1.
+ACCESSION   gp4
+VERSION     gp4.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..123
+                     /locus_tag="T7p23"
+                     /note="gene 4.1"
+                     /db_xref="GeneID:1261047"
+     CDS             1..123
+                     /locus_tag="T7p23"
+                     /name="gp4.1"
+                     /note="gene 4.1"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041976.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03782"
+                     /db_xref="GeneID:1261047"
+                     /translation="MGTRCSLTDTRSATYARSGLLVMKTLKRGLQNGNPQEVNQ"
+ORIGIN
+        1 atgggaactc gctgttctct gacggacaca cgttctgcta cgtatgcgag aagtggactg
+       61 ctggtaatga agacactaaa gagagggctt caaaacggaa accctcagga ggtaaaccaa
+      121 tga
+//
+LOCUS       gp4B                    1512 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4B.
+ACCESSION   gp4B
+VERSION     gp4B
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1512
+                     /locus_tag="T7p24"
+                     /note="gene 4B"
+                     /db_xref="GeneID:1261048"
+     CDS             1..1512
+                     /locus_tag="T7p24"
+                     /name="gp4B"
+                     /note="gene 4B/helicase [14,15]"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="helicase"
+                     /protein_id="NP_041977.1"
+                     /db_xref="GOA:P03692"
+                     /db_xref="UniProtKB/Swiss-Prot:P03692"
+                     /db_xref="GeneID:1261048"
+                     /translation="MTYNVWNFGESNGRYSALTARGISKETCQKAGYWIAKVDGVMYQV
+                     ADYRDQNGNIVSQKVRDKDKNFKTTGSHKSDALFGKHLWNGGKKIVVTEGEIDMLTVME
+                     LQDCKYPVVSLGHGASAAKKTCAANYEYFDQFEQIILMFDMDEAGRKAVEEAAQVLPAG
+                     KVRVAVLPCKDANECHLNGHDREIMEQVWNAGPWIPDGVVSALSLRERIREHLSSEESV
+                     GLLFSGCTGINDKTLGARGGEVIMVTSGSGMGKSTFVRQQALQWGTAMGKKVGLAMLEE
+                     SVEETAEDLIGLHNRVRLRQSDSLKREIIENGKFDQWFDELFGNDTFHLYDSFAEAETD
+                     RLLAKLAYMRSGLGCDVIILDHISIVVSASGESDERKMIDNLMTKLKGFAKSTGVVLVV
+                     ICHLKNPDKGKAHEEGRPVSITDLRGSGALRQLSDTIIALERNQQGDMPNLVLVRILKC
+                     RFTGDTGIAGYMEYNKETGWLEPSSYSGEEESHSESTDWSNDTDF"
+     regulatory      918
+                     /regulatory_class="promoter"
+                     /locus_tag="T7p24"
+                     /note="T7 promoter phi4c"
+ORIGIN
+        1 atgacttaca acgtgtggaa cttcggggaa tccaatggac gctactccgc gttaactgcg
+       61 agaggaatct ccaaggaaac ctgtcagaag gctggctact ggattgccaa agtagacggt
+      121 gtgatgtacc aagtggctga ctatcgggac cagaacggca acattgtgag tcagaaggtt
+      181 cgagataaag ataagaactt taagaccact ggtagtcaca agagtgacgc tctgttcggg
+      241 aagcacttgt ggaatggtgg taagaagatt gtcgttacag aaggtgaaat cgacatgctt
+      301 accgtgatgg aacttcaaga ctgtaagtat cctgtagtgt cgttgggtca cggtgcctct
+      361 gccgctaaga agacatgcgc tgccaactac gaatactttg accagttcga acagattatc
+      421 ttaatgttcg atatggacga agcagggcgc aaagcagtcg aagaggctgc acaggttcta
+      481 cctgctggta aggtacgagt ggcagttctt ccgtgtaagg atgcaaacga gtgtcaccta
+      541 aatggtcacg accgtgaaat catggagcaa gtgtggaatg ctggtccttg gattcctgat
+      601 ggtgtggtat cggctctttc gttacgtgaa cgaatccgtg agcacctatc gtccgaggaa
+      661 tcagtaggtt tacttttcag tggctgcact ggtatcaacg ataagacctt aggtgcccgt
+      721 ggtggtgaag tcattatggt cacttccggt tccggtatgg gtaagtcaac gttcgtccgt
+      781 caacaagctc tacaatgggg cacagcgatg ggcaagaagg taggcttagc gatgcttgag
+      841 gagtccgttg aggagaccgc tgaggacctt ataggtctac acaaccgtgt ccgactgaga
+      901 caatccgact cactaaagag agagattatt gagaacggta agttcgacca atggttcgat
+      961 gaactgttcg gcaacgatac gttccatcta tatgactcat tcgccgaggc tgagacggat
+     1021 agactgctcg ctaagctggc ctacatgcgc tcaggcttgg gctgtgacgt aatcattcta
+     1081 gaccacatct caatcgtcgt atccgcttct ggtgaatccg atgagcgtaa gatgattgac
+     1141 aacctgatga ccaagctcaa agggttcgct aagtcaactg gggtggtgct ggtcgtaatt
+     1201 tgtcacctta agaacccaga caaaggtaaa gcacatgagg aaggtcgccc cgtttctatt
+     1261 actgacctac gtggttctgg cgcactacgc caactatctg atactattat tgcccttgag
+     1321 cgtaatcagc aaggcgatat gcctaacctt gtcctcgttc gtattctcaa gtgccgcttt
+     1381 actggtgata ctggtatcgc tggctacatg gaatacaaca aggaaaccgg atggcttgaa
+     1441 ccatcaagtt actcagggga agaagagtca cactcagagt caacagactg gtccaacgac
+     1501 actgacttct ga
+//
+LOCUS       gp4.2                    339 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4.2.
+ACCESSION   gp4
+VERSION     gp4.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..339
+                     /locus_tag="T7p25"
+                     /note="gene 4.2"
+                     /db_xref="GeneID:1261021"
+     CDS             1..339
+                     /locus_tag="T7p25"
+                     /name="gp4.2"
+                     /note="gene 4.2"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041978.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03783"
+                     /db_xref="GeneID:1261021"
+                     /translation="MRKVAPFLLLTYVVLAHYANYLILLLPLSVISKAICLTLSSFVFS
+                     SAALLVILVSLATWNTTRKPDGLNHQVTQGKKSHTQSQQTGPTTLTSDRILDDFPDDYE
+                     KFRWRVPF"
+ORIGIN
+        1 atgaggaagg tcgccccgtt tctattactg acctacgtgg ttctggcgca ctacgccaac
+       61 tatctgatac tattattgcc cttgagcgta atcagcaagg cgatatgcct aaccttgtcc
+      121 tcgttcgtat tctcaagtgc cgctttactg gtgatactgg tatcgctggc tacatggaat
+      181 acaacaagga aaccggatgg cttgaaccat caagttactc aggggaagaa gagtcacact
+      241 cagagtcaac agactggtcc aacgacactg acttctgaca ggattcttga tgactttcca
+      301 gacgactacg agaagtttcg ctggagagtc ccattctaa
+//
+LOCUS       gp4.3                    213 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4.3.
+ACCESSION   gp4
+VERSION     gp4.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..213
+                     /locus_tag="T7p26"
+                     /note="gene 4.3"
+                     /db_xref="GeneID:1261069"
+     CDS             1..213
+                     /locus_tag="T7p26"
+                     /name="gp4.3"
+                     /note="not essential in T7; Other names: gp4.3."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041979.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03784"
+                     /db_xref="GeneID:1261069"
+                     /translation="MFKLIKKLGQLLVRMYNVEAKRLNDEARKEATQSRALAIRSNELA
+                     DSASTKVTEAARVANQAQQLSKFFE"
+ORIGIN
+        1 atgttcaaac tgattaagaa gttaggccaa ctgctggttc gtatgtacaa cgtggaagcc
+       61 aagcgactga acgatgaggc tcgtaaagag gccacacagt cacgcgctct ggcgattcgc
+      121 tccaacgaac tggctgacag tgcatccact aaagttaccg aggctgcccg tgtggcaaac
+      181 caagctcaac agctttccaa attctttgag taa
+//
+LOCUS       gp4.5                    270 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4.5.
+ACCESSION   gp4
+VERSION     gp4.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..270
+                     /locus_tag="T7p27"
+                     /note="gene 4.5"
+                     /db_xref="GeneID:1261059"
+     CDS             1..270
+                     /locus_tag="T7p27"
+                     /name="gp4.5"
+                     /note="not essential in T7. Other names: gp4.5."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041980.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03785"
+                     /db_xref="GeneID:1261059"
+                     /translation="MSNVAETIRLSDTADQWNRRVHINVRNGKATMVYRWKDSKSSKNH
+                     TQRMTLTDEQALRLVNALTKAAVTAIHEAGRVNEAMAILDKIDN"
+ORIGIN
+        1 atgtctaacg tagctgaaac tatccgtcta tccgatacag ctgaccagtg gaaccgtcga
+       61 gtccacatca acgttcgcaa cggtaaggcg actatggttt accgctggaa ggactctaag
+      121 tcctctaaga atcacactca gcgtatgacg ttgacagatg agcaagcact gcgtctggtc
+      181 aatgcgctta ccaaagctgc cgtgacagca attcatgaag ctggtcgcgt caatgaagct
+      241 atggctatcc tcgacaagat tgataactaa
+//
+LOCUS       gp4.7                    408 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp4.7.
+ACCESSION   gp4
+VERSION     gp4.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..408
+                     /locus_tag="T7p28"
+                     /note="gene 4.7"
+                     /db_xref="GeneID:1261043"
+     CDS             1..408
+                     /locus_tag="T7p28"
+                     /name="gp4.7"
+                     /note="gene 4.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041981.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03786"
+                     /db_xref="GeneID:1261043"
+                     /translation="MRDPKVIQAEIAKLEAELEDVKYHEAKTRSAVHILKNLGWTWTRQ
+                     TGWKKPEVTKLSHKVFDKDTMTHIKAGDWVKVDMGVVGGYGYVRSVSGKYAQVSYITGV
+                     TPRGAIVADKTNMIHTGFLTVVSYEEIVKSR"
+ORIGIN
+        1 atgcgtgacc ctaaagttat ccaagcagaa atcgctaaac tggaagctga actggaggac
+       61 gttaagtacc atgaagctaa gactcgctcc gctgttcaca tcttgaagaa cttaggctgg
+      121 acttggacaa gacagactgg ctggaagaaa ccagaagtta ccaagctgag tcataaggtg
+      181 ttcgataagg acactatgac ccacatcaag gctggtgatt gggttaaggt tgacatggga
+      241 gttgttggtg gatacggcta cgtccgctca gttagtggca aatatgcaca agtgtcatac
+      301 atcacaggtg ttactccacg cggtgcaatc gttgccgata agaccaacat gattcacaca
+      361 ggtttcttga cagttgtttc atatgaagag attgttaagt cacgataa
+//
+LOCUS       gp5                     2115 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp5.
+ACCESSION   gp5
+VERSION     gp5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..2115
+                     /locus_tag="T7p29"
+                     /note="gene 5"
+                     /db_xref="GeneID:1261044"
+     CDS             1..2115
+                     /locus_tag="T7p29"
+                     /name="gp5"
+                     /note="gene 5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA polymerase"
+                     /protein_id="NP_041982.1"
+                     /db_xref="GOA:P00581"
+                     /db_xref="UniProtKB/Swiss-Prot:P00581"
+                     /db_xref="GeneID:1261044"
+                     /translation="MIVSDIEANALLESVTKFHCGVIYDYSTAEYVSYRPSDFGAYLDA
+                     LEAEVARGGLIVFHNGHKYDVPALTKLAKLQLNREFHLPRENCIDTLVLSRLIHSNLKD
+                     TDMGLLRSGKLPGKRFGSHALEAWGYRLGEMKGEYKDDFKRMLEEQGEEYVDGMEWWNF
+                     NEEMMDYNVQDVVVTKALLEKLLSDKHYFPPEIDFTDVGYTTFWSESLEAVDIEHRAAW
+                     LLAKQERNGFPFDTKAIEELYVELAARRSELLRKLTETFGSWYQPKGGTEMFCHPRTGK
+                     PLPKYPRIKTPKVGGIFKKPKNKAQREGREPCELDTREYVAGAPYTPVEHVVFNPSSRD
+                     HIQKKLQEAGWVPTKYTDKGAPVVDDEVLEGVRVDDPEKQAAIDLIKEYLMIQKRIGQS
+                     AEGDKAWLRYVAEDGKIHGSVNPNGAVTGRATHAFPNLAQIPGVRSPYGEQCRAAFGAE
+                     HHLDGITGKPWVQAGIDASGLELRCLAHFMARFDNGEYAHEILNGDIHTKNQIAAELPT
+                     RDNAKTFIYGFLYGAGDEKIGQIVGAGKERGKELKKKFLENTPAIAALRESIQQTLVES
+                     SQWVAGEQQVKWKRRWIKGLDGRKVHVRSPHAALNTLLQSAGALICKLWIIKTEEMLVE
+                     KGLKHGWDGDFAYMAWVHDEIQVGCRTEEIAQVVIETAQEAMRWVGDHWNFRCLLDTEG
+                     KMGPNWAICH"
+ORIGIN
+        1 atgatcgttt ctgacatcga agctaacgcc ctcttagaga gcgtcactaa gttccactgc
+       61 ggggttatct acgactactc caccgctgag tacgtaagct accgtccgag tgacttcggt
+      121 gcgtatctgg atgcgctgga agccgaggtt gcacgaggcg gtcttattgt gttccacaac
+      181 ggtcacaagt atgacgttcc tgcattgacc aaactggcaa agttgcaatt gaaccgagag
+      241 ttccaccttc ctcgtgagaa ctgtattgac acccttgtgt tgtcacgttt gattcattcc
+      301 aacctcaagg acaccgatat gggtcttctg cgttccggca agttgcccgg aaaacgcttt
+      361 gggtctcacg ctttggaggc gtggggttat cgcttaggcg agatgaaggg tgaatacaaa
+      421 gacgacttta agcgtatgct tgaagagcag ggtgaagaat acgttgacgg aatggagtgg
+      481 tggaacttca acgaagagat gatggactat aacgttcagg acgttgtggt aactaaagct
+      541 ctccttgaga agctactctc tgacaaacat tacttccctc ctgagattga ctttacggac
+      601 gtaggataca ctacgttctg gtcagaatcc cttgaggccg ttgacattga acatcgtgct
+      661 gcatggctgc tcgctaaaca agagcgcaac gggttcccgt ttgacacaaa agcaatcgaa
+      721 gagttgtacg tagagttagc tgctcgccgc tctgagttgc tccgtaaatt gaccgaaacg
+      781 ttcggctcgt ggtatcagcc taaaggtggc actgagatgt tctgccatcc gcgaacaggt
+      841 aagccactac ctaaataccc tcgcattaag acacctaaag ttggtggtat ctttaagaag
+      901 cctaagaaca aggcacagcg agaaggccgt gagccttgcg aacttgatac ccgcgagtac
+      961 gttgctggtg ctccttacac cccagttgaa catgttgtgt ttaacccttc gtctcgtgac
+     1021 cacattcaga agaaactcca agaggctggg tgggtcccga ccaagtacac cgataagggt
+     1081 gctcctgtgg tggacgatga ggtactcgaa ggagtacgtg tagatgaccc tgagaagcaa
+     1141 gccgctatcg acctcattaa agagtacttg atgattcaga agcgaatcgg acagtctgct
+     1201 gagggagaca aagcatggct tcgttatgtt gctgaggatg gtaagattca tggttctgtt
+     1261 aaccctaatg gagcagttac gggtcgtgcg acccatgcgt tcccaaacct tgcgcaaatt
+     1321 ccgggtgtac gttctcctta tggagagcag tgtcgcgctg cttttggcgc tgagcaccat
+     1381 ttggatggga taactggtaa gccttgggtt caggctggca tcgacgcatc cggtcttgag
+     1441 ctacgctgct tggctcactt catggctcgc tttgataacg gcgagtacgc tcacgagatt
+     1501 cttaacggcg acatccacac taagaaccag atagctgctg aactacctac ccgagataac
+     1561 gctaagacgt tcatctatgg gttcctctat ggtgctggtg atgagaagat tggacagatt
+     1621 gttggtgctg gtaaagagcg cggtaaggaa ctcaagaaga aattccttga gaacaccccc
+     1681 gcgattgcag cactccgcga gtctatccaa cagacacttg tcgagtcctc tcaatgggta
+     1741 gctggtgagc aacaagtcaa gtggaaacgc cgctggatta aaggtctgga tggtcgtaag
+     1801 gtacacgttc gtagtcctca cgctgccttg aataccctac tgcaatctgc tggtgctctc
+     1861 atctgcaaac tgtggattat caagaccgaa gagatgctcg tagagaaagg cttgaagcat
+     1921 ggctgggatg gggactttgc gtacatggca tgggtacatg atgaaatcca agtaggctgc
+     1981 cgtaccgaag agattgctca ggtggtcatt gagaccgcac aagaagcgat gcgctgggtt
+     2041 ggagaccact ggaacttccg gtgtcttctg gataccgaag gtaagatggg tcctaattgg
+     2101 gcgatttgcc actga
+//
+LOCUS       gp5.3                    357 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp5.3.
+ACCESSION   gp5
+VERSION     gp5.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..357
+                     /locus_tag="T7p30"
+                     /note="gene 5.3"
+                     /db_xref="GeneID:1261045"
+     CDS             1..357
+                     /locus_tag="T7p30"
+                     /name="gp5.3"
+                     /note="gene 5.3"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041983.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03798"
+                     /db_xref="GeneID:1261045"
+                     /translation="MNERHLTGAASEMLVAYKFTKAGYTVYYPMLTQSKEDLVVCKDGK
+                     FSKVQVKTATTVQTNTGDAKQVRLGGCGRSEYKDGDFDILAVVVDEDVLIFTWDEVKGK
+                     TSMCVGKRNKGIKL"
+ORIGIN
+        1 atgaacgaaa gacacttaac aggtgctgct tctgaaatgc tagtagccta caaatttacc
+       61 aaagctgggt acactgtcta ttaccctatg ctgactcaga gtaaagagga cttggttgta
+      121 tgtaaggatg gtaaatttag taaggttcag gttaaaacag ccacaacggt tcaaaccaac
+      181 acaggagatg ccaagcaggt taggctaggt ggatgcggta ggtccgaata taaggatgga
+      241 gactttgaca ttcttgcggt tgtggttgac gaagatgtgc ttattttcac atgggacgaa
+      301 gtaaaaggta agacatccat gtgtgtcggc aagagaaaca aaggcataaa actatag
+//
+LOCUS       gp5.5-5.7                509 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp5.5-5.7.
+ACCESSION   gp5.5-5.7
+VERSION     gp5.5-5.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..509
+                     /locus_tag="T7p31"
+                     /note="possible gene 5.5-5.7"
+                     /db_xref="GeneID:1261041"
+     CDS             join(1..297,297..509)
+                     /locus_tag="T7p31"
+                     /name="gp5.5-5.7"
+                     /note="possible gene 5.5-5.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041984.1"
+                     /db_xref="GOA:P03787"
+                     /db_xref="UniProtKB/Swiss-Prot:P03787"
+                     /db_xref="GeneID:1261041"
+                     /translation="MAMTKKFKVSFDVTAKMSSDVQAILEKDMLHLCKQVGSGAIVPNG
+                     KQKEMIVQFLTHGMEGLMTFVVRTSFREAIKDMHEEYADKDSFKQSPATVREVFLMSDY
+                     LKVLQAIKSCPKTFQSNYVRNNASLVAEAASRGHISCLTTSGRNGGAWEITASGTRFLK
+                     RMGGCV"
+     gene            1..300
+                     /locus_tag="T7p32"
+                     /note="gene 5.5"
+                     /db_xref="GeneID:1261038"
+     CDS             1..300
+                     /locus_tag="T7p32"
+                     /name="gp5.5"
+                     /note="in Enterobacteria phage T7, gp5.5 abolishes E. coli
+                     nucleoid protein H-NS-mediated inhibition of transcription
+                     by T7 RNA polymerases in vitro. Not essential, but mutants
+                     have lower burst size. Mutants in this gene are not capable
+                     of replicating in phage lambda lysogens. Other names:
+                     gp5.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="host protein H-NS-interacting protein"
+                     /protein_id="NP_041985.1"
+                     /db_xref="GOA:P03787"
+                     /db_xref="UniProtKB/Swiss-Prot:P03787"
+                     /db_xref="GeneID:1261038"
+                     /translation="MAMTKKFKVSFDVTAKMSSDVQAILEKDMLHLCKQVGSGAIVPNG
+                     KQKEMIVQFLTHGMEGLMTFVVRTSFREAIKDMHEEYADKDSFKQSPATVREVF"
+     gene            300..509
+                     /locus_tag="T7p33"
+                     /note="gene 5.7"
+                     /db_xref="GeneID:1261040"
+     CDS             300..509
+                     /locus_tag="T7p33"
+                     /name="gp5.7"
+                     /note="gene 5.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041986.1"
+                     /db_xref="GOA:P03787"
+                     /db_xref="UniProtKB/Swiss-Prot:P03787"
+                     /db_xref="GeneID:1261040"
+                     /translation="MSDYLKVLQAIKSCPKTFQSNYVRNNASLVAEAASRGHISCLTTS
+                     GRNGGAWEITASGTRFLKRMGGCV"
+ORIGIN
+        1 atggctatga caaagaaatt taaagtgtcc ttcgacgtta ccgcaaagat gtcgtctgac
+       61 gttcaggcaa tcttagagaa agatatgctg catctatgta agcaggtcgg ctcaggtgcg
+      121 attgtcccca atggtaaaca gaaggaaatg attgtccagt tcctgacaca cggtatggaa
+      181 ggattgatga cattcgtagt acgtacatca tttcgtgagg ccattaagga catgcacgaa
+      241 gagtatgcag ataaggactc tttcaaacaa tctcctgcaa cagtacggga ggtgttctga
+      301 tgtctgacta cctgaaagtg ctgcaagcaa tcaaaagttg ccctaagact ttccagtcca
+      361 actatgtacg gaacaatgcg agcctcgtag cggaggccgc ttcccgtggt cacatctcgt
+      421 gcctgactac tagtggacgt aacggtggcg cttgggaaat cactgcttcc ggtactcgct
+      481 ttctgaaacg aatgggagga tgtgtctaa
+//
+LOCUS       gp5.5                    300 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp5.5.
+ACCESSION   gp5
+VERSION     gp5.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..300
+                     /locus_tag="T7p32"
+                     /note="gene 5.5"
+                     /db_xref="GeneID:1261038"
+     CDS             1..300
+                     /locus_tag="T7p32"
+                     /name="gp5.5"
+                     /note="in Enterobacteria phage T7, gp5.5 abolishes E. coli
+                     nucleoid protein H-NS-mediated inhibition of transcription
+                     by T7 RNA polymerases in vitro. Not essential, but mutants
+                     have lower burst size. Mutants in this gene are not capable
+                     of replicating in phage lambda lysogens. Other names:
+                     gp5.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="host protein H-NS-interacting protein"
+                     /protein_id="NP_041985.1"
+                     /db_xref="GOA:P03787"
+                     /db_xref="UniProtKB/Swiss-Prot:P03787"
+                     /db_xref="GeneID:1261038"
+                     /translation="MAMTKKFKVSFDVTAKMSSDVQAILEKDMLHLCKQVGSGAIVPNG
+                     KQKEMIVQFLTHGMEGLMTFVVRTSFREAIKDMHEEYADKDSFKQSPATVREVF"
+ORIGIN
+        1 atggctatga caaagaaatt taaagtgtcc ttcgacgtta ccgcaaagat gtcgtctgac
+       61 gttcaggcaa tcttagagaa agatatgctg catctatgta agcaggtcgg ctcaggtgcg
+      121 attgtcccca atggtaaaca gaaggaaatg attgtccagt tcctgacaca cggtatggaa
+      181 ggattgatga cattcgtagt acgtacatca tttcgtgagg ccattaagga catgcacgaa
+      241 gagtatgcag ataaggactc tttcaaacaa tctcctgcaa cagtacggga ggtgttctga
+//
+LOCUS       gp5.7                    210 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp5.7.
+ACCESSION   gp5
+VERSION     gp5.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..210
+                     /locus_tag="T7p33"
+                     /note="gene 5.7"
+                     /db_xref="GeneID:1261040"
+     CDS             1..210
+                     /locus_tag="T7p33"
+                     /name="gp5.7"
+                     /note="gene 5.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041986.1"
+                     /db_xref="GOA:P03787"
+                     /db_xref="UniProtKB/Swiss-Prot:P03787"
+                     /db_xref="GeneID:1261040"
+                     /translation="MSDYLKVLQAIKSCPKTFQSNYVRNNASLVAEAASRGHISCLTTS
+                     GRNGGAWEITASGTRFLKRMGGCV"
+ORIGIN
+        1 atgtctgact acctgaaagt gctgcaagca atcaaaagtt gccctaagac tttccagtcc
+       61 aactatgtac ggaacaatgc gagcctcgta gcggaggccg cttcccgtgg tcacatctcg
+      121 tgcctgacta ctagtggacg taacggtggc gcttgggaaa tcactgcttc cggtactcgc
+      181 tttctgaaac gaatgggagg atgtgtctaa
+//
+LOCUS       gp5.9                    159 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp5.9.
+ACCESSION   gp5
+VERSION     gp5.9
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..159
+                     /locus_tag="T7p34"
+                     /note="gene 5.9"
+                     /db_xref="GeneID:1261037"
+     CDS             1..159
+                     /locus_tag="T7p34"
+                     /name="gp5.9"
+                     /note="not essential. Other names: gp5.9; exonuclease V
+                     inhibitor"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="host recBCD nuclease inhibitor"
+                     /protein_id="NP_041987.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P20406"
+                     /db_xref="GeneID:1261037"
+                     /translation="MSRDLVTIPRDVWNDIQGYIDSLERENDSLKNQLMEADEYVAELE
+                     EKLNGTS"
+ORIGIN
+        1 atgtctcgtg accttgtgac tattccacgc gatgtgtgga acgatataca gggctacatc
+       61 gactctctgg aacgtgagaa cgatagcctt aagaatcaac taatggaagc tgacgaatac
+      121 gtagcggaac tagaggagaa acttaatggc acttcttga
+//
+LOCUS       gp6                      903 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp6.
+ACCESSION   gp6
+VERSION     gp6
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..903
+                     /locus_tag="T7p35"
+                     /note="gene 6"
+                     /db_xref="GeneID:1261052"
+     CDS             1..903
+                     /locus_tag="T7p35"
+                     /name="gp6"
+                     /note="The T7 exonuclease encoded by gene 6 is required for
+                     (a) recombination and (b) for the degradation of host
+                     chromosomal DNA. The latter process provides nucleotides
+                     for phage DNA replication. Both processes are carried out
+                     together with the T7 gene 3-encoded endonuclease/Holliday
+                     junction resolvase. In addition, the exonuclease also
+                     functions as an RNase H that removes RNA primers during DNA
+                     replication and promotes concatemer formation."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="exonuclease"
+                     /protein_id="NP_041988.1"
+                     /db_xref="GOA:P00638"
+                     /db_xref="UniProtKB/Swiss-Prot:P00638"
+                     /db_xref="GeneID:1261052"
+                     /translation="MALLDLKQFYELREGCDDKGILVMDGDWLVFQAMSAAEFDASWEE
+                     EIWHRCCDHAKARQILEDSIKSYETRKKAWAGAPIVLAFTDSVNWRKELVDPNYKANRK
+                     AVKKPVGYFEFLDALFEREEFYCIREPMLEGDDVMGVIASNPSAFGARKAVIISCDKDF
+                     KTIPNCDFLWCTTGNILTQTEESADWWHLFQTIKGDITDGYSGIAGWGDTAEDFLNNPF
+                     ITEPKTSVLKSGKNKGQEVTKWVKRDPEPHETLWDCIKSIGAKAGMTEEDIIKQGQMAR
+                     ILRFNEYNFIDKEIYLWRP"
+ORIGIN
+        1 atggcacttc ttgaccttaa acaattctat gagttacgtg aaggctgcga cgacaagggt
+       61 atccttgtga tggacggcga ctggctggtc ttccaagcta tgagtgctgc tgagtttgat
+      121 gcctcttggg aggaagagat ttggcaccga tgctgtgacc acgctaaggc ccgtcagatt
+      181 cttgaggatt ccattaagtc ctacgagacc cgtaagaagg cttgggcagg tgctccaatt
+      241 gtccttgcgt tcaccgatag tgttaactgg cgtaaagaac tggttgaccc gaactataag
+      301 gctaaccgta aggccgtgaa gaaacctgta gggtactttg agttccttga tgctctcttt
+      361 gagcgcgaag agttctattg catccgtgag cctatgcttg agggtgatga cgttatggga
+      421 gttattgctt ccaatccgtc tgccttcggt gctcgtaagg ctgtaatcat ctcttgcgat
+      481 aaggacttta agaccatccc taactgtgac ttcctgtggt gtaccactgg taacatcctg
+      541 actcagaccg aagagtccgc tgactggtgg cacctcttcc agaccatcaa gggtgacatc
+      601 actgatggtt actcagggat tgctggatgg ggtgataccg ccgaggactt cttgaataac
+      661 ccgttcataa ccgagcctaa aacgtctgtg cttaagtccg gtaagaacaa aggccaagag
+      721 gttactaaat gggttaaacg cgaccctgag cctcatgaga cgctttggga ctgcattaag
+      781 tccattggcg cgaaggctgg tatgaccgaa gaggatatta tcaagcaggg ccaaatggct
+      841 cgaatcctac ggttcaacga gtacaacttt attgacaagg agatttacct gtggagaccg
+      901 tag
+//
+LOCUS       gp6.3                    114 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp6.3.
+ACCESSION   gp6
+VERSION     gp6.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..114
+                     /locus_tag="T7p36"
+                     /note="gene 6.3"
+                     /db_xref="GeneID:1261058"
+     CDS             1..114
+                     /locus_tag="T7p36"
+                     /name="gp6.3"
+                     /note="gene 6.3"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041989.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03799"
+                     /db_xref="GeneID:1261058"
+                     /translation="METVAYIGLGLCVLGVCLISWGLWDLARIIKSLHDTK"
+ORIGIN
+        1 gtggagaccg tagcgtatat tggtctgggt ctttgtgttc tcggagtgtg cctcatttcg
+       61 tggggccttt gggacttagc cagaataatc aagtcgttac acgacactaa gtga
+//
+LOCUS       gp6.5                    255 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp6.5.
+ACCESSION   gp6
+VERSION     gp6.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..255
+                     /locus_tag="T7p37"
+                     /note="gene 6.5"
+                     /db_xref="GeneID:1261036"
+     CDS             1..255
+                     /locus_tag="T7p37"
+                     /name="gp6.5"
+                     /note="gene 6.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041990.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03800"
+                     /db_xref="GeneID:1261036"
+                     /translation="MLTPINQLLKNPNDIPDVPRATAEYLQVRFNYAYLEASGHIGLMR
+                     ANGCSEAHILGFIQGLQYASNVIDEIELRKEQLRDDGED"
+ORIGIN
+        1 atgttaacac ctattaacca attacttaag aaccctaacg atattccaga tgtacctcgt
+       61 gcaaccgctg agtatctaca ggttcgattc aactatgcgt acctcgaagc gtctggtcat
+      121 ataggactta tgcgtgctaa tggttgtagt gaggcccaca tcttgggttt cattcagggc
+      181 ctacagtatg cctctaacgt cattgacgag attgagttac gcaaggaaca actaagagat
+      241 gatggggagg attga
+//
+LOCUS       gp6.7                    267 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp6.7.
+ACCESSION   gp6
+VERSION     gp6.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..267
+                     /locus_tag="T7p38"
+                     /note="gene 6.7"
+                     /db_xref="GeneID:1261039"
+     CDS             1..267
+                     /locus_tag="T7p38"
+                     /name="gp6.7"
+                     /note="may be involved in virion morphogenesis and is
+                     injected from virion into host cell. Other names: gp6.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041991.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03801"
+                     /db_xref="GeneID:1261039"
+                     /translation="MCFSPKIKTPKMDTNQIRAVEPAPLTQEVSSVEFGGSSDETDTEG
+                     TEVSGRKGLKVERDDSVAKSKASGNGSARMKSSIRKSAFGGKK"
+ORIGIN
+        1 atgtgtttct caccgaaaat taaaactccg aagatggata ccaatcagat tcgagccgtt
+       61 gagccagcgc ctctgaccca agaagtgtca agcgtggagt tcggtgggtc ttctgatgag
+      121 acggataccg agggcaccga agtgtctgga cgcaaaggcc tcaaggtcga acgtgatgat
+      181 tccgtagcga agtctaaagc cagcggcaat ggctccgctc gtatgaaatc ttccatccgt
+      241 aagtccgcat ttggaggtaa gaagtga
+//
+LOCUS       gp7                      402 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp7.
+ACCESSION   gp7
+VERSION     gp7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..402
+                     /locus_tag="T7p39"
+                     /note="gene 7"
+                     /db_xref="GeneID:1261056"
+     CDS             1..402
+                     /locus_tag="T7p39"
+                     /name="gp7"
+                     /note="gene 7, host range"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041992.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03750"
+                     /db_xref="GeneID:1261056"
+                     /translation="MSEFTCVEAKSRFRAIRWTVEHLGLPKGFEGHFVGYSLYVDEVMD
+                     MSGCREEYILDSTGKHVAYFAWCVSCDIHHKGDILDVTSVVINPEADSKGLQRFLAKRF
+                     KYLAELHDCDWVSRCKHEGETMRVYFKEV"
+ORIGIN
+        1 atgtctgagt tcacatgtgt ggaggctaag agtcgcttcc gtgcaatccg gtggactgtg
+       61 gaacaccttg ggttgcctaa aggattcgaa ggacactttg tgggctacag cctctacgta
+      121 gacgaagtga tggacatgtc tggttgccgt gaagagtaca ttctggactc taccggaaaa
+      181 catgtagcgt acttcgcgtg gtgcgtaagc tgtgacattc accacaaagg agacattctg
+      241 gatgtaacgt ccgttgtcat taatcctgag gcagactcta agggcttaca gcgattccta
+      301 gcgaaacgct ttaagtacct tgcggaactc cacgattgcg attgggtgtc tcgttgtaag
+      361 catgaaggcg agacaatgcg tgtatacttt aaggaggtat aa
+//
+LOCUS       gp7.3                    300 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp7.3.
+ACCESSION   gp7
+VERSION     gp7.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..300
+                     /locus_tag="T7p40"
+                     /note="gene 7.3"
+                     /db_xref="GeneID:1261035"
+     CDS             1..300
+                     /locus_tag="T7p40"
+                     /name="gp7.3"
+                     /note="required for virion infectivity but not
+                     morphogenesis. In T7, gp 7.3 appears to be required for the
+                     assembly of tail fibers on capsids. Other names: gp7.3"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="tail assembly protein"
+                     /protein_id="NP_041993.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03751"
+                     /db_xref="GeneID:1261035"
+                     /translation="MGKKVKKAVKKVTKSVKKVVKEGARPVKQVAGGLAGLAGGTGEAQ
+                     MVEVPQAAAQIVDVPEKEVSTEDEAQTESGRKKARAGGKKSLSVARSSGGGINI"
+ORIGIN
+        1 atgggtaaga aagttaagaa ggccgtgaag aaagtcacca agtccgttaa gaaagtcgtt
+       61 aaggaagggg ctcgtccggt taaacaggtt gctggcggtc tagctggtct ggctggtggt
+      121 actggtgaag cacagatggt ggaagtacca caagctgccg cacagattgt tgacgtacct
+      181 gagaaagagg tttccactga ggacgaagca cagacagaaa gcggacgcaa gaaagctcgt
+      241 gctggcggta agaaatcctt gagtgtagcc cgtagctccg gtggcggtat caacatttaa
+//
+LOCUS       gp7.7                    393 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp7.7.
+ACCESSION   gp7
+VERSION     gp7.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..393
+                     /locus_tag="T7p41"
+                     /note="gene 7.7"
+                     /db_xref="GeneID:1261028"
+     CDS             1..393
+                     /locus_tag="T7p41"
+                     /name="gp7.7"
+                     /note="gene 7.7"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_041994.1"
+                     /db_xref="GOA:P03796"
+                     /db_xref="UniProtKB/Swiss-Prot:P03796"
+                     /db_xref="GeneID:1261028"
+                     /translation="MEDCIEWTGGVNSKGYGRKWVNGKLVTPHRHIYEETYGPVPTGIV
+                     VMHICDNPRCYNIKHLTLGTPKDNSEDMVTKGRQAKGEELSKKLTESDVLAIRSSTLSH
+                     RSLGELYGVSQSTITRILQRKTWRHI"
+ORIGIN
+        1 gtggaagact gcattgaatg gaccggaggt gtcaactcta agggttatgg tcgtaagtgg
+       61 gttaatggta aacttgtgac tccacatagg cacatctatg aggagacata tggtccagtt
+      121 ccaacaggaa ttgtggtgat gcatatctgc gataacccta ggtgctataa cataaagcac
+      181 cttacgcttg gaactccaaa ggataattcc gaggacatgg ttaccaaagg tagacaggct
+      241 aaaggagagg aactaagcaa gaaacttaca gagtcagacg ttctcgctat acgctcttca
+      301 accttaagcc accgctcctt aggagaactg tatggagtca gtcaatcaac cataacgcga
+      361 atactacagc gtaagacatg gagacacatt taa
+//
+LOCUS       gp8                     1611 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp8.
+ACCESSION   gp8
+VERSION     gp8
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1611
+                     /locus_tag="T7p42"
+                     /note="gene 8"
+                     /db_xref="GeneID:1261033"
+     CDS             1..1611
+                     /locus_tag="T7p42"
+                     /name="gp8"
+                     /note="gene 8"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="head-tail connector protein"
+                     /protein_id="NP_041995.1"
+                     /db_xref="GOA:P03728"
+                     /db_xref="UniProtKB/Swiss-Prot:P03728"
+                     /db_xref="GeneID:1261033"
+                     /translation="MAEKRTGLAEDGAKSVYERLKNDRAPYETRAQNCAQYTIPSLFPK
+                     DSDNASTDYQTPWQAVGARGLNNLASKLMLALFPMQTWMRLTISEYEAKQLLSDPDGLA
+                     KVDEGLSMVERIIMNYIESNSYRVTLFEALKQLVVAGNVLLYLPEPEGSNYNPMKLYRL
+                     SSYVVQRDAFGNVLQMVTRDQIAFGALPEDIRKAVEGQGGEKKADETIDVYTHIYLDED
+                     SGEYLRYEEVEGMEVQGSDGTYPKEACPYIPIRMVRLDGESYGRSYIEEYLGDLRSLEN
+                     LQEAIVKMSMISSKVIGLVNPAGITQPRRLTKAQTGDFVTGRPEDISFLQLEKQADFTV
+                     AKAVSDAIEARLSFAFMLNSAVQRTGERVTAEEIRYVASELEDTLGGVYSILSQELQLP
+                     LVRVLLKQLQATQQIPELPKEAVEPTISTGLEAIGRGQDLDKLERCVTAWAALAPMRDD
+                     PDINLAMIKLRIANAIGIDTSGILLTEEQKQQKMAQQSMQMGMDNGAAALAQGMAAQAT
+                     ASPEAMAAAADSVGLQPGI"
+ORIGIN
+        1 atggctgaga aacgaacagg acttgcggag gatggcgcaa agtctgtcta tgagcgttta
+       61 aagaacgacc gtgctcccta tgagacacgc gctcagaatt gcgctcaata taccatccca
+      121 tcattgttcc ctaaggactc cgataacgcc tctacagatt atcaaactcc gtggcaagcc
+      181 gtgggcgctc gtggtctgaa caatctagcc tctaagctca tgctggctct attccctatg
+      241 cagacttgga tgcgacttac tatatctgaa tatgaagcaa agcagttact gagcgacccc
+      301 gatggactcg ctaaggtcga tgagggcctc tcgatggtag agcgtatcat catgaactac
+      361 attgagtcta acagttaccg cgtgactctc tttgaggctc tcaaacagtt agtcgtagct
+      421 ggtaacgtcc tgctgtacct accggaaccg gaagggtcaa actataatcc catgaagctg
+      481 taccgattgt cttcttatgt ggtccaacga gacgcattcg gcaacgttct gcaaatggtg
+      541 actcgtgacc agatagcttt tggtgctctc cctgaggaca tccgtaaggc tgtagaaggt
+      601 caaggtggtg agaagaaagc tgatgagaca atcgacgtgt acactcacat ctatctggat
+      661 gaggactcag gtgaatacct ccgatacgaa gaggtcgagg gtatggaagt ccaaggctcc
+      721 gatgggactt atcctaaaga ggcttgccca tacatcccga ttcggatggt cagactagat
+      781 ggtgaatcct acggtcgttc gtacattgag gaatacttag gtgacttacg gtcccttgaa
+      841 aatctccaag aggctatcgt caagatgtcc atgattagct ctaaggttat cggcttagtg
+      901 aatcctgctg gtatcaccca gccacgccga ctgaccaaag ctcagactgg tgacttcgtt
+      961 actggtcgtc cagaagacat ctcgttcctc caactggaga agcaagcaga ctttactgta
+     1021 gctaaagccg taagtgacgc tatcgaggct cgcctttcgt ttgcctttat gttgaactct
+     1081 gcggttcagc gtacaggtga acgtgtgacc gccgaagaga ttcggtatgt agcttctgaa
+     1141 cttgaagata ctttaggtgg tgtctactct atcctttctc aagaattaca attgcctctg
+     1201 gtacgagtgc tcttgaagca actacaagcc acgcaacaga ttcctgagtt acctaaggaa
+     1261 gccgtagagc caaccattag tacaggtctg gaagcaattg gtcgaggaca agaccttgat
+     1321 aagctggagc ggtgtgtcac tgcgtgggct gcactggcac ctatgcggga cgaccctgat
+     1381 attaaccttg cgatgattaa gttacgtatt gccaacgcta tcggtattga cacttctggt
+     1441 attctactca ccgaagaaca gaagcaacag aagatggccc aacagtctat gcaaatgggt
+     1501 atggataatg gtgctgctgc gctggctcaa ggtatggctg cacaagctac agcttcacct
+     1561 gaggctatgg ctgctgccgc tgattccgta ggtttacagc cgggaattta a
+//
+LOCUS       gp9                      924 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp9.
+ACCESSION   gp9
+VERSION     gp9
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..924
+                     /locus_tag="T7p43"
+                     /note="gene 9"
+                     /db_xref="GeneID:1261027"
+     CDS             1..924
+                     /locus_tag="T7p43"
+                     /name="gp9"
+                     /note="Phage T7-like scaffolding protein. The protein is
+                     encoded by gene 9 in T7 (gp9) and is required for the
+                     formation of pro-capsids."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="capsid assembly protein"
+                     /protein_id="NP_041996.1"
+                     /db_xref="GOA:P03716"
+                     /db_xref="UniProtKB/Swiss-Prot:P03716"
+                     /db_xref="GeneID:1261027"
+                     /translation="MAESNADVYASFGVNSAVMSGGSVEEHEQNMLALDVAARDGDDAI
+                     ELASDEVETERDLYDNSDPFGQEDDEGRIQVRIGDGSEPTDVDTGEEGVEGTEGSEEFT
+                     PLGETPEELVAASEQLGEHEEGFQEMINIAAERGMSVETIEAIQREYEENEELSAESYA
+                     KLAEIGYTKAFIDSYIRGQEALVEQYVNSVIEYAGGRERFDALYNHLETHNPEAAQSLD
+                     NALTNRDLATVKAIINLAGESRAKAFGRKPTRSVTNRAIPAKPQATKREGFADRSEMIK
+                     AMSDPRYRTDANYRRQVEQKVIDSNF"
+ORIGIN
+        1 atggctgaat ctaatgcaga cgtatatgca tcttttggcg tgaactccgc tgtgatgtct
+       61 ggtggttccg ttgaggaaca tgagcagaac atgctggctc ttgatgttgc tgcccgtgat
+      121 ggcgatgatg caatcgagtt agcgtcagac gaagtggaaa cagaacgtga cctgtatgac
+      181 aactctgacc cgttcggtca agaggatgac gaaggccgca ttcaggttcg tatcggtgat
+      241 ggctctgagc cgaccgatgt ggacactgga gaagaaggcg ttgagggcac cgaaggttcc
+      301 gaagagttta ccccactggg cgagactcca gaagaactgg tagctgcctc tgagcaactt
+      361 ggtgagcacg aagagggctt ccaagagatg attaacattg ctgctgagcg tggcatgagt
+      421 gtcgagacca ttgaggctat ccagcgtgag tacgaggaga acgaagagtt gtccgccgag
+      481 tcctacgcta agctggctga aattggctac acgaaggctt tcattgactc gtatatccgt
+      541 ggtcaagaag ctctggtgga gcagtacgta aacagtgtca ttgagtacgc tggtggtcgt
+      601 gaacgttttg atgcactgta taaccacctt gagacgcaca accctgaggc tgcacagtcg
+      661 ctggataatg cgttgaccaa tcgtgactta gcgaccgtta aggctatcat caacttggct
+      721 ggtgagtctc gcgctaaggc gttcggtcgt aagccaactc gtagtgtgac taatcgtgct
+      781 attccggcta aacctcaggc taccaagcgt gaaggctttg cggaccgtag cgagatgatt
+      841 aaagctatga gtgaccctcg gtatcgcaca gatgccaact atcgtcgtca agtcgaacag
+      901 aaagtaatcg attcgaactt ctga
+//
+LOCUS       gp10B                   1196 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp10B.
+ACCESSION   gp10B
+VERSION     gp10B
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1196
+                     /locus_tag="T7p44"
+                     /note="gene 10B"
+                     /db_xref="GeneID:1261029"
+     CDS             join(1..1023,1023..1196)
+                     /locus_tag="T7p44"
+                     /name="gp10B"
+                     /note="major capsid protein. Involved in F-exclusion of wt
+                     T7 phage. A minor capsid protein (gp10B) is produced from
+                     gene 10 by a -1 frameshift towards the end of 10A,
+                     resulting in a slightly larger protein. Other names:
+                     gp10A."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="major capsid protein"
+                     /protein_id="NP_041997.1"
+                     /db_xref="GOA:P19727"
+                     /db_xref="UniProtKB/Swiss-Prot:P19727"
+                     /db_xref="GeneID:1261029"
+                     /translation="MASMTGGQQMGTNQGKGVVAAGDKLALFLKVFGGEVLTAFARTSV
+                     TTSRHMVRSISSGKSAQFPVLGRTQAAYLAPGENLDDKRKDIKHTEKVITIDGLLTADV
+                     LIYDIEDAMNHYDVRSEYTSQLGESLAMAADGAVLAEIAGLCNVESKYNENIEGLGTAT
+                     VIETTQNKAALTDQVALGKEIIAALTKARAALTKNYVPAADRVFYCDPDSYSAILAALM
+                     PNAANYAALIDPEKGSIRNVMGFEVVEVPHLTAGGAGTAREGTTGQKHVFPANKGEGNV
+                     KVAKDNVIGLFMHRSAVGTVKLRDLALERARRANFQADQIIAKYAMGHGGLRPEAAGAV
+                     VFQSGVMLGVASTVAASPEEASVTSTEETLTPAQEAARTRAANKARKEAELAAATAEQ"
+     gene            1..1038
+                     /locus_tag="T7p45"
+                     /note="gene 10A"
+                     /db_xref="GeneID:1261026"
+     CDS             1..1038
+                     /locus_tag="T7p45"
+                     /name="gp10A"
+                     /note="major capsid protein. Involved in F-exclusion of wt
+                     T7 phage. A minor capsid protein (gp10B) is produced from
+                     gene 10 by a -1 frameshift towards the end of 10A,
+                     resulting in a slightly larger protein. Other names:
+                     gp10A."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="major capsid protein"
+                     /protein_id="NP_041998.1"
+                     /db_xref="GOA:P19726"
+                     /db_xref="UniProtKB/Swiss-Prot:P19726"
+                     /db_xref="GeneID:1261026"
+                     /translation="MASMTGGQQMGTNQGKGVVAAGDKLALFLKVFGGEVLTAFARTSV
+                     TTSRHMVRSISSGKSAQFPVLGRTQAAYLAPGENLDDKRKDIKHTEKVITIDGLLTADV
+                     LIYDIEDAMNHYDVRSEYTSQLGESLAMAADGAVLAEIAGLCNVESKYNENIEGLGTAT
+                     VIETTQNKAALTDQVALGKEIIAALTKARAALTKNYVPAADRVFYCDPDSYSAILAALM
+                     PNAANYAALIDPEKGSIRNVMGFEVVEVPHLTAGGAGTAREGTTGQKHVFPANKGEGNV
+                     KVAKDNVIGLFMHRSAVGTVKLRDLALERARRANFQADQIIAKYAMGHGGLRPEAAGAV
+                     VFKVE"
+ORIGIN
+        1 atggctagca tgactggtgg acagcaaatg ggtactaacc aaggtaaagg tgtagttgct
+       61 gctggagata aactggcgtt gttcttgaag gtatttggcg gtgaagtcct gactgcgttc
+      121 gctcgtacct ccgtgaccac ttctcgccac atggtacgtt ccatctccag cggtaaatcc
+      181 gctcagttcc ctgttctggg tcgcactcag gcagcgtatc tggctccggg cgagaacctc
+      241 gacgataaac gtaaggacat caaacacacc gagaaggtaa tcaccattga cggtctcctg
+      301 acggctgacg ttctgattta tgatattgag gacgcgatga accactacga cgttcgctct
+      361 gagtatacct ctcagttggg tgaatctctg gcgatggctg cggatggtgc ggttctggct
+      421 gagattgccg gtctgtgtaa cgtggaaagc aaatataatg agaacatcga gggcttaggt
+      481 actgctaccg taattgagac cactcagaac aaggccgcac ttaccgacca agttgcgctg
+      541 ggtaaggaga ttattgcggc tctgactaag gctcgtgcgg ctctgaccaa gaactatgtt
+      601 ccggctgctg accgtgtgtt ctactgtgac ccagatagct actctgcgat tctggcagca
+      661 ctgatgccga acgcagcaaa ctacgctgct ctgattgacc ctgagaaggg ttctatccgc
+      721 aacgttatgg gctttgaggt tgtagaagtt ccgcacctca ccgctggtgg tgctggtacc
+      781 gctcgtgagg gcactactgg tcagaagcac gtcttccctg ccaataaagg tgagggtaat
+      841 gtcaaggttg ctaaggacaa cgttatcggc ctgttcatgc accgctctgc ggtaggtact
+      901 gttaagctgc gtgacttggc tctggagcgc gctcgccgtg ctaacttcca agcggaccag
+      961 attatcgcta agtacgcaat gggccacggt ggtcttcgcc cagaagctgc tggtgcagtg
+     1021 gttttcaaag tggagtaatg ctgggggtgg cctcaacggt cgctgctagt cccgaagagg
+     1081 cgagtgttac ttcaacagaa gaaaccttaa cgccagcaca ggaggccgca cgcacccgcg
+     1141 ctgctaacaa agcccgaaag gaagctgagt tggctgctgc caccgctgag caataa
+//
+LOCUS       gp10A                   1038 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp10A.
+ACCESSION   gp10A
+VERSION     gp10A
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1038
+                     /locus_tag="T7p45"
+                     /note="gene 10A"
+                     /db_xref="GeneID:1261026"
+     CDS             1..1038
+                     /locus_tag="T7p45"
+                     /name="gp10A"
+                     /note="major capsid protein. Involved in F-exclusion of wt
+                     T7 phage. A minor capsid protein (gp10B) is produced from
+                     gene 10 by a -1 frameshift towards the end of 10A,
+                     resulting in a slightly larger protein. Other names:
+                     gp10A."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="major capsid protein"
+                     /protein_id="NP_041998.1"
+                     /db_xref="GOA:P19726"
+                     /db_xref="UniProtKB/Swiss-Prot:P19726"
+                     /db_xref="GeneID:1261026"
+                     /translation="MASMTGGQQMGTNQGKGVVAAGDKLALFLKVFGGEVLTAFARTSV
+                     TTSRHMVRSISSGKSAQFPVLGRTQAAYLAPGENLDDKRKDIKHTEKVITIDGLLTADV
+                     LIYDIEDAMNHYDVRSEYTSQLGESLAMAADGAVLAEIAGLCNVESKYNENIEGLGTAT
+                     VIETTQNKAALTDQVALGKEIIAALTKARAALTKNYVPAADRVFYCDPDSYSAILAALM
+                     PNAANYAALIDPEKGSIRNVMGFEVVEVPHLTAGGAGTAREGTTGQKHVFPANKGEGNV
+                     KVAKDNVIGLFMHRSAVGTVKLRDLALERARRANFQADQIIAKYAMGHGGLRPEAAGAV
+                     VFKVE"
+ORIGIN
+        1 atggctagca tgactggtgg acagcaaatg ggtactaacc aaggtaaagg tgtagttgct
+       61 gctggagata aactggcgtt gttcttgaag gtatttggcg gtgaagtcct gactgcgttc
+      121 gctcgtacct ccgtgaccac ttctcgccac atggtacgtt ccatctccag cggtaaatcc
+      181 gctcagttcc ctgttctggg tcgcactcag gcagcgtatc tggctccggg cgagaacctc
+      241 gacgataaac gtaaggacat caaacacacc gagaaggtaa tcaccattga cggtctcctg
+      301 acggctgacg ttctgattta tgatattgag gacgcgatga accactacga cgttcgctct
+      361 gagtatacct ctcagttggg tgaatctctg gcgatggctg cggatggtgc ggttctggct
+      421 gagattgccg gtctgtgtaa cgtggaaagc aaatataatg agaacatcga gggcttaggt
+      481 actgctaccg taattgagac cactcagaac aaggccgcac ttaccgacca agttgcgctg
+      541 ggtaaggaga ttattgcggc tctgactaag gctcgtgcgg ctctgaccaa gaactatgtt
+      601 ccggctgctg accgtgtgtt ctactgtgac ccagatagct actctgcgat tctggcagca
+      661 ctgatgccga acgcagcaaa ctacgctgct ctgattgacc ctgagaaggg ttctatccgc
+      721 aacgttatgg gctttgaggt tgtagaagtt ccgcacctca ccgctggtgg tgctggtacc
+      781 gctcgtgagg gcactactgg tcagaagcac gtcttccctg ccaataaagg tgagggtaat
+      841 gtcaaggttg ctaaggacaa cgttatcggc ctgttcatgc accgctctgc ggtaggtact
+      901 gttaagctgc gtgacttggc tctggagcgc gctcgccgtg ctaacttcca agcggaccag
+      961 attatcgcta agtacgcaat gggccacggt ggtcttcgcc cagaagctgc tggtgcagtg
+     1021 gttttcaaag tggagtaa
+//
+LOCUS       gp11                     591 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp11.
+ACCESSION   gp11
+VERSION     gp11
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..591
+                     /locus_tag="T7p46"
+                     /note="gene 11"
+                     /db_xref="GeneID:1261030"
+     CDS             1..591
+                     /locus_tag="T7p46"
+                     /name="gp11"
+                     /note="Tail tubular proteins A and B are required for
+                     assembly of tails of T7-like phages."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="tail tubular protein A"
+                     /protein_id="NP_041999.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03746"
+                     /db_xref="GeneID:1261030"
+                     /translation="MRSYDMNVETAAELSAVNDILASIGEPPVSTLEGDANADAANARR
+                     ILNKINRQIQSRGWTFNIEEGITLLPDVYSNLIVYSDDYLSLMSTSGQSIYVNRGGYVY
+                     DRTSQSDRFDSGITVNIIRLRDYDEMPECFRYWIVTKASRQFNNRFFGAPEVEGVLQEE
+                     EDEARRLCMEYEMDYGGYNMLDGDAFTSGLLTR"
+ORIGIN
+        1 atgcgctcat acgatatgaa cgttgagact gccgctgagt tatcagctgt gaacgacatt
+       61 ctggcgtcta tcggtgaacc tccggtatca acgctggaag gtgacgctaa cgcagatgca
+      121 gcgaacgctc ggcgtattct caacaagatt aaccgacaga ttcaatctcg tggatggacg
+      181 ttcaacattg aggaaggcat aacgctacta cctgatgttt actccaacct gattgtatac
+      241 agtgacgact atttatccct aatgtctact tccggtcaat ccatctacgt taaccgaggt
+      301 ggctatgtgt atgaccgaac gagtcaatca gaccgctttg actctggtat tactgtgaac
+      361 attattcgtc tccgcgacta cgatgagatg cctgagtgct tccgttactg gattgtcacc
+      421 aaggcttccc gtcagttcaa caaccgattc tttggggcac cggaagtaga gggtgtactc
+      481 caagaagagg aagatgaggc tagacgtctc tgcatggagt atgagatgga ctacggtggg
+      541 tacaatatgc tggatggaga tgcgttcact tctggtctac tgactcgcta a
+//
+LOCUS       gp12                    2385 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp12.
+ACCESSION   gp12
+VERSION     gp12
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..2385
+                     /locus_tag="T7p47"
+                     /note="gene 12"
+                     /db_xref="GeneID:1261024"
+     CDS             1..2385
+                     /locus_tag="T7p47"
+                     /name="gp12"
+                     /note="gene 12"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="tail tubular protein B"
+                     /protein_id="NP_042000.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03747"
+                     /db_xref="GeneID:1261024"
+                     /translation="MALISQSIKNLKGGISQQPDILRYPDQGSRQVNGWSSETEGLQKR
+                     PPLVFLNTLGDNGALGQAPYIHLINRDEHEQYYAVFTGSGIRVFDLSGNEKQVRYPNGS
+                     NYIKTANPRNDLRMVTVADYTFIVNRNVVAQKNTKSVNLPNYNPNQDGLINVRGGQYGR
+                     ELIVHINGKDVAKYKIPDGSQPEHVNNTDAQWLAEELAKQMRTNLSDWTVNVGQGFIHV
+                     TAPSGQQIDSFTTKDGYADQLINPVTHYAQSFSKLPPNAPNGYMVKIVGDASKSADQYY
+                     VRYDAERKVWTETLGWNTEDQVLWETMPHALVRAADGNFDFKWLEWSPKSCGDVDTNPW
+                     PSFVGSSINDVFFFRNRLGFLSGENIILSRTAKYFNFYPASIANLSDDDPIDVAVSTNR
+                     IAILKYAVPFSEELLIWSDEAQFVLTASGTLTSKSVELNLTTQFDVQDRARPFGIGRNV
+                     YFASPRSSFTSIHRYYAVQDVSSVKNAEDITSHVPNYIPNGVFSICGSGTENFCSVLSH
+                     GDPSKIFMYKFLYLNEELRQQSWSHWDFGENVQVLACQSISSDMYVILRNEFNTFLARI
+                     SFTKNAIDLQGEPYRAFMDMKIRYTIPSGTYNDDTFTTSIHIPTIYGANFGRGKITVLE
+                     PDGKITVFEQPTAGWNSDPWLRLSGNLEGRMVYIGFNINFVYEFSKFLIKQTADDGSTS
+                     TEDIGRLQLRRAWVNYENSGTFDIYVENQSSNWKYTMAGARLGSNTLRAGRLNLGTGQY
+                     RFPVVGNAKFNTVYILSDETTPLNIIGCGWEGNYLRRSSGI"
+ORIGIN
+        1 atggcactca ttagccaatc aatcaagaac ttgaagggtg gtatcagcca acagcctgac
+       61 atccttcgtt atccagacca agggtcacgc caagttaacg gttggtcttc ggagaccgag
+      121 ggcctccaaa agcgtccacc tcttgttttc ttaaatacac ttggagacaa cggtgcgtta
+      181 ggtcaagctc cgtacatcca cctgattaac cgagatgagc acgaacagta ttacgctgtg
+      241 ttcactggta gcggaatccg agtgttcgac ctttctggta acgagaagca agttaggtat
+      301 cctaacggtt ccaactacat caagaccgct aatccacgta acgacctgcg aatggttact
+      361 gtagcagact atacgttcat cgttaaccgt aacgttgttg cacagaagaa cacaaagtct
+      421 gtcaacttac cgaattacaa ccctaatcaa gacggattga ttaacgttcg tggtggtcag
+      481 tatggtaggg aactaattgt acacattaac ggtaaagacg ttgcgaagta taagatacca
+      541 gatggtagtc aacctgaaca cgtaaacaat acggatgccc aatggttagc tgaagagtta
+      601 gccaagcaga tgcgcactaa cttgtctgat tggactgtaa atgtagggca agggttcatc
+      661 catgtgaccg cacctagtgg tcaacagatt gactccttca cgactaaaga tggctacgca
+      721 gaccagttga ttaaccctgt gacccactac gctcagtcgt tctctaagct gccacctaat
+      781 gctcctaacg gctacatggt gaaaatcgta ggggacgcct ctaagtctgc cgaccagtat
+      841 tacgttcggt atgacgctga gcggaaagtt tggactgaga ctttaggttg gaacactgag
+      901 gaccaagttc tatgggaaac catgccacac gctcttgtgc gagccgctga cggtaatttc
+      961 gacttcaagt ggcttgagtg gtctcctaag tcttgtggtg acgttgacac caacccttgg
+     1021 ccttcttttg ttggttcaag tattaacgat gtgttcttct tccgtaaccg cttaggattc
+     1081 cttagtgggg agaacatcat attgagtcgt acagccaaat acttcaactt ctaccctgcg
+     1141 tccattgcga accttagtga tgacgaccct atagacgtag ctgtgagtac caaccgaata
+     1201 gcaatcctta agtacgccgt tccgttctca gaagagttac tcatctggtc cgatgaagca
+     1261 caattcgtcc tgactgcctc gggtactctc acatctaagt cggttgagtt gaacctaacg
+     1321 acccagtttg acgtacagga ccgagcgaga ccttttggga ttgggcgtaa tgtctacttt
+     1381 gctagtccga ggtccagctt cacgtccatc cacaggtact acgctgtgca ggatgtcagt
+     1441 tccgttaaga atgctgagga cattacatca cacgttccta actacatccc taatggtgtg
+     1501 ttcagtattt gcggaagtgg tacggaaaac ttctgttcgg tactatctca cggggaccct
+     1561 agtaaaatct tcatgtacaa attcctgtac ctgaacgaag agttaaggca acagtcgtgg
+     1621 tctcattggg actttgggga aaacgtacag gttctagctt gtcagagtat cagctcagat
+     1681 atgtatgtga ttcttcgcaa tgagttcaat acgttcctag ctagaatctc tttcactaag
+     1741 aacgccattg acttacaggg agaaccctat cgtgccttta tggacatgaa gattcgatac
+     1801 acgattccta gtggaacata caacgatgac acattcacta cctctattca tattccaaca
+     1861 atttatggtg caaacttcgg gaggggcaaa atcactgtat tggagcctga tggtaagata
+     1921 accgtgtttg agcaacctac ggctgggtgg aatagcgacc cttggctgag actcagcggt
+     1981 aacttggagg gacgcatggt gtacattggg ttcaacatta acttcgtata tgagttctct
+     2041 aagttcctca tcaagcagac tgccgacgac gggtctacct ccacggaaga cattgggcgc
+     2101 ttacagttac gccgagcgtg ggttaactac gagaactctg gtacgtttga catttatgtt
+     2161 gagaaccaat cgtctaactg gaagtacaca atggctggtg cccgattagg ctctaacact
+     2221 ctgagggctg ggagactgaa cttagggacc ggacaatatc gattccctgt ggttggtaac
+     2281 gccaagttca acactgtata catcttgtca gatgagacta cccctctgaa catcattggg
+     2341 tgtggctggg aaggtaacta cttacggaga agttccggta tttaa
+//
+LOCUS       gp13                     417 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp13.
+ACCESSION   gp13
+VERSION     gp13
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..417
+                     /locus_tag="T7p48"
+                     /note="gene 13"
+                     /db_xref="GeneID:1261025"
+     CDS             1..417
+                     /locus_tag="T7p48"
+                     /name="gp13"
+                     /note="gene 13"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="internal virion protein A"
+                     /protein_id="NP_042001.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03723"
+                     /db_xref="GeneID:1261025"
+                     /translation="MMTIRPTKSTDFEVFTPAHHDILEAKAAGIEPSFPDASECVTLSL
+                     YGFPLAIGGNCGDQCWFVTSDQVWRLSGKAKRKFRKLIMEYRDKMLEKYDTLWNYVWVG
+                     NTSHIRFLKTIGAVFHEEYTRDGQFQLFTITKGG"
+ORIGIN
+        1 atgatgacta taagacctac taaaagtaca gactttgagg tattcactcc ggctcaccat
+       61 gacattcttg aagctaaggc tgctggtatt gagccgagtt tccctgatgc ttccgagtgt
+      121 gtcacgttga gcctctatgg gttccctcta gctatcggtg gtaactgcgg ggaccagtgc
+      181 tggttcgtta cgagcgacca agtgtggcga cttagtggaa aggctaagcg aaagttccgt
+      241 aagttaatca tggagtatcg cgataagatg cttgagaagt atgatactct ttggaattac
+      301 gtatgggtag gcaatacgtc ccacattcgt ttcctcaaga ctatcggtgc ggtattccat
+      361 gaagagtaca cacgagatgg tcaatttcag ttatttacaa tcacgaaagg aggataa
+//
+LOCUS       gp14                     591 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp14.
+ACCESSION   gp14
+VERSION     gp14
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..591
+                     /locus_tag="T7p49"
+                     /note="gene 14"
+                     /db_xref="GeneID:1261032"
+     CDS             1..591
+                     /locus_tag="T7p49"
+                     /name="gp14"
+                     /note="Approximately 12 copies of the internal virion
+                     protein B encoded in phage T7 by gene 14 are part of the
+                     internal core of the T7 virion. Along with gp16 and gp15,
+                     the other internal core proteins, gp14 is ejected from the
+                     phage head and forms part of a putative channel that spans
+                     the entire host cell envelope and allows entry of DNA. gp14
+                     appears to localize to the outer host membrane after
+                     ejection. Other names: gp14"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="internal virion protein B"
+                     /protein_id="NP_042002.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03724"
+                     /db_xref="GeneID:1261032"
+                     /translation="MCWAAAIPIAISGAQAISGQNAQAKMIAAQTAAGRRQAMEIMRQT
+                     NIQNADLSLQARSKLEEASAELTSQNMQKVQAIGSIRAAIGESMLEGSSMDRIKRVTEG
+                     QFIREANMVTENYRRDYQAIFAQQLGGTQSAASQIDEIYKSEQKQKSKLQMVLDPLAIM
+                     GSSAASAYASGAFDSKSTTKAPIVAAKGTKTGR"
+ORIGIN
+        1 atgtgttggg cagccgcaat acctatcgct atatctggcg ctcaggctat cagtggtcag
+       61 aacgctcagg ccaaaatgat tgccgctcag accgctgctg gtcgtcgtca agctatggaa
+      121 atcatgaggc agacgaacat ccagaatgct gacctatcgt tgcaagctcg aagtaaactt
+      181 gaggaagcgt ccgccgagtt gacctcacag aacatgcaga aggtccaagc tattgggtct
+      241 atccgagcgg ctatcggaga gagtatgctt gaaggttcct caatggaccg cattaagcga
+      301 gtcacagaag gacagttcat tcgggaagcc aatatggtaa ctgagaacta tcgccgtgac
+      361 taccaagcaa tcttcgcaca gcaacttggt ggtactcaaa gtgctgcaag tcagattgac
+      421 gaaatctata agagcgaaca gaaacagaag agtaagctac agatggttct ggacccactg
+      481 gctatcatgg ggtcttccgc tgcgagtgct tacgcatccg gtgcgttcga ctctaagtcc
+      541 acaactaagg cacctattgt tgccgctaaa ggaaccaaga cggggaggta a
+//
+LOCUS       gp15                    2244 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp15.
+ACCESSION   gp15
+VERSION     gp15
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..2244
+                     /locus_tag="T7p50"
+                     /note="gene 15"
+                     /db_xref="GeneID:1261034"
+     CDS             1..2244
+                     /locus_tag="T7p50"
+                     /name="gp15"
+                     /note="Approximately 12 copies of the internal virion
+                     protein C encoded by phage T7 gene 15 (gp15) are part of
+                     the internal core of the T7 virion. Along with gp14 and
+                     gp16, the other internal core proteins, gp15 is ejected
+                     from the phage head and forms part of a putative channel
+                     that spans the entire host cell envelope and allows entry
+                     of DNA."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="internal virion protein C"
+                     /protein_id="NP_042003.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03725"
+                     /db_xref="GeneID:1261034"
+                     /translation="MSKIESALQAAQPGLSRLRGGAGGMGYRAATTQAEQPRSSLLDTI
+                     GRFAKAGADMYTAKEQRARDLADERSNEIIRKLTPEQRREALNNGTLLYQDDPYAMEAL
+                     RVKTGRNAAYLVDDDVMQKIKEGVFRTREEMEEYRHSRLQEGAKVYAEQFGIDPEDVDY
+                     QRGFNGDITERNISLYGAHDNFLSQQAQKGAIMNSRVELNGVLQDPDMLRRPDSADFFE
+                     KYIDNGLVTGAIPSDAQATQLISQAFSDASSRAGGADFLMRVGDKKVTLNGATTTYREL
+                     IGEEQWNALMVTAQRSQFETDAKLNEQYRLKINSALNQEDPRTAWEMLQGIKAELDKVQ
+                     PDEQMTPQREWLISAQEQVQNQMNAWTKAQAKALDDSMKSMNKLDVIDKQFQKRINGEW
+                     VSTDFKDMPVNENTGEFKHSDMVNYANKKLAEIDSMDIPDGAKDAMKLKYLQADSKDGA
+                     FRTAIGTMVTDAGQEWSAAVINGKLPERTPAMDALRRIRNADPQLIAALYPDQAELFLT
+                     MDMMDKQGIDPQVILDADRLTVKRSKEQRFEDDKAFESALNASKAPEIARMPASLRESA
+                     RKIYDSVKYRSGNESMAMEQMTKFLKESTYTFTGDDVDGDTVGVIPKNMMQVNSDPKSW
+                     EQGRDILEEARKGIIASNPWITNKQLTMYSQGDSIYLMDTTGQVRVRYDKELLSKVWSE
+                     NQKKLEEKAREKALADVNKRAPIVAATKAREAAAKRVREKRKQTPKFIYGRKE"
+ORIGIN
+        1 atgagtaaaa ttgaatctgc ccttcaagcg gcacaaccgg gactctctcg gttacgtggt
+       61 ggtgctggag gtatgggcta tcgtgcagca accactcagg ccgaacagcc aaggtcaagc
+      121 ctattggaca ccattggtcg gttcgctaag gctggtgccg atatgtatac cgctaaggaa
+      181 caacgagcac gagacctagc tgatgaacgc tctaacgaga ttatccgtaa gctgacccct
+      241 gagcaacgtc gagaagctct caacaacggg acccttctgt atcaggatga cccatacgct
+      301 atggaagcac tccgagtcaa gactggtcgt aacgctgcgt atcttgtgga cgatgacgtt
+      361 atgcagaaga taaaagaggg tgtcttccgt actcgcgaag agatggaaga gtatcgccat
+      421 agtcgccttc aagagggcgc taaggtatac gctgagcagt tcggcatcga ccctgaggac
+      481 gttgattatc agcgtggttt caacggggac attaccgagc gtaacatctc gctgtatggt
+      541 gcgcatgata acttcttgag ccagcaagct cagaagggcg ctatcatgaa cagccgagtg
+      601 gaactcaacg gtgtccttca agaccctgat atgctgcgtc gtccagactc tgctgacttc
+      661 tttgagaagt atatcgacaa cggtctggtt actggcgcaa tcccatctga tgctcaagcc
+      721 acacagctta taagccaagc gttcagtgac gcttctagcc gtgctggtgg tgctgacttc
+      781 ctgatgcgag tcggtgacaa gaaggtaaca cttaacggag ccactacgac ttaccgagag
+      841 ttgattggtg aggaacagtg gaacgctctc atggtcacag cacaacgttc tcagtttgag
+      901 actgacgcga agctgaacga gcagtatcgc ttgaagatta actctgcgct gaaccaagag
+      961 gacccaagga cagcttggga gatgcttcaa ggtatcaagg ctgaactaga taaggtccaa
+     1021 cctgatgagc agatgacacc acaacgtgag tggctaatct ccgcacagga acaagttcag
+     1081 aatcagatga acgcatggac gaaagctcag gccaaggctc tggacgattc catgaagtca
+     1141 atgaacaaac ttgacgtaat cgacaagcaa ttccagaagc gaatcaacgg tgagtgggtc
+     1201 tcaacggatt ttaaggatat gccagtcaac gagaacactg gtgagttcaa gcatagcgat
+     1261 atggttaact acgccaataa gaagctcgct gagattgaca gtatggacat tccagacggt
+     1321 gccaaggatg ctatgaagtt gaagtacctt caagcggact ctaaggacgg agcattccgt
+     1381 acagccatcg gaaccatggt cactgacgct ggtcaagagt ggtctgccgc tgtgattaac
+     1441 ggtaagttac cagaacgaac cccagctatg gatgctctgc gcagaatccg caatgctgac
+     1501 cctcagttga ttgctgcgct atacccagac caagctgagc tattcctgac gatggacatg
+     1561 atggacaagc agggtattga ccctcaggtt attcttgatg ccgaccgact gactgttaag
+     1621 cggtccaaag agcaacgctt tgaggatgat aaagcattcg agtctgcact gaatgcatct
+     1681 aaggctcctg agattgcccg tatgccagcg tcactgcgcg aatctgcacg taagatttat
+     1741 gactccgtta agtatcgctc ggggaacgaa agcatggcta tggagcagat gaccaagttc
+     1801 cttaaggaat ctacctacac gttcactggt gatgatgttg acggtgatac cgttggtgtg
+     1861 attcctaaga atatgatgca ggttaactct gacccgaaat catgggagca aggtcgggat
+     1921 attctggagg aagcacgtaa gggaatcatt gcgagcaacc cttggataac caataagcaa
+     1981 ctgaccatgt attctcaagg tgactccatt taccttatgg acaccacagg tcaagtcaga
+     2041 gtccgatacg acaaagagtt actctcgaag gtctggagtg agaaccagaa gaaactcgaa
+     2101 gagaaagctc gtgagaaggc tctggctgat gtgaacaagc gagcacctat agttgccgct
+     2161 acgaaggccc gtgaagctgc tgctaaacga gtccgagaga aacgtaaaca gactcctaag
+     2221 ttcatctacg gacgtaagga gtaa
+//
+LOCUS       gp16                    3957 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp16.
+ACCESSION   gp16
+VERSION     gp16
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..3957
+                     /locus_tag="T7p51"
+                     /note="gene 16"
+                     /db_xref="GeneID:1261031"
+     CDS             1..3957
+                     /locus_tag="T7p51"
+                     /name="gp16"
+                     /note="Approximately 3 copies of the internal virion
+                     protein D encoded by phage T7 gene 16 (gp16) are part of
+                     the internal core of the T7 virion. Along with gp14 and
+                     gp15, the other internal core proteins, gp16 is ejected
+                     from the phage head and forms part of a putative channel
+                     that spans the entire host cell envelope and allows entry
+                     of DNA. The N-terminus has similarity to a lytic
+                     transglycosylase and may help form a channel for phage DNA
+                     translocation through the crosslinked peptidoglycan layer
+                     of the host envelope."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="internal virion protein D"
+                     /protein_id="NP_042004.1"
+                     /db_xref="GOA:P03726"
+                     /db_xref="UniProtKB/Swiss-Prot:P03726"
+                     /db_xref="GeneID:1261031"
+                     /translation="MDKYDKNVPSDYDGLFQKAADANGVSYDLLRKVAWTESRFVPTAK
+                     SKTGPLGMMQFTKATAKALGLRVTDGPDDDRLNPELAINAAAKQLAGLVGKFDGDELKA
+                     ALAYNQGEGRLGNPQLEAYSKGDFASISEEGRNYMRNLLDVAKSPMAGQLETFGGITPK
+                     GKGIPAEVGLAGIGHKQKVTQELPESTSFDVKGIEQEATAKPFAKDFWETHGETLDEYN
+                     SRSTFFGFKNAAEAELSNSVAGMAFRAGRLDNGFDVFKDTITPTRWNSHIWTPEELEKI
+                     RTEVKNPAYINVVTGGSPENLDDLIKLANENFENDSRAAEAGLGAKLSAGIIGAGVDPL
+                     SYVPMVGVTGKGFKLINKALVVGAESAALNVASEGLRTSVAGGDADYAGAALGGFVFGA
+                     GMSAISDAVAAGLKRSKPEAEFDNEFIGPMMRLEARETARNANSADLSRMNTENMKFEG
+                     EHNGVPYEDLPTERGAVVLHDGSVLSASNPINPKTLKEFSEVDPEKAARGIKLAGFTEI
+                     GLKTLGSDDADIRRVAIDLVRSPTGMQSGASGKFGATASDIHERLHGTDQRTYNDLYKA
+                     MSDAMKDPEFSTGGAKMSREETRYTIYRRAALAIERPELQKALTPSERIVMDIIKRHFD
+                     TKRELMENPAIFGNTKAVSIFPESRHKGTYVPHVYDRHAKALMIQRYGAEGLQEGIARS
+                     WMNSYVSRPEVKARVDEMLKELHGVKEVTPEMVEKYAMDKAYGISHSDQFTNSSIIEEN
+                     IEGLVGIENNSFLEARNLFDSDLSITMPDGQQFSVNDLRDFDMFRIMPAYDRRVNGDIA
+                     IMGSTGKTTKELKDEILALKAKAEGDGKKTGEVHALMDTVKILTGRARRNQDTVWETSL
+                     RAINDLGFFAKNAYMGAQNITEIAGMIVTGNVRALGHGIPILRDTLYKSKPVSAKELKE
+                     LHASLFGKEVDQLIRPKRADIVQRLREATDTGPAVANIVGTLKYSTQELAARSPWTKLL
+                     NGTTNYLLDAARQGMLGDVISATLTGKTTRWEKEGFLRGASVTPEQMAGIKSLIKEHMV
+                     RGEDGKFTVKDKQAFSMDPRAMDLWRLADKVADEAMLRPHKVSLQDSHAFGALGKMVMQ
+                     FKSFTIKSLNSKFLRTFYDGYKNNRAIDAALSIITSMGLAGGFYAMAAHVKAYALPKEK
+                     RKEYLERALDPTMIAHAALSRSSQLGAPLAMVDLVGGVLGFESSKMARSTILPKDTVKE
+                     RDPNKPYTSREVMGAMGSNLLEQMPSAGFVANVGATLMNAAGVVNSPNKATEQDFMTGL
+                     MNSTKELVPNDPLTQQLVLKIYEANGVNLRERRK"
+ORIGIN
+        1 atggataagt acgataagaa cgtaccaagt gattatgatg gtctgttcca aaaggctgct
+       61 gatgccaacg gggtctctta tgacctttta cgtaaagtcg cttggacaga atcacgattt
+      121 gtgcctacag caaaatctaa gactggacca ttaggcatga tgcaatttac caaggcaacc
+      181 gctaaggccc tcggtctgcg agttaccgat ggtccagacg acgaccgact gaaccctgag
+      241 ttagctatta atgctgccgc taagcaactt gcaggtctgg tagggaagtt tgatggcgat
+      301 gaactcaaag ctgcccttgc gtacaaccaa ggcgagggac gcttgggtaa tccacaactt
+      361 gaggcgtact ctaagggaga cttcgcatca atctctgagg agggacgtaa ctacatgcgt
+      421 aaccttctgg atgttgctaa gtcacctatg gctggacagt tggaaacttt tggtggcata
+      481 accccaaagg gtaaaggcat tccggctgag gtaggattgg ctggaattgg tcacaagcag
+      541 aaagtaacac aggaacttcc tgagtccaca agttttgacg ttaagggtat cgaacaggag
+      601 gctacggcga aaccattcgc caaggacttt tgggagaccc acggagaaac acttgacgag
+      661 tacaacagtc gttcaacctt cttcggattc aaaaatgctg ccgaagctga actctccaac
+      721 tcagtcgctg ggatggcttt ccgtgctggt cgtctcgata atggttttga tgtgtttaaa
+      781 gacaccatta cgccgactcg ctggaactct cacatctgga ctccagagga gttagagaag
+      841 attcgaacag aggttaagaa ccctgcgtac atcaacgttg taactggtgg ttcccctgag
+      901 aacctcgatg acctcattaa attggctaac gagaactttg agaatgactc ccgcgctgcc
+      961 gaggctggcc taggtgccaa actgagtgct ggtattattg gtgctggtgt ggacccgctt
+     1021 agctatgttc ctatggtcgg tgtcactggt aagggcttta agttaatcaa taaggctctt
+     1081 gtagttggtg ccgaaagtgc tgctctgaac gttgcatccg aaggtctccg tacctccgta
+     1141 gctggtggtg acgcagacta tgcgggtgct gccttaggtg gctttgtgtt tggcgcaggc
+     1201 atgtctgcaa tcagtgacgc tgtagctgct ggactgaaac gcagtaaacc agaagctgag
+     1261 ttcgacaatg agttcatcgg tcctatgatg cgattggaag cccgtgagac agcacgaaac
+     1321 gccaactctg cggacctctc tcggatgaac actgagaaca tgaagtttga aggtgaacat
+     1381 aatggtgtcc cttatgagga cttaccaaca gagagaggtg ccgtggtgtt acatgatggc
+     1441 tccgttctaa gtgcaagcaa cccaatcaac cctaagactc taaaagagtt ctccgaggtt
+     1501 gaccctgaga aggctgcgcg aggaatcaaa ctggctgggt tcaccgagat tggcttgaag
+     1561 accttggggt ctgacgatgc tgacatccgt agagtggcta tcgacctcgt tcgctctcct
+     1621 actggtatgc agtctggtgc ctcaggtaag ttcggtgcaa cagcttctga catccatgag
+     1681 agacttcatg gtactgacca gcgtacttat aatgacttgt acaaagcaat gtctgacgct
+     1741 atgaaagacc ctgagttctc tactggcggc gctaagatgt cccgtgaaga aactcgatac
+     1801 actatctacc gtagagcggc actagctatt gagcgtccag aactacagaa ggcactcact
+     1861 ccgtctgaga gaatcgttat ggacatcatt aagcgtcact ttgacaccaa gcgtgaactt
+     1921 atggaaaacc cagcaatatt cggtaacaca aaggctgtga gtatcttccc tgagagtcgc
+     1981 cacaaaggta cttacgttcc tcacgtatat gaccgtcatg ccaaggcgct gatgattcaa
+     2041 cgctacggtg ccgaaggttt gcaggaaggg attgcccgct catggatgaa cagctacgtc
+     2101 tccagacctg aggtcaaggc cagagtcgat gagatgctta aggaattaca cggggtgaag
+     2161 gaagtaacac cagagatggt agagaagtac gctatggata aggcttatgg tatctcccac
+     2221 tcagaccagt tcaccaacag ttccataata gaagagaaca ttgagggctt agtaggtatc
+     2281 gagaataact cattccttga ggcacgtaac ttgtttgatt cggacctatc catcactatg
+     2341 ccagacggac agcaattctc agtgaatgac ctaagggact tcgatatgtt ccgcatcatg
+     2401 ccagcgtatg accgccgtgt caatggtgac atcgccatca tggggtctac tggtaaaacc
+     2461 actaaggaac ttaaggatga gattttggct ctcaaagcga aagctgaggg agacggtaag
+     2521 aagactggcg aggtacatgc tttaatggat accgttaaga ttcttactgg tcgtgctaga
+     2581 cgcaatcagg acactgtgtg ggaaacctca ctgcgtgcca tcaatgacct agggttcttc
+     2641 gctaagaacg cctacatggg tgctcagaac attacggaga ttgctgggat gattgtcact
+     2701 ggtaacgttc gtgctctagg gcatggtatc ccaattctgc gtgatacact ctacaagtct
+     2761 aaaccagttt cagctaagga actcaaggaa ctccatgcgt ctctgttcgg gaaggaggtg
+     2821 gaccagttga ttcggcctaa acgtgctgac attgtgcagc gcctaaggga agcaactgat
+     2881 accggacctg ccgtggcgaa catcgtaggg accttgaagt attcaacaca ggaactggct
+     2941 gctcgctctc cgtggactaa gctactgaac ggaaccacta actaccttct ggatgctgcg
+     3001 cgtcaaggta tgcttgggga tgttattagt gccaccctaa caggtaagac tacccgctgg
+     3061 gagaaagaag gcttccttcg tggtgcctcc gtaactcctg agcagatggc tggcatcaag
+     3121 tctctcatca aggaacatat ggtacgcggt gaggacggga agtttaccgt taaggacaag
+     3181 caagcgttct ctatggaccc acgggctatg gacttatgga gactggctga caaggtagct
+     3241 gatgaggcaa tgctgcgtcc acataaggtg tccttacagg attcccatgc gttcggagca
+     3301 ctaggtaaga tggttatgca gtttaagtct ttcactatca agtcccttaa ctctaagttc
+     3361 ctgcgaacct tctatgatgg atacaagaac aaccgagcga ttgacgctgc gctgagcatc
+     3421 atcacctcta tgggtctcgc tggtggtttc tatgctatgg ctgcacacgt caaagcatac
+     3481 gctctgccta aggagaaacg taaggagtac ttggagcgtg cactggaccc aaccatgatt
+     3541 gcccacgctg cgttatctcg tagttctcaa ttgggtgctc ctttggctat ggttgaccta
+     3601 gttggtggtg ttttagggtt cgagtcctcc aagatggctc gctctacgat tctacctaag
+     3661 gacaccgtga aggaacgtga cccaaacaaa ccgtacacct ctagagaggt aatgggcgct
+     3721 atgggttcaa accttctgga acagatgcct tcggctggct ttgtggctaa cgtaggggct
+     3781 accttaatga atgctgctgg cgtggtcaac tcacctaata aagcaaccga gcaggacttc
+     3841 atgactggtc ttatgaactc cacaaaagag ttagtaccga acgacccatt gactcaacag
+     3901 cttgtgttga agatttatga ggcgaacggt gttaacttga gggagcgtag gaaataa
+//
+LOCUS       gp17                    1662 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp17.
+ACCESSION   gp17
+VERSION     gp17
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1662
+                     /locus_tag="T7p52"
+                     /note="gene 17"
+                     /db_xref="GeneID:1261023"
+     CDS             1..1662
+                     /locus_tag="T7p52"
+                     /name="gp17"
+                     /note="in phages T7 and T3 trimers of gp17 form each of the
+                     6 kinked tail fibers. Other names: gp17."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="tail fiber protein"
+                     /protein_id="NP_042005.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03748"
+                     /db_xref="GeneID:1261023"
+                     /translation="MANVIKTVLTYQLDGSNRDFNIPFEYLARKFVVVTLIGVDRKVLT
+                     INTDYRFATRTTISLTKAWGPADGYTTIELRRVTSTTDRLVDFTDGSILRAYDLNVAQI
+                     QTMHVAEEARDLTTDTIGVNNDGHLDARGRRIVNLANAVDDRDAVPFGQLKTMNQNSWQ
+                     ARNEALQFRNEAETFRNQAEGFKNESSTNATNTKQWRDETKGFRDEAKRFKNTAGQYAT
+                     SAGNSASAAHQSEVNAENSATASANSAHLAEQQADRAEREADKLENYNGLAGAIDKVDG
+                     TNVYWKGNIHANGRLYMTTNGFDCGQYQQFFGGVTNRYSVMEWGDENGWLMYVQRREWT
+                     TAIGGNIQLVVNGQIITQGGAMTGQLKLQNGHVLQLESASDKAHYILSKDGNRNNWYIG
+                     RGSDNNNDCTFHSYVHGTTLTLKQDYAVVNKHFHVGQAVVATDGNIQGTKWGGKWLDAY
+                     LRDSFVAKSKAWTQVWSGSAGGGVSVTVSQDLRFRNIWIKCANNSWNFFRTGPDGIYFI
+                     ASDGGWLRFQIHSNGLGFKNIADSRSVPNAIMVENE"
+ORIGIN
+        1 atggctaacg taattaaaac cgttttgact taccagttag atggctccaa tcgtgatttt
+       61 aatatcccgt ttgagtatct agcccgtaag ttcgtagtgg taactcttat tggtgtagac
+      121 cgaaaggtcc ttacgattaa tacagactat cgctttgcta cacgtactac tatctctctg
+      181 acaaaggctt ggggtccagc cgatggctac acgaccatcg agttacgtcg agtaacctcc
+      241 actaccgacc gattggttga ctttacggat ggttcaatcc tccgcgcgta tgaccttaac
+      301 gtcgctcaga ttcaaacgat gcacgtagcg gaagaggccc gtgacctcac tacggatact
+      361 atcggtgtca ataacgatgg tcacttggat gctcgtggtc gtcgaattgt gaacctagcg
+      421 aacgccgtgg atgaccgcga tgctgttccg tttggtcaac taaagaccat gaaccagaac
+      481 tcatggcaag cacgtaatga agccttacag ttccgtaatg aggctgagac tttcagaaac
+      541 caagcggagg gctttaagaa cgagtccagt accaacgcta cgaacacaaa gcagtggcgc
+      601 gatgagacca agggtttccg agacgaagcc aagcggttca agaatacggc tggtcaatac
+      661 gctacatctg ctgggaactc tgcttccgct gcgcatcaat ctgaggtaaa cgctgagaac
+      721 tctgccacag catccgctaa ctctgctcat ttggcagaac agcaagcaga ccgtgcggaa
+      781 cgtgaggcag acaagctgga aaattacaat ggattggctg gtgcaattga taaggtagat
+      841 ggaaccaatg tgtactggaa aggaaatatt cacgctaacg ggcgccttta catgaccaca
+      901 aacggttttg actgtggcca gtatcaacag ttctttggtg gtgtcactaa tcgttactct
+      961 gtcatggagt ggggagatga gaacggatgg ctgatgtatg ttcaacgtag agagtggaca
+     1021 acagcgatag gcggtaacat ccagttagta gtaaacggac agatcatcac ccaaggtgga
+     1081 gccatgaccg gtcagctaaa attgcagaat gggcatgttc ttcaattaga gtccgcatcc
+     1141 gacaaggcgc actatattct atctaaagat ggtaacagga ataactggta cattggtaga
+     1201 gggtcagata acaacaatga ctgtaccttc cactcctatg tacatggtac gaccttaaca
+     1261 ctcaagcagg actatgcagt agttaacaaa cacttccacg taggtcaggc cgttgtggcc
+     1321 actgatggta atattcaagg tactaagtgg ggaggtaaat ggctggatgc ttacctacgt
+     1381 gacagcttcg ttgcgaagtc caaggcgtgg actcaggtgt ggtctggtag tgctggcggt
+     1441 ggggtaagtg tgactgtttc acaggatctc cgcttccgca atatctggat taagtgtgcc
+     1501 aacaactctt ggaacttctt ccgtactggc cccgatggaa tctacttcat agcctctgat
+     1561 ggtggatggt tacgattcca aatacactcc aacggtctcg gattcaagaa tattgcagac
+     1621 agtcgttcag tacctaatgc aatcatggtg gagaacgagt aa
+//
+LOCUS       gp17.5                   204 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp17.5.
+ACCESSION   gp17
+VERSION     gp17.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..204
+                     /locus_tag="T7p53"
+                     /note="gene 17.5"
+                     /db_xref="GeneID:1261022"
+     CDS             1..204
+                     /locus_tag="T7p53"
+                     /name="gp17.5"
+                     /note="Type II holins have two putative transmembrane
+                     domains and are thought to allow endolysins access to the
+                     cell wall at the optimal lysis time. However, in phage T7
+                     the holin protein gp17.5 does not appear to be essential
+                     and gp17.5 mutants only show a minor delay in lysis. Other
+                     names: gp17.5; lysis protein"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="type II holin"
+                     /protein_id="NP_042006.1"
+                     /db_xref="GOA:P03802"
+                     /db_xref="UniProtKB/Swiss-Prot:P03802"
+                     /db_xref="GeneID:1261022"
+                     /translation="MLSLDFNNELIKAAPIVGTGVADVSARLFFGLSLNEWFYVAAIAY
+                     TVVQIGAKVVDKMIDWKKANKE"
+ORIGIN
+        1 gtgctatcat tagactttaa caacgaattg attaaggctg ctccaattgt tgggacgggt
+       61 gtagcagatg ttagtgctcg actgttcttt gggttaagcc ttaacgaatg gttctacgtt
+      121 gctgctatcg cctacacagt ggttcagatt ggtgccaagg tagtcgataa gatgattgac
+      181 tggaagaaag ccaataagga gtga
+//
+LOCUS       gp18                     270 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp18.
+ACCESSION   gp18
+VERSION     gp18
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..270
+                     /locus_tag="T7p54"
+                     /note="gene 18"
+                     /db_xref="GeneID:1261042"
+     CDS             1..270
+                     /locus_tag="T7p54"
+                     /name="gp18"
+                     /note="involved in the packaging of genome monomers into a
+                     procapsid using head-to-tail concatemers of genomes. other
+                     names: DNA packaging protein A; DNA maturation protein A;
+                     terminase, small subunit"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA packaging protein, small subunit"
+                     /protein_id="NP_042007.1"
+                     /db_xref="GOA:P03693"
+                     /db_xref="UniProtKB/Swiss-Prot:P03693"
+                     /db_xref="GeneID:1261042"
+                     /translation="MEKDKSLITFLEMLDTAMAQRMLADLSDHERRSPQLYNAINKLLD
+                     RHKFQIGKLQPDVHILGGLAGALEEYKEKVGDNGLTDDDIYTLQ"
+ORIGIN
+        1 atggaaaagg ataagagcct tattacattc ttagagatgt tggacactgc gatggctcag
+       61 cgtatgcttg cggacctttc ggaccatgag cgtcgctctc cgcaactcta taatgctatt
+      121 aacaaactgt tagaccgcca caagttccag attggtaagt tgcagccgga tgttcacatc
+      181 ttaggtggcc ttgctggtgc tcttgaagag tacaaagaga aagtcggtga taacggtctt
+      241 acggatgatg atatttacac attacagtga
+//
+LOCUS       gp18.5                   432 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp18.5.
+ACCESSION   gp18
+VERSION     gp18.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..432
+                     /locus_tag="T7p55"
+                     /note="gene 18.5"
+                     /db_xref="GeneID:1261067"
+     CDS             1..432
+                     /locus_tag="T7p55"
+                     /name="gp18.5"
+                     /note="analog of phage lambda protein Rz, a cell lysis
+                     protein. Rz and gp18.5 share distant sequence similarity,
+                     similar function, and a similar genome neighborhood. In T7,
+                     gp18.5 interacts with gp18.7, a lambda RZ1-like lysis
+                     protein. Other names: gp18.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phage lambda Rz-like lysis protein"
+                     /protein_id="NP_042008.1"
+                     /db_xref="GOA:P03803"
+                     /db_xref="UniProtKB/Swiss-Prot:P03803"
+                     /db_xref="GeneID:1261067"
+                     /translation="MLEFLRKLIPWVLAGMLFGLGWHLGSDSMDAKWKQEVHNEYVKRV
+                     EAAKSTQRAIDAVSAKYQEDLAALEGSTDRIISDLRSDNKRLRVRVKTTGTSDGQCGFE
+                     PDGRAELDDRDAKRILAVTQKGDAWIRALQDTIRELQRK"
+     gene            116..367
+                     /locus_tag="T7p56"
+                     /note="gene 18.7"
+                     /db_xref="GeneID:1261057"
+     CDS             116..367
+                     /locus_tag="T7p56"
+                     /name="gp18.7"
+                     /note="in Enterobacteria phage T7, this protein interacts
+                     with gp18.5 and is expressed from the -1 frame of a gene
+                     completely overlapping gene 18.5. This suggests that it may
+                     be an analog of lambda lysis protein Rz1. Other names:
+                     gp18.7."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phage lambda Rz1-like protein"
+                     /protein_id="NP_042009.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03788"
+                     /db_xref="GeneID:1261057"
+                     /translation="MSTLRELRLRRALKEQSMRYLLSIKKTLPRWKGALIGLFLICVAT
+                     ISGCASESKLPEPPMVSVDSSLMVEPNLTTEMLNVFSQ"
+ORIGIN
+        1 atgctagaat ttttacgtaa gctaatccct tgggttctcg ctgggatgct attcgggtta
+       61 ggatggcatc tagggtcaga ctcaatggac gctaaatgga aacaggaggt acacaatgag
+      121 tacgttaaga gagttgaggc tgcgaagagc actcaaagag caatcgatgc ggtatctgct
+      181 aagtatcaag aagaccttgc cgcgctggaa gggagcactg ataggattat ttctgatttg
+      241 cgtagcgaca ataagcggtt gcgcgtcaga gtcaaaacta ccggaacctc cgatggtcag
+      301 tgtggattcg agcctgatgg tcgagccgaa cttgacgacc gagatgctaa acgtattctc
+      361 gcagtgaccc agaagggtga cgcatggatt cgtgcgttac aggatactat tcgtgaactg
+      421 caacgtaagt ag
+//
+LOCUS       gp18.7                   252 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp18.7.
+ACCESSION   gp18
+VERSION     gp18.7
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..252
+                     /locus_tag="T7p56"
+                     /note="gene 18.7"
+                     /db_xref="GeneID:1261057"
+     CDS             1..252
+                     /locus_tag="T7p56"
+                     /name="gp18.7"
+                     /note="in Enterobacteria phage T7, this protein interacts
+                     with gp18.5 and is expressed from the -1 frame of a gene
+                     completely overlapping gene 18.5. This suggests that it may
+                     be an analog of lambda lysis protein Rz1. Other names:
+                     gp18.7."
+                     /codon_start=1
+                     /transl_table=11
+                     /product="phage lambda Rz1-like protein"
+                     /protein_id="NP_042009.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03788"
+                     /db_xref="GeneID:1261057"
+                     /translation="MSTLRELRLRRALKEQSMRYLLSIKKTLPRWKGALIGLFLICVAT
+                     ISGCASESKLPEPPMVSVDSSLMVEPNLTTEMLNVFSQ"
+ORIGIN
+        1 atgagtacgt taagagagtt gaggctgcga agagcactca aagagcaatc gatgcggtat
+       61 ctgctaagta tcaagaagac cttgccgcgc tggaagggag cactgatagg attatttctg
+      121 atttgcgtag cgacaataag cggttgcgcg tcagagtcaa aactaccgga acctccgatg
+      181 gtcagtgtgg attcgagcct gatggtcgag ccgaacttga cgaccgagat gctaaacgta
+      241 ttctcgcagt ga
+//
+LOCUS       gp19                    1761 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp19.
+ACCESSION   gp19
+VERSION     gp19
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..1761
+                     /locus_tag="T7p57"
+                     /note="gene 19"
+                     /db_xref="GeneID:1261062"
+     CDS             1..1761
+                     /locus_tag="T7p57"
+                     /name="gp19"
+                     /note="gene 19"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA maturation protein"
+                     /protein_id="NP_042010.1"
+                     /db_xref="GOA:P03694"
+                     /db_xref="UniProtKB/Swiss-Prot:P03694"
+                     /db_xref="GeneID:1261062"
+                     /translation="MSTQSNRNALVVAQLKGDFVAFLFVLWKALNLPVPTKCQIDMAKV
+                     LANGDNKKFILQAFRGIGKSFITCAFVVWSLWRDPQLKILIVSASKERADANSIFIKNI
+                     IDLLPFLSELKPRPGQRDSVISFDVGPANPDHSPSVKSVGITGQLTGSRADIIIADDVE
+                     IPSNSATMGAREKLWTLVQEFAALLKPLPSSRVIYLGTPQTEMTLYKELEDNRGYTTII
+                     WPALYPRTREENLYYSQRLAPMLRAEYDENPEALAGTPTDPVRFDRDDLRERELEYGKA
+                     GFTLQFMLNPNLSDAEKYPLRLRDAIVAALDLEKAPMHYQWLPNRQNIIEDLPNVGLKG
+                     DDLHTYHDCSNNSGQYQQKILVIDPSGRGKDETGYAVLYTLNGYIYLMEAGGFRDGYSD
+                     KTLELLAKKAKQWGVQTVVYESNFGDGMFGKVFSPILLKHHNCAMEEIRARGMKEMRIC
+                     DTLEPVMQTHRLVIRDEVIRADYQSARDVDGKHDVKYSLFYQMTRITREKGALAHDDRL
+                     DALALGIEYLRESMQLDSVKVEGEVLADFLEEHMMRPTVAATHIIEMSVGGVDVYSEDD
+                     EGYGTSFIEW"
+     gene            647..904
+                     /locus_tag="T7p58"
+                     /note="gene 19.2"
+                     /db_xref="GeneID:1261064"
+     CDS             647..904
+                     /locus_tag="T7p58"
+                     /name="gp19.2"
+                     /note="gene 19.2"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_042011.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03789"
+                     /db_xref="GeneID:1261064"
+                     /translation="MGTQPLSGLLCTQGHVKRTSITHSVLLLCYALSTMRTLRHLLGLQ
+                     QTQCALTVMTCASVSWNTVRLALRYSSCLTLTLVMPRSTR"
+     gene            1184..1357
+                     /locus_tag="T7p59"
+                     /note="gene 19.3"
+                     /db_xref="GeneID:1261066"
+     CDS             1184..1357
+                     /locus_tag="T7p59"
+                     /name="gp19.3"
+                     /note="gene 19.3"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_042012.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03790"
+                     /db_xref="GeneID:1261066"
+                     /translation="MATPIRPLSYSLRRQSNGESRRLSTRVTSVTVCSVRYSVLSFLNT
+                     TTVRWKRFVPVV"
+ORIGIN
+        1 gtgtctactc aatccaatcg taatgcgctc gtagtggcgc aactgaaagg agacttcgtg
+       61 gcgttcctat tcgtcttatg gaaggcgcta aacctaccgg tgcccactaa gtgtcagatt
+      121 gacatggcta aggtgctggc gaatggagac aacaagaagt tcatcttaca ggctttccgt
+      181 ggtatcggta agtcgttcat cacatgtgcg ttcgttgtgt ggtccttatg gagagaccct
+      241 cagttgaaga tacttatcgt atcagcctct aaggagcgtg cagacgctaa ctccatcttt
+      301 attaagaaca tcattgacct gctgccattc ctatctgagt taaagccaag acccggacag
+      361 cgtgactcgg taatcagctt tgatgtaggc ccagccaatc ctgaccactc tcctagtgtg
+      421 aaatcagtag gtatcactgg tcagttaact ggtagccgtg ctgacattat cattgcggat
+      481 gacgttgaga ttccgtctaa cagcgcaact atgggtgccc gtgagaagct atggactctg
+      541 gttcaggagt tcgctgcgtt acttaaaccg ctgccttcct ctcgcgttat ctaccttggt
+      601 acacctcaga cagagatgac tctctataag gaacttgagg ataaccgtgg gtacacaacc
+      661 attatctggc ctgctctgta cccaaggaca cgtgaagaga acctctatta ctcacagcgt
+      721 cttgctccta tgttacgcgc tgagtacgat gagaaccctg aggcacttgc tgggactcca
+      781 acagacccag tgcgctttga ccgtgatgac ctgcgcgagc gtgagttgga atacggtaag
+      841 gctggcttta cgctacagtt catgcttaac cctaacctta gtgatgccga gaagtacccg
+      901 ctgaggcttc gtgacgctat cgtagcggcc ttagacttag agaaggcccc aatgcattac
+      961 cagtggcttc cgaaccgtca gaacatcatt gaggaccttc ctaacgttgg ccttaagggt
+     1021 gatgacctgc atacgtacca cgattgttcc aacaactcag gtcagtacca acagaagatt
+     1081 ctggtcattg accctagtgg tcgcggtaag gacgaaacag gttacgctgt gctgtacaca
+     1141 ctgaacggtt acatctacct tatggaagct ggaggtttcc gtgatggcta ctccgataag
+     1201 acccttgagt tactcgctaa gaaggcaaag caatggggag tccagacggt tgtctacgag
+     1261 agtaacttcg gtgacggtat gttcggtaag gtattcagtc ctatccttct taaacaccac
+     1321 aactgtgcga tggaagagat tcgtgcccgt ggtatgaaag agatgcgtat ttgcgatacc
+     1381 cttgagccag tcatgcagac tcaccgcctt gtaattcgtg atgaggtcat tagggccgac
+     1441 taccagtccg ctcgtgacgt agacggtaag catgacgtta agtactcgtt gttctaccag
+     1501 atgacccgta tcactcgtga gaaaggcgct ctggctcatg atgaccgatt ggatgccctt
+     1561 gcgttaggca ttgagtatct ccgtgagtcc atgcagttgg attccgttaa ggtcgagggt
+     1621 gaagtacttg ctgacttcct tgaggaacac atgatgcgtc ctacggttgc tgctacgcat
+     1681 atcattgaga tgtctgtggg aggagttgat gtgtactctg aggacgatga gggttacggt
+     1741 acgtctttca ttgagtggtg a
+//
+LOCUS       gp19.2                   258 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp19.2.
+ACCESSION   gp19
+VERSION     gp19.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..258
+                     /locus_tag="T7p58"
+                     /note="gene 19.2"
+                     /db_xref="GeneID:1261064"
+     CDS             1..258
+                     /locus_tag="T7p58"
+                     /name="gp19.2"
+                     /note="gene 19.2"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_042011.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03789"
+                     /db_xref="GeneID:1261064"
+                     /translation="MGTQPLSGLLCTQGHVKRTSITHSVLLLCYALSTMRTLRHLLGLQ
+                     QTQCALTVMTCASVSWNTVRLALRYSSCLTLTLVMPRSTR"
+ORIGIN
+        1 gtgggtacac aaccattatc tggcctgctc tgtacccaag gacacgtgaa gagaacctct
+       61 attactcaca gcgtcttgct cctatgttac gcgctgagta cgatgagaac cctgaggcac
+      121 ttgctgggac tccaacagac ccagtgcgct ttgaccgtga tgacctgcgc gagcgtgagt
+      181 tggaatacgg taaggctggc tttacgctac agttcatgct taaccctaac cttagtgatg
+      241 ccgagaagta cccgctga
+//
+LOCUS       gp19.3                   174 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp19.3.
+ACCESSION   gp19
+VERSION     gp19.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..174
+                     /locus_tag="T7p59"
+                     /note="gene 19.3"
+                     /db_xref="GeneID:1261066"
+     CDS             1..174
+                     /locus_tag="T7p59"
+                     /name="gp19.3"
+                     /note="gene 19.3"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_042012.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03790"
+                     /db_xref="GeneID:1261066"
+                     /translation="MATPIRPLSYSLRRQSNGESRRLSTRVTSVTVCSVRYSVLSFLNT
+                     TTVRWKRFVPVV"
+ORIGIN
+        1 atggctactc cgataagacc cttgagttac tcgctaagaa ggcaaagcaa tggggagtcc
+       61 agacggttgt ctacgagagt aacttcggtg acggtatgtt cggtaaggta ttcagtccta
+      121 tccttcttaa acaccacaac tgtgcgatgg aagagattcg tgcccgtggt atga
+//
+LOCUS       gp19.5                   150 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Piece of T7 genome overlapping gp19.5.
+ACCESSION   gp19
+VERSION     gp19.5
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     gene            1..150
+                     /locus_tag="T7p60"
+                     /note="gene 19.5"
+                     /db_xref="GeneID:1261068"
+     CDS             1..150
+                     /locus_tag="T7p60"
+                     /name="gp19.5"
+                     /note="gene 19.5"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="NP_042013.1"
+                     /db_xref="UniProtKB/Swiss-Prot:P03804"
+                     /db_xref="GeneID:1261068"
+                     /translation="MFRLLLNLLRHRVTYRFLVVLCAALGYASLTGDLSSLESVVCSIL
+                     TCSD"
+ORIGIN
+        1 atgttccgct tattgttgaa cctactgcgg catagagtca cctaccgatt tcttgtggta
+       61 ctttgtgctg cccttgggta cgcatctctt actggagacc tcagttcact ggagtctgtc
+      121 gtttgctcta tactcacttg tagcgattag
+//

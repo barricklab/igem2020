@@ -207,13 +207,10 @@ def normalize_weights(weights):
 
 def phage_model(input, output=None, time=1500, verbose=True, seed=None, multiplicity=1, use_rnases=False):
 
-    if 0 > seed > 2147483647:
+    if (seed != None) and (0 > seed > 2147483647):
         raise ValueError(f"Seed must be between 0 and 2147483647. You used '{seed}'.")
 
     sim = pt.Model(cell_volume=CELL_VOLUME)
-
-    record = SeqIO.read(input, "genbank")
-    genome_length = len(record.seq)
 
     if not output:
         output = ".".join(input.split(".")[:-1])
@@ -230,6 +227,16 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
     else:
         log_output = f"{output}.log"
     logger = Logger(log_output=f"{log_output}", verbose=verbose)
+
+    # Use just the first record
+    all_records = list(SeqIO.parse(input, "genbank"))
+    if len(all_records)>1:
+      logger.normal("Ignored extra sequence records in input file.")
+    record=all_records[0]
+    genome_length = len(record.seq)
+
+
+
     start_time = datetime.datetime.utcnow()
     logger.normal("[Pinetree] Pinetree T7 Genome Simulation")
     logger.normal("barricklab/igem2020 Fork")
@@ -340,7 +347,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
     phage_genomes = {}
     for infection in range(0, multiplicity):
         weights = [0.0] * len(record.seq)
-        if RNase_E:
+        if use_rnases:
             phage_genomes[infection] = pt.Genome(name=f"phage_{infection}", length=genome_length,
                               transcript_degradation_rate_ext=RNase_E['rate'],
                               rnase_speed=RNase_E['speed'],
