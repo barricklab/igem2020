@@ -31,11 +31,11 @@ This one `insert_sfGFP_after_0.3.gd` inserts sfGFP between genes 0.3 and 0.4:
 ```txt
 #=GENOME_DIFF	1.0
 DEL	1	.	T7	925	509
-INT	2	.	T7	924	0	gp0.3:1-354
-INT	3	.	T7	924	0	sfGFP:1-717
+INT	2	.	T7	924	0	gp0.3:1-354	before=3
+INT	3	.	T7	924	0	sfGFP:1-717	before=4
 INT	4	.	T7	924	0	gp0.4:1-156
 ```
-**Note:** In this case, the genes overlap by a base in the original genome, so it is necessary to first delete them, and then add back 0.3, sfGFP, and 0.4. an `INT` with a size of zero will insert the new region after the given position.
+**Note:** In this case, the genes overlap by a base in the original genome, so it is necessary to first delete them, and then add back 0.3, sfGFP, and 0.4. an `INT` with a size of zero will insert the new region after the given position. The `before=X` entries make sure that the order is enforced so that 0.3, then sfGFP, then 0.4 are inserted in turn.
 
 In all of these these `*.gd` files, it is important that the columns are separated by 'tabs' and not spaces!
 
@@ -49,7 +49,6 @@ gdtools APPLY -s T7 -f GENBANK -r T7_genome.gb -o T7_delete_1.4-1.6.gb delete_1.
 gdtools APPLY -s T7 -f GENBANK -r T7_genome.gb -r sfGFP.gb -o T7_replace_0.4_with_sfGFP.gb replace_0.4_with_sfGFP.gd
 gdtools APPLY -s T7 -f GENBANK -r T7_genome.gb -r sfGFP.gb -r T7_genes.gb -o T7_insert_sfGFP_after_0.3.gb insert_sfGFP_after_0.3.gd
 ```
-
 This creates the new GenBank files `T7_delete_1.4-1.6.gb`, `T7_replace_0.4_with_sfGFP.gb`, `T7_insert_sfGFP_after_0.3.gb`. Take a look at them to see if they've been mutated!
 
 **Notes:** There are additional `-r` entries when a file is needed to provide the sequence and annotation for an `INT`. The `-s` option makes sure that only the mutated T& is included in the output, rather than also including the sfGFP sequence, for example.
