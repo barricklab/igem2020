@@ -62,6 +62,8 @@ RNase_III = {"rate": 1e-2}  # This is the default for the RNAse_table values if 
 
 RNAse_Table = {"R0.0": 1e-2}  # RNAse site R0.0 doesn't exist, its just an example. To ignore a site, set to 0
 
+PHI10_RNASE_FACTOR = 10
+
 
 class Logger:
     '''Sends pretty colors to the console and also logs console to file'''
@@ -101,61 +103,72 @@ class Logger:
         self._send_to_log(f"[LOG] {text}")
 
 
-def get_promoter_interactions(name):
-    '''
-    Calculate promoter binding strengths. The relative strengths defined here
-    come from 2012 Covert, et al paper.
-    '''
-    if name in IGNORE_REGULATORY:
-        return
-    ecoli_strong = ["E. coli promoter A1",
-                    "E. coli promoter A2",
-                    "E. coli promoter A3"]
-    ecoli_weak = ["E. coli B promoter",
-                  "E. coli C promoter"]
-    phi1_3 = ["T7 promoter phi1.1A",
-              "T7 promoter phi1.1B",
-              "T7 promoter phi1.3",
-              "T7 promoter phi1.5",
-              "T7 promoter phi1.6"]
-    phi3_8 = ["T7 promoter phi2.5",
-              "T7 promoter phi3.8",
-              "T7 promoter phi4c",
-              "T7 promoter phi4.3",
-              "T7 promoter phi4.7"]
-    phi6_5 = ["T7 promoter phi6.5"]
-    phi9 = ["T7 promoter phi9"]
-    phi10 = ["T7 promoter phi10"]
-    phi13 = ["T7 promoter phi13",
-             "T7 promoter phi17"]
+class Promoters:
+    def __init__(self):
+        self.promoter_dict = {
+            "classifications": {"ecoli_strong": ["E. coli promoter A1",
+                                         "E. coli promoter A2",
+                                         "E. coli promoter A3"],
+                        "ecoli_weak": ["E. coli B promoter",
+                                       "E. coli C promoter"],
+                        "phi1_3": ["T7 promoter phi1.1A",
+                                   "T7 promoter phi1.1B",
+                                   "T7 promoter phi1.3",
+                                   "T7 promoter phi1.5",
+                                   "T7 promoter phi1.6"],
+                        "phi3_8": ["T7 promoter phi2.5",
+                                   "T7 promoter phi3.8",
+                                   "T7 promoter phi4c",
+                                   "T7 promoter phi4.3",
+                                   "T7 promoter phi4.7"],
+                        "phi6_5": ["T7 promoter phi6.5"],
+                        "phi9": ["T7 promoter phi9"],
+                        "phi10": ["T7 promoter phi10"],
+                        "phi13": ["T7 promoter phi13",
+                                  "T7 promoter phi17"]},
+            "affinities": {"ecoli_strong": {'ecolipol': 10e4,
+                                            'ecolipol-p': 3e4},
+                           "ecoli_weak": {'ecolipol': 1e4,
+                                          'ecolipol-p': 0.3e4},
+                           "phi1_3": {'gp1': PHI10_BIND * 0.01,
+                                      'gp3.5': PHI10_BIND * 0.01 * 0.5},
+                           "phi3_8": {'gp1': PHI10_BIND * 0.01,
+                                      'gp3.5': PHI10_BIND * 0.01 * 0.5},
+                           "phi6_5": {'gp1': PHI10_BIND * 0.05,
+                                      'gp3.5': PHI10_BIND * 0.05},
+                           "phi9": {'gp1': PHI10_BIND * 0.2,
+                                    'gp3.5': PHI10_BIND * 0.2},
+                           "phi10": {'gp1': PHI10_BIND,
+                                     'gp3.5': PHI10_BIND},
+                           "phi13": {'gp1': PHI10_BIND * 0.1,
+                                     'gp3.5': PHI10_BIND * 0.1}}}
+    def get_interaction(self, name):
+        if name in IGNORE_REGULATORY:
+            return
+        found_classification = False
+        for classification in self.promoter_dict['classifications'].keys():
+            if name in self.promoter_dict['classifications'][classification]:
+                found_classification = classification
+        if not found_classification:
+            raise ValueError("Promoter strength for {0} not assigned.".format(name))
+        elif found_classification not in self.promoter_dict['affinities'].keys():
+            raise ValueError(f"Promoter classification {found_classification} has no affinities.")
+        else:
+            return self.promoter_dict['affinities'][found_classification]
 
-    if name in ecoli_strong:
-        return {'ecolipol': 10e4,
-                'ecolipol-p': 3e4}
-    elif name in ecoli_weak:
-        return {'ecolipol': 1e4,
-                'ecolipol-p': 0.3e4}
-    elif name in phi1_3:
-        return {'gp1': PHI10_BIND * 0.01,
-                'gp3.5': PHI10_BIND * 0.01 * 0.5}
-    elif name in phi3_8:
-        return {'gp1': PHI10_BIND * 0.01,
-                'gp3.5': PHI10_BIND * 0.01 * 0.5}
-    elif name in phi6_5:
-        return {'gp1': PHI10_BIND * 0.05,
-                'gp3.5': PHI10_BIND * 0.05}
-    elif name in phi9:
-        return {'gp1': PHI10_BIND * 0.2,
-                'gp3.5': PHI10_BIND * 0.2}
-    elif name in phi10:
-        return {'gp1': PHI10_BIND,
-                'gp3.5': PHI10_BIND}
-    elif name in phi13:
-        return {'gp1': PHI10_BIND * 0.1,
-                'gp3.5': PHI10_BIND * 0.1}
-    else:
-        raise ValueError(
-            "Promoter strength for {0} not assigned.".format(name))
+    def set_classification(self, classification, members):
+        if type(members) != list:
+            raise TypeError("Values must be a list of promoter names.")
+        else:
+            self.promoter_dict['classifications'][classification] = members
+
+    def set_affinity(self, classification, values):
+        if type(values) != dict:
+            raise TypeError("Values must be a dictionary with key polymerase and value affinity.")
+        elif classification not in self.promoter_dict['classifications'].keys():
+            raise UserWarning(f"Affinities for {classification} was set, but it doesn't exist as a classification.")
+        else:
+            self.promoter_dict['affinities'][classification] = values
 
 
 def get_terminator_interactions(name):
@@ -255,6 +268,8 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
 
     # --- Feature Acquisition and validation  VVV
 
+    promoters = Promoters()
+
     feature_dict = {}
     for i, feature in enumerate(record.features):  # Accuasition
         start = feature.location.start.position + 1
@@ -274,7 +289,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
                 length = stop - start
                 if length < 35:
                     start = start - 35
-                interactions = get_promoter_interactions(name)
+                interactions = promoters.get_interaction(name)
                 feature_type = "promoter"
             if "terminator" in feature.qualifiers["regulatory_class"]:
                 interactions = get_terminator_interactions(name)
@@ -394,7 +409,7 @@ def phage_model(input, output=None, time=1500, verbose=True, seed=None, multipli
             continue
         feature_contents['strength'] = None
         if feature_contents['type'] == "promoter":
-            promoter_interaction_result = get_promoter_interactions(feature_contents['name'])
+            promoter_interaction_result = promoters.get_interaction(feature_contents['name'])
             if 'ecolipol' in promoter_interaction_result.keys():
                 feature_contents['strength'] = promoter_interaction_result['ecolipol']
             elif 'gp1' in promoter_interaction_result.keys():
@@ -608,6 +623,9 @@ if __name__ == "__main__":
         use_rnases = False
     if not use_rnases:
         use_rnases = False
+
+    if use_rnases:
+        PHI10_BIND = PHI10_BIND*PHI10_RNASE_FACTOR
 
     if not output_path:
         output_path = ".".join(input_genome.split(".")[:-1])
