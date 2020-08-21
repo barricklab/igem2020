@@ -131,17 +131,17 @@ class Promoters:
                            "ecoli_weak": {'ecolipol': 1e4,
                                           'ecolipol-p': 0.3e4},
                            "phi1_3": {'gp1': PHI10_BIND * 0.01,
-                                      'gp3.5': PHI10_BIND * 0.01 * 0.5},
+                                      'gp1+gp3.5': PHI10_BIND * 0.01 * 0.5},
                            "phi3_8": {'gp1': PHI10_BIND * 0.01,
-                                      'gp3.5': PHI10_BIND * 0.01 * 0.5},
+                                      'gp1+gp3.5': PHI10_BIND * 0.01 * 0.5},
                            "phi6_5": {'gp1': PHI10_BIND * 0.05,
-                                      'gp3.5': PHI10_BIND * 0.05},
+                                      'gp1+gp3.5': PHI10_BIND * 0.05},
                            "phi9": {'gp1': PHI10_BIND * 0.2,
-                                    'gp3.5': PHI10_BIND * 0.2},
+                                    'gp1+gp3.5': PHI10_BIND * 0.2},
                            "phi10": {'gp1': PHI10_BIND,
-                                     'gp3.5': PHI10_BIND},
+                                     'gp1+gp3.5': PHI10_BIND},
                            "phi13": {'gp1': PHI10_BIND * 0.1,
-                                     'gp3.5': PHI10_BIND * 0.1}}}
+                                     'gp1+gp3.5': PHI10_BIND * 0.1}}}
     def get_interaction(self, name):
         if name in IGNORE_REGULATORY:
             return
