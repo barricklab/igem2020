@@ -50,21 +50,41 @@ colnames(avg_pc) = c("species", "average", "sort.order", "gene.class", "lower95"
 disp = disp %>% arrange(sort.order)
 avg_pc$species = factor(avg_pc$species, levels = disp$species)
 
-#plots 
-compare_genomes_barplot <- ggplot(avg_pc, aes(x = species, y = average, fill = as.factor(gene.class))) + 
-  geom_bar( alpha = 0.5, stat = "identity") +
+cts.to.graph.GFP = avg_pc %>% filter(species == 'sfGFP')
+cts.to.graph.native = avg_pc %>% filter(species != 'sfGFP')
+
+
+#plots
+
+native.plot <- ggplot(cts.to.graph.native, aes(x = species, y = average, fill = as.factor(gene.class))) + 
+  geom_bar(alpha = 0.5, stat = "identity") +
   geom_errorbar(aes(ymin = lower95, ymax = upper95), width = 0.5, alpha = 0.5) +
-  scale_fill_manual(values = c("#CC79A7", "#56B4E9", "#E69F00"), name = "Class", labels = c("I", "II", "III")) +
-  theme(axis.text.x = element_text(angle = 90), axis.line = element_line(colour = "black"),
-  panel.grid.major = element_blank(),
-  panel.grid.minor = element_blank(),
-  panel.border = element_blank(),
-  panel.background = element_blank())  
-compare_genomes_barplot
+  scale_fill_manual(values = c("#CC79A7", "#56B4E9", "#E69F00"), name = "Class", labels = c("I", "II", "III", "GFP")) +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  theme(axis.text.x = element_text(angle = 90, vjust=0.5), axis.line = element_line(colour = "black"),
+        axis.title.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
 
 
-#generates plotly for the graph and saves it locally in the working directory 
-library(plotly)
-pPlotly <- ggplotly(compare_genomes_barplot)
+GFP.plot <- ggplot(cts.to.graph.GFP, aes(x = species, y = average, fill = as.factor(gene.class))) + 
+  geom_bar(width = 0.2, alpha = 0.5, stat = "identity") +
+  geom_errorbar(aes(ymin = lower95, ymax = upper95), width = 0.125, alpha = 0.5) +
+  scale_fill_manual(values = "#3cf013") +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  theme(axis.text.x = element_text(angle = 90, vjust=0.5), axis.line = element_line(colour = "black"),
+        legend.position="none",
+        axis.title.x = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
 
-htmlwidgets::saveWidget(pPlotly, "Holin_replace_8-AE.html")
+native.plot = native.plot + ylab("Average Proteins")
+native.plot = native.plot + xlab("Species")
+GFP.plot = GFP.plot + ylab("Average Proteins")
+
+plot.combined = plot_grid(GFP.plot, native.plot, rel_widths = c(1, 7), align = "h")
+plot.combined
